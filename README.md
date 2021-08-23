@@ -2,5 +2,5 @@
 
 Hier wird die Enterprise gebaut
 
-* in virtueller Umgebung
+* als Docker-Container
 * mit der gesamten Crew. SCOTTY, SPOKE ...
