@@ -1,0 +1,139 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: Configure vagrant machine
+  hosts: kvm-ubunutu-mate         # siehe ./hosts, datei mit managbaren systemen
+  become: True
+  tasks:
+
+    # multiple packages
+    - name: install extra packages
+      become: True
+      become_user: root
+      apt:
+        pkg:
+          - autotools-dev
+          - bat
+          - cmatrix
+          - cowsay
+          - debconf-utils
+          - fd-find
+          - git
+          - locate
+          - lolcat
+          - neofetch
+          - neovim
+          - net-tools
+          - nmap
+          - powerline
+          - powerline-doc
+          - python2
+          - python3-pip
+          - speedtest-cli
+          - tree
+          - zsh
+        update_cache: True
+
+    # change vagrant login shell to zsh
+    - name: change login shell
+      user:
+        name: christoph
+        shell: /usr/bin/zsh
+
+    # check that locale exists
+    - name: Ensure the locale exists
+      locale_gen:
+        name: en_US.UTF-8
+        state: present
+
+    # system default local
+    - name: copy locale
+      copy: src=../files/locale        dest=/etc/default/locale owner=root group=root
+
+      #- name: set as default locale LANG
+        #become_user: root
+        #command: localectl set-locale LANG=en_US.UTF-8
+
+      #- name: set as default locale LC_ALL
+        #become_user: root
+        #command: localectl set-locale LC_NAME=en_US.UTF-8
+
+    - name: set hostname
+      hostname:
+        name: "{{ hostname }}"
+
+    - name: install powerline-shell python package
+      pip:
+        name: powerline-shell
+        extra_args: --upgrade
+
+    - name: upgrade msgpack
+      pip:
+        name: msgpack
+        extra_args: --upgrade
+
+    - name: upgrade pynvim
+      pip:
+        name: pynvim
+        extra_args: --upgrade
+
+    - name: upgrade psutil
+      pip:
+        name: psutil
+        extra_args: --upgrade
+
+    # multiple files configuration files
+    - name: copy .bashrc
+      copy: src=../files/.bashrc       dest=/home/vagrant owner=vagrant group=vagrant
+
+    - name: copy .inputrc
+      copy: src=../files/.inputrc      dest=/home/vagrant owner=vagrant group=vagrant
+
+    - name: copy .vimrc
+      copy: src=../files/.vimrc        dest=/home/vagrant owner=vagrant group=vagrant
+
+    - name: copy .zshenv
+      copy: src=../files/.zshenv       dest=/home/vagrant owner=vagrant group=vagrant
+
+    - name: copy .zshrc
+      copy: src=../files/.zshrc        dest=/home/vagrant owner=vagrant group=vagrant
+    # neovim
+    - name: copy init.vim
+      copy: src=../files/init.vim      dest=/home/vagrant/.config/nvim/ owner=vagrant group=vagrant
+
+    - name: copy maps.vim
+      copy: src=../files/maps.vim      dest=/home/vagrant/.config/nvim/ owner=vagrant group=vagrant
+
+    - name: copy settings.vim
+      copy: src=../files/settings.vim  dest=/home/vagrant/.config/nvim/ owner=vagrant group=vagrant
+
+    - name: copy tmux.conf
+      copy: src=../files/.tmux.conf    dest=/home/vagrant/.tmux.conf owner=vagrant group=vagrant
+
+    # custom zsh plugins
+    - name: copy slm-aliases.plugin.zsh
+      copy: src=../files/slm-aliases.plugin.zsh           dest=/home/vagrant/.local/plugins/   owner=vagrant group=vagrant
+
+    - name: copy slm-colored-man-pages.plugin.zsh
+      copy: src=../files/slm-colored-man-pages.plugin.zsh dest=/home/vagrant/.local/plugins/   owner=vagrant group=vagrant
+
+    - name: copy slm-fzf.plugin.zsh
+      copy: src=../files/slm-fzf.plugin.zsh               dest=/home/vagrant/.local/plugins/   owner=vagrant group=vagrant
+
+    - name: copy slm-powerline.plugin.zsh
+      copy: src=../files/slm-powerline.plugin.zsh         dest=/home/vagrant/.local/plugins/   owner=vagrant group=vagrant
+
+    - name: create symbolic .local/bin
+      file:
+        dest:  /home/vagrant/.local/bin
+        owner: vagrant
+        group: vagrant
+        state: directory
+
+    - name: create symbolic link to batcat
+      file:
+        src: /usr/bin/batcat
+        dest: /home/vagrant/.local/bin/bat
+        owner: vagrant
+        group: vagrant
+        state: link
