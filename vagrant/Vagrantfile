@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+# Use the same key for each machine
+  config.ssh.insert_key = false
+
+  config.vm.define "enterprise-vb" do |vb_enterprise|
+    vb_enterprise.vm.box = "generic/ubuntu2004"
+    vb_enterprise.vm.network "private_network", ip: "192.168.0.50"
+  end
+end
+
