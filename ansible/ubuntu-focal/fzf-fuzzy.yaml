@@ -1,0 +1,35 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: make fzf-fuzzy
+  hosts: vagrant_machines          # siehe ./hosts, datei mit managbaren systemen
+  become: True
+  tasks:
+
+    # install and configure fzf
+    - name: install packages
+      apt:
+        pkg:
+          - fzf
+        update_cache: True
+
+    # clone fzf
+    - name: clone fzf-source
+      become_user: vagrant
+      git:
+        repo: 'https://github.com/junegunn/fzf.git'
+        dest: ~/git/fzf
+        clone: yes
+        update: yes
+
+    # install und konfigurieren von fzf
+    - name: check if _fzf_zsh exits
+      become_user: vagrant
+      stat:
+        path: ~/.fzf.zsh
+      register: stat_fzf_zsh_result
+
+    - name: configure fzf-stuff
+      become_user: vagrant
+      command: '~/git/fzf/install --no-bash --no-fish --no-update-rc --key-bindings --completion'
+      when: not stat_fzf_zsh_result.stat.exists
