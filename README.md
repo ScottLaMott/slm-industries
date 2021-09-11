@@ -21,8 +21,8 @@ Konfiguration mit ansible
 
 als Docker-Container
 
-
 # usefull links
+https://de.wikipedia.org/wiki/Raumschiff_Enterprise
 https://startrek.de/universum
 
 # probleme
