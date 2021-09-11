@@ -1,19 +1,29 @@
 # ENTERPRISE
+Hier wird die Enterprise gebaut ...
+mit der gesamten Crew. Captain Kirk, Scotty, Spoke, Pille, Lt. Uhura ...
 
-Hier wird die Enterprise gebaut
+#  virtuelle Maschine mit Vagrant
+Die virtuelle Maschine ist in _*Vagrantfile*_ beschrieben.
 
-* als Docker-Container
-* als VM mit Hilfe von Docker
-* Konfiguration mit ansible
-* mit der gesamten Crew. SCOTTY, SPOKE ...
+- erstellen einer VM
+```
+$ vagrant up
+```
+- login in die VM
+```
+$ vagrant ssh
+```
+- info zu libvirt-Provider
+  - https://github.com/vagrant-libvirt/vagrant-libvirt.git
 
-### Vagrant
-erstellen einer virtuellen Maschine mit 'vagrant up' in Verzeichnis vagrant
+###  ansible
+Konfiguration mit ansible
+
+als Docker-Container
+
 
 # usefull links
 https://startrek.de/universum
 
-
 # probleme
-
 * apt upgrade mit bat und ripgrep ergibt fehlermeldung
