@@ -2,7 +2,7 @@
 ---
 
 - name: Configure vagrant machine
-  hosts: kvm-ubunutu-mate         # siehe ./hosts, datei mit managbaren systemen
+  hosts: enterprise         # siehe ./hosts, datei mit managbaren systemen
   become: True
   tasks:
 

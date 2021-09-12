@@ -11,6 +11,7 @@ ansible-playbook playbooks/fvs.yaml          -i hosts -l enterprise -e 'hostname
 ansible-playbook playbooks/config-root.yaml  -i hosts -l enterprise
 
 # benutzer konfigurieren
+ansible-playbook playbooks/add-user.yaml     -i hosts -l enterprise -e 'username=christop' -e 'fullname=Christoph Timmer' -e 'home=/home/christoph'
 ansible-playbook playbooks/add-user.yaml     -i hosts -l enterprise -e 'username=kirk' -e 'fullname=James D. Kirk' -e 'home=/home/kirk'
 ansible-playbook playbooks/add-user.yaml     -i hosts -l enterprise -e 'username=scotty' -e 'fullname=Montgomery Scott' -e 'home=/home/scotty'
 
