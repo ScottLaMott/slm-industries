@@ -6,14 +6,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 # Use the same key for each machine
   config.ssh.insert_key = false
 
-  config.vm.provider :libvirt do |v|
-    v.memory = "8192"
-    v.cpus   = 3
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = "8192"
+    libvirt.cpus   = 3
   end
 
-  config.vm.define "enterprise-vb" do |vb_enterprise|
-    vb_enterprise.vm.box = "generic/ubuntu2004"
-    vb_enterprise.vm.network "private_network", ip: "192.168.0.50"
+  config.vm.define "enterprise" do |enterprise|
+    enterprise.vm.box = "generic/ubuntu2004"
+    enterprise.vm.network "private_network", ip: "192.168.0.50"
   end
 end
 
