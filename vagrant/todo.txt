@@ -1,3 +1,5 @@
-- ssh login als user scotty
+
+- hostname durch vagrant vergeben
+- ssh login als user scotty             y
 
 - enterprise log-buch schreiben

@@ -7,14 +7,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
 
   config.vm.provider :libvirt do |libvirt|
-    libvirt.memory = "8192"
-    libvirt.cpus   = 3
+    libvirt.driver  = "kvm"
+    libvirt.memory  = "8192"
+    libvirt.cpus    = 3
   end
 
   config.vm.define "enterprise" do |enterprise|
     enterprise.vm.box      = "generic/ubuntu2004"
     enterprise.vm.hostname = "enterprise"
-    enterprise.vm.network "private_network", ip: "192.168.0.50"
+    enterprise.vm.network    "private_network", ip: "192.168.0.50"
   end
 end
 
