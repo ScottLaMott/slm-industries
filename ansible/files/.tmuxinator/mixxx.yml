@@ -1,0 +1,34 @@
+# ~/.tmuxinator/mixxx.yml
+
+name: mixxx
+root: ~/ws/mixxx
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Specifies (by name or index) which window will be selected on project startup.
+startup_window: mixxx:mixxx
+
+windows:
+  - mixxx:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - vim .
+        - vim mixxx.cfg
+        - 'bin/mixxx --settingsPath ~/ws/mixxx --resourcePath ~/ws/mixxx/res --pluginPath ~/ws/mixxx/plugin'
+  - log:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - tail -f mixxx.log
+        - clear
+        - clear
+  - edit-mixxx-libs: $EDITOR /mnt
+  - edit-mixxx-yml:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - $EDITOR ~/.tmuxinator/mixxx.yml
+        - figlet " ... mux ..."
+        - figlet ' . . . mixxx . .'

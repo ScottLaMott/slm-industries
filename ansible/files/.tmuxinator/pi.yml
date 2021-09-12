@@ -1,0 +1,33 @@
+# ~/.tmuxinator/pi.yml
+
+name: pi
+root: ~/ws/pi
+
+startup_pane: 1
+pre_window:
+
+startup_window: pi:mosh-pi
+
+windows:
+ - mosh-pi:
+    # layout muss noch geändert werden
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - mosh pi@corona
+     - mosh pi@corona
+     - mosh pi@corona
+ - control-pi:
+    # layout muss noch geändert werden
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - mosh pi@corona
+     - mosh pi@corona htop
+     - mosh pi@corona 'watch -n 15 -d vcgencmd measure_temp'
+ - edit-yml:
+    # layout aus layout-template-dir
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    #layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - $EDITOR ~/.tmuxinator/pi.yml
+     - ssh pi@corona neofetch
+     -

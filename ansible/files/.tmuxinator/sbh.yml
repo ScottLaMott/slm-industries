@@ -1,0 +1,21 @@
+# ~/.tmuxinator/sbh.yml
+name: sbh
+root: /home/christoph
+
+startup_pane: 1
+pre_window:
+
+startup_window: sbh:command
+
+windows:
+ - command:
+    layout: main-horizontal
+    panes:
+     -
+     -
+ - main-horizontal:
+    layout: main-horizontal
+    panes:
+     -
+     -
+

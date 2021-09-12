@@ -1,0 +1,34 @@
+# ~/.tmuxinator/mobil.yml
+
+name: mobil
+root: ~/ws/mobil
+
+pre_window:
+        . ./adb-fastboot/setup-platform-tools.sh
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+# tmux_options: -v
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: edit-ws-mobil
+
+windows:
+ - edit-ws-mobil:
+    layout: 7793,203x64,0,0[203x47,0,0{101x47,0,0,108,101x47,102,0,113},203x17,0,48,114]
+    panes:
+     - $EDITOR .
+     - clear
+     - clear
+ - control:
+    layout: c175,237x66,0,0[237x61,0,0{164x61,0,0,10,72x61,165,0,14},237x5,0,62,15]
+    panes:
+     - clear
+     - clear
+     - clear
+ - edit-yml:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - $EDITOR ~/.tmuxinator/mobil.yml
+     - clear; figlet " . . . mux . . ."
+     - clear; figlet ' . . . mobil . .'

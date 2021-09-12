@@ -1,0 +1,35 @@
+# ~/.tmuxinator/stretch-extended.yml
+
+name: stretch-extended
+root: ~/ws/docker/debian/stretch
+
+startup_pane: 1
+pre_window: reset
+
+ export EDITOR=nvim
+ export DOCKER_DIR=stretch-extended
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: docker:e-docker
+#startup_window: edit-docker-yml
+
+windows:
+ - e-docker: $EDITOR .
+ - man-docker:
+    panes:
+     - man docker
+     - clear
+ - e-extended: $EDITOR $DOCKER_DIR
+ - r-extended: cd $DOCKER_DIR
+ - logs:
+    panes:
+     - journalctl -f
+     - dmesg -w
+     - watch -n 10 docker images
+     - watch -n 10 'df -vh | grep dev/sd'
+ - w4:
+ - edit-docker-yml:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - $EDITOR ~/.tmuxinator/docker.yml
+     - clear; figlet ' . . . docker . .'

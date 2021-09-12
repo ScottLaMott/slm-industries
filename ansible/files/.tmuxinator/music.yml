@@ -1,0 +1,29 @@
+# ~/.tmuxinator/music.yml
+name: music
+root: ~/projects/music
+
+startup_pane: 1
+pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup.
+startup_window: music:cmd
+
+windows:
+  - cmd:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+              - ssh pi@corona
+              -
+              -
+  - music-libs:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+              - cd /mnt/music-lib-0.1; $EDITOR .
+              - cd /mnt/music-source; $EDITOR .
+              - cd /mnt/music-lib; $EDITOR .
+  - edit-music-yml:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - $EDITOR ~/.tmuxinator/music.yml
+        - figlet " ... mux ..."
+        - figlet ' . . . music . .'

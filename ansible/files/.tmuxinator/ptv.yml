@@ -1,0 +1,53 @@
+# ~/.tmuxinator/ptv.yml
+
+name: ptv
+root: ~/ws/ptv
+
+startup_pane: 1
+pre_window: reset
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+# tmux_options: -vv
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: ptv:shell
+
+windows:
+ - cmd-window:
+    layout: 7793,203x64,0,0[203x47,0,0{101x47,0,0,108,101x47,102,0,113},203x17,0,48,114]
+    panes:
+      - clear
+      - clear
+      - clear
+ - shell:
+    layout: main-vertical
+    panes:
+      - $EDITOR ~/.oh-my-zsh/oh-my-zsh.sh
+      - $EDITOR ~/.zshrc
+ - powerline:
+    panes:
+      - $EDITOR /usr/share/powerline
+      - $EDITOR /usr/share/doc/powerline
+      - cd powerline
+ - tmux:
+    panes:
+      - $EDITOR ~/.tmux.conf
+      - $EDITOR ~/.tmux
+ - vim: cd vim
+            - $EDITOR ~/.config/nvim/init.vim
+ - plugin-manager:
+    panes:
+      - $EDITOR plugin-manager/iv.vim-plug-manager.vim
+      - $EDITOR ~/.local/share/nvim/plugged
+      - cd plugin-manager
+ - git:
+    panes:
+      - git config -e
+      - ssh gituser@localhost
+ - edit-ptv-yml:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - $EDITOR ~/.tmuxinator/ptv.yml
+     - clear; figlet " . . . don't  spoil\n  my  box \n      slm . . ."
+     - clear; neofetch

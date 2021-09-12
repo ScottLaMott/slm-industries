@@ -1,0 +1,28 @@
+# ~/.tmuxinator/test-nvim.yml
+
+name: test-nvim
+root: ~/ws/test/nvim
+
+startup_pane: 1
+pre_window: reset
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+# tmux_options: -v
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: test-nvim:test-nvim
+
+windows:
+ - cmd-window:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+    - clear
+    - clear
+    - clear
+ - test-nvim:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - clear; nvim +":help | :help tips | :only"
+     - $EDITOR .
+     - clear;
