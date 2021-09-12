@@ -12,5 +12,5 @@
 enterprise          ansible_ssh_host=192.168.0.50 ansible_ssh_port=22  ansible_ssh_user=vagrant # vagrant
 
 # kvm/qemu virtual machines
-[kvm_machines]
-kvm-enterprise      ansible_ssh_host=192.168.10.50      ansible_ssh_port=22  ansible_ssh_user=vagrant      # vagrant
+#[kvm_machines]
+#kvm-enterprise      ansible_ssh_host=192.168.10.50      ansible_ssh_port=22  ansible_ssh_user=vagrant      # vagrant
