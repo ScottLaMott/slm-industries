@@ -6,7 +6,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 # Use the same key for each machine
   config.ssh.insert_key = false
 
-
   config.vm.provider :libvirt do |v|
     v.memory = "8192"
     v.cpus   = 3
