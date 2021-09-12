@@ -1,0 +1,27 @@
+# vim: filetype=muttrc
+unmailboxes *
+
+# in/out mail servers
+set realname = "Christoph Timmer"
+set imap_pass = "sommer16"
+set smtp_url = "smtps://ctimmer@mail.arcor.de:465"
+set smtp_pass = "sommer16"
+set folder = "imaps://ctimmer@imap.arcor.de:993"
+set spoolfile = "+INBOX"
+
+set from = "ctimmer@arcor.de"
+set envelope_from
+set use_from = "yes"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+set mail_check = 6
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+## Hook -- IMPORTANT!
+account-hook $folder "set imap_pass=sommer16"

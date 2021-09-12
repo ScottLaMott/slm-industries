@@ -1,0 +1,26 @@
+# ~/.tmuxinator/stow.yml
+
+name: stow
+root: ~/stow-home
+
+#pre_window: reset
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: stow:cmd
+startup_pane: 1
+
+windows:
+  - cmd:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        -
+        - man stow
+        -
+  - edit:
+     - $EDITOR .
+  - edit-stow-yml:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - $EDITOR tmux/.tmuxinator/stow.yml
+        - neofetch
+        - figlet ' . . . . . stow . .'

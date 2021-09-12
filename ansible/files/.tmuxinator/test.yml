@@ -1,0 +1,27 @@
+# ~/.tmuxinator/test.yml
+
+name: test
+root: /home/christoph
+
+#startup_pane: 1
+#pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: test:git
+
+windows:
+  - git:
+     layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+     panes:
+       - cd ws/test/git
+       - man git
+  - find:
+     layout: 6a7a,176x43,0,0{108x43,0,0,0,67x43,109,0,11}
+     panes:
+       - cd ws/test/find
+       - man find
+  - nvim:
+     layout: 6a7a,176x43,0,0{108x43,0,0,0,67x43,109,0,11}
+     panes:
+       - cd ws/test/nvim
+       - man nvim

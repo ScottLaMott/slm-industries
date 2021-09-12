@@ -1,0 +1,28 @@
+# ~/.tmuxinator/bee.yml
+
+name: bee
+root: ~/ws/docker/debian/stretch
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: editor-bee-yml
+
+windows:
+  - edit-bee-yml:
+      layout: 19f3,203x64,0,0{139x64,0,0,29,63x64,140,0[63x32,140,0,37,63x31,140,33,38]}
+      panes:
+        - $EDITOR ~/.tmuxinator/bee.yml
+        - figlet ' . . mux . . . .'
+        - figlet ' . . . bee . . .'
+  - edit-base: $EDITOR stretch-base
+  - run-base: cd stretch-base
+  - edit-extended: $EDITOR stretch-extended
+  - run-extended: cd stretch-extended
+  - edit-enterprise: $EDITOR enterprise
+  - run-enterprise: cd enterprise
+  - test-window:

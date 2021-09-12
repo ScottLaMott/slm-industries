@@ -1,0 +1,35 @@
+# ~/.tmuxinator/corona.yml
+
+name: corona
+root: ~/ws/corona
+
+startup_pane: 1
+pre_window:
+
+startup_window: corona:ssh-corona
+
+windows:
+ - ssh-corona:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - ssh -t pi@corona vim .kodi
+     - ssh pi@corona neofetch
+     - ssh pi@corona
+ - corona:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - ssh -t pi@corona tail -f .kodi/temp/kodi.log
+     - ssh
+     - ssh -t pi@corona watch -n 60 -d vcgencmd measure_temp
+ - jever-localhost:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     -
+     -
+     -
+ - edit-yml:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - $EDITOR ~/.tmuxinator/corona.yml
+     - ssh -t pi@corona neofetch
+     -

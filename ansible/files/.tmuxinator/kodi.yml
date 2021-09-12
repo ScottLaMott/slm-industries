@@ -1,0 +1,38 @@
+# ~/.tmuxinator/kodi.yml
+#
+# for work on local kodi
+#
+
+name: kodi
+root: ~/ws/kodi
+
+startup_window: kodi:kodi-ws
+pre_window:
+
+windows:
+  - corona:
+    layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+    panes:
+     - ssh pi@corona
+     - ssh pi@corona neofetch
+     - ssh -t pi@corona
+  - kodi-ws:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - vim .
+        - vim ~/.kodi
+        - clear
+  - log:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - tail -f ~/.kodi/temp/kodi.log
+        - clear
+        - clear
+  - edit-kodi-libs: $EDITOR /mnt
+  - edit-kodi-yml:
+      layout: 8fe1,178x55,0,0{116x55,0,0,69,61x55,117,0[61x27,117,0,72,61x27,117,28,73]}
+      panes:
+        - $EDITOR ~/.tmuxinator/kodi.yml
+        - figlet " ... mux ..."
+        - figlet ' . . . kodi . .'
+

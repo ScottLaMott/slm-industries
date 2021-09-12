@@ -1,0 +1,28 @@
+# ~/.tmuxinator/sb.yml
+
+name: kvm
+root: ~/ws/kvm-qemu
+
+startup_pane: 1
+pre_window:
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+startup_window: main
+
+windows:
+ - main:
+    # layout muss noch geändert werden
+    layout: main-horizontal
+    panes:
+     - cd ~; $EDITOR .
+     - cd ~; clear
+ - kvm-10:
+    layout: main-horizontal
+    panes:
+     - clear; vagrant up kvm-10
+     - clear
+ - kvm-20:
+    layout: main-horizontal
+    panes:
+     - clear; vagrant up kvm-20
+     - clear
