@@ -1,0 +1,3 @@
+- ssh login als user scotty
+
+- enterprise log-buch schreiben
