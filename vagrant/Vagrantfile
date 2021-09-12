@@ -12,7 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "enterprise" do |enterprise|
-    enterprise.vm.box = "generic/ubuntu2004"
+    enterprise.vm.box      = "generic/ubuntu2004"
+    enterprise.vm.hostname = "enterprise"
     enterprise.vm.network "private_network", ip: "192.168.0.50"
   end
 end
