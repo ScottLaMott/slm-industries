@@ -4,7 +4,7 @@
 #
 
 # grundsystem (user vagrant included)
-ansible-playbook playbooks/fvs.yaml          -i hosts -l enterprise -e 'hostname=enterprise'
+ansible-playbook playbooks/fvs.yaml          -i hosts -l enterprise -e 'hostname=enterprise-001'
 
 # root konfigurieren
 ansible-playbook playbooks/config-root.yaml  -i hosts -l enterprise
