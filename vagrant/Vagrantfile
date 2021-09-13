@@ -8,8 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :libvirt do |libvirt|
     libvirt.driver  = "kvm"
-    libvirt.memory  = "8192"
-    libvirt.cpus    = 3
+    libvirt.memory  = "4096"
+    libvirt.cpus    = 2
   end
 
   config.vm.define "enterprise" do |enterprise|
