@@ -27,3 +27,6 @@ https://startrek.de/universum
 
 # probleme
 * apt upgrade mit bat und ripgrep ergibt fehlermeldung
+
+Todo 
+* Spacecraft-Werft
