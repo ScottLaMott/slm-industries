@@ -12,6 +12,7 @@
       become_user: root
       apt:
         pkg:
+          - atop
           - autotools-dev
           - bat
           - cmatrix
