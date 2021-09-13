@@ -30,3 +30,5 @@ https://startrek.de/universum
 
 Todo 
 * Spacecraft-Werft
+   * Fabrik zum Erstellen von Raumschiffen.
+   * eindeutige id, sc-Name,Position GPS,verfolgt sc,
