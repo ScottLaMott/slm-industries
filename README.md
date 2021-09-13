@@ -21,16 +21,22 @@ Konfiguration mit ansible
 
 als Docker-Container
 
-# usefull links
-https://de.wikipedia.org/wiki/Raumschiff_Enterprise
-https://startrek.de/universum
+### usefull links
+- https://de.wikipedia.org/wiki/Raumschiff_Enterprise
+- https://startrek.de/universum
 
-# probleme
-* apt upgrade mit bat und ripgrep ergibt fehlermeldung
+### Probleme nicht hier
+- apt upgrade mit bat und ripgrep ergibt fehlermeldung
 
-Todo 
+Todo
 * Spacecraft-Werft
-   * Fabrik zum Erstellen von Raumschiffen.
-   * eindeutige id, sc-Name,Position GPS,verfolgt sc,
-   * callsign
-* Pull Pille pull
+   - Fabrik zum Erstellen von Raumschiffen.
+   - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
+   - callsign
+- Spacecraft
+   - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
+   - callsign
+   -
+_*Pull Pull*_ ...
+
+_*Pull Pull*_ ...
