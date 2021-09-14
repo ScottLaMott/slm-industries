@@ -1,5 +1,10 @@
-: 1631646951:0;vagrant up
-: 1631647496:0;vagrant ssh -c 'sudo apt update'
-: 1631647607:0;vagrant ssh -c 'sudo apt -y upgrade'
-: 1631647607:0;vagrant ssh -c 'sudo apt -y autoremove'
+#!/bin/bash
+###################################################
+#
+# erzeugt eine VM mit vagrant, provider ist libvirt
+#
 
+vagrant up --provider=libvirt
+vagrant ssh -c 'sudo apt update'
+vagrant ssh -c 'sudo apt -y upgrade'
+vagrant ssh -c 'sudo apt -y autoremove'
