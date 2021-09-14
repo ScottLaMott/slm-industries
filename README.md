@@ -25,18 +25,18 @@ als Docker-Container
 - https://de.wikipedia.org/wiki/Raumschiff_Enterprise
 - https://startrek.de/universum
 
-### Probleme nicht hier
-- apt upgrade mit bat und ripgrep ergibt fehlermeldung
-
 Todo
 * Spacecraft-Werft
    - Fabrik zum Erstellen von Raumschiffen.
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
+
+https://github.com/diogok/termux-qemu-alpine-docker/blob/master/README.md
+
 - Spacecraft
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
    -
 _*Pull Pull*_ ...
 
-_*Pull Pull*_ ...
+_*push*_ ...
