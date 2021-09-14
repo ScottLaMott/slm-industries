@@ -1,5 +1,3 @@
-
-- hostname durch vagrant vergeben
-- ssh login als user scotty             y
+- playbooks ausführen
 
 - enterprise log-buch schreiben
