@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+# Use the same key for each machine
+  config.ssh.insert_key = false
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.driver  = "kvm"
+    libvirt.memory  = "4096"
+    libvirt.cpus    = 2
+  end
+
+  config.vm.define "enterprise-construction" do |enterprise|
+    enterprise.vm.box      = "generic/ubuntu2004"
+    enterprise.vm.hostname = "enterprise-001"
+    enterprise.vm.network    "private_network", ip: "192.168.0.50"
+  end
+end
+
