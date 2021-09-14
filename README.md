@@ -30,6 +30,9 @@ Todo
    - Fabrik zum Erstellen von Raumschiffen.
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
+
+https://github.com/diogok/termux-qemu-alpine-docker/blob/master/README.md
+
 - Spacecraft
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
