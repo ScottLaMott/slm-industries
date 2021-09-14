@@ -25,9 +25,6 @@ als Docker-Container
 - https://de.wikipedia.org/wiki/Raumschiff_Enterprise
 - https://startrek.de/universum
 
-### Probleme nicht hier
-- apt upgrade mit bat und ripgrep ergibt fehlermeldung
-
 Todo
 * Spacecraft-Werft
    - Fabrik zum Erstellen von Raumschiffen.
