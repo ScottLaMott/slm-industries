@@ -4,7 +4,7 @@ vor 14.09.21
   betreiben wird.
 
 - 14.09.21
-  Die Werft ist eingerichtet, es wurde ein erstes Raumschiff in der Konstruktionsabteilung entwickelt und
+  Eine provisorische Werft ist eingerichtet, es wurde ein erstes Raumschiff in der Konstruktionsabteilung entwickelt und
   als Prototyp zusammengebaut. Die Crew ist noch nicht an Board gegangen, aber sie ist bereit die
   unfassbaren Weg zur Erforschung fremder Galaxyen zu beschreiten.
 
