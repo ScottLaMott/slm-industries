@@ -5,7 +5,8 @@ mit der gesamten Crew. Captain Kirk, Scotty, Spoke, Pille, Lt. Uhura ...
 #  virtuelle Maschine mit Vagrant
 Die virtuelle Maschine ist in _*Vagrantfile*_ beschrieben.
 
-- erstellen einer VM
+- erstellen einer VM in ~/ws/enterprise/dockyard/construction/vagrant
+
 ```
 $ vagrant up
 ```
