@@ -1,1 +1,0 @@
-git-submodule aus plugins ???? in dockerverzeichnis
