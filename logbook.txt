@@ -10,3 +10,6 @@ vor 14.09.21
 
 - 19.09.21
   War nicht viel los in der Werft am Wochenende. Dann haben wir auf Stella schnell einen Enterprise-Container gebaut. Kirk war an Board.
+
+- 20.09.21
+  Captain Kirk war das erste mal an Bord ...
