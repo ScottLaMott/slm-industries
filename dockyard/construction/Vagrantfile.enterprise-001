@@ -12,6 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     libvirt.cpus    = 2
   end
 
+  config.vm.synced_folder ".", "/vagrant_data"
+
   config.vm.define "enterprise" do |enterprise|
     enterprise.vm.box      = "generic/ubuntu2004"
     enterprise.vm.hostname = "enterprise-001"

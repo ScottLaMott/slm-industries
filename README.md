@@ -1,16 +1,27 @@
-# ENTERPRISE (pullen ...)
+ENTERPRISE (pullen ...)
+===
+
 Hier wird die Enterprise gebaut ...
 mit der gesamten Crew. Captain Kirk, Scotty, Spoke, Pille, Lt. Uhura ...
-## Dockyard
-### Archive
+
+Dockyard
+---
+
+### [Archive](file:/home/christoph/ws/enterprise/dockyard/enterprise/archive)
+
 ### Factory
+
 ### Construction
+
 ### Production
-### Workbench
+
+### [Workbench](Workbench)
+
 #### Docker
+
 - erstes Raumschiff mit Kirk an Bord als container gebaut
 
-#  virtuelle Maschine mit Vagrant
+###  virtuelle Maschine mit Vagrant (verschieben)
 Die virtuelle Maschine ist in _*Vagrantfile*_ beschrieben.
 
 - erstellen einer VM in ~/ws/enterprise/dockyard/construction/vagrant
@@ -25,27 +36,26 @@ $ vagrant ssh
 - info zu libvirt-Provider
   - https://github.com/vagrant-libvirt/vagrant-libvirt.git
 
-###  ansible
+###  ansible (verschieben)
 Konfiguration mit ansible
 
 als Docker-Container
 
 ### usefull links
-- https://de.wikipedia.org/wiki/Raumschiff_Enterprise
-- https://startrek.de/universum
+- [Raumschiff Enterprise](https://de.wikipedia.org/wiki/Raumschiff_Enterprise)
+- [Startrek-deutsch](https://startrek.de/universum)
+- [termux/qemu/kvm](https://github.com/diogok/termux-qemu-alpine-docker/blob/master/README.md)
 
-Todo
+Todo (verschieben)
 * Spacecraft-Werft
    - Fabrik zum Erstellen von Raumschiffen.
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
 
-https://github.com/diogok/termux-qemu-alpine-docker/blob/master/README.md
 
-- Spacecraft
+- Spacecraft (verschieben)
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
    -
-_*Pull Pull*_ ...
 
-_*push*_ ...
+_*pushen*_ ...
