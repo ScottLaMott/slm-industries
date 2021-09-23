@@ -1,4 +1,4 @@
-
+- erste playbook erstellen
 - hostname durch vagrant vergeben
 - ssh login als user scotty             y
 
