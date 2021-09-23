@@ -26,6 +26,7 @@ Dockyard
 #### Docker
 
 - erstes Raumschiff mit Kirk an Bord als container gebaut
+- base-/full-packed container erstellt
 
 ###  virtuelle Maschine mit Vagrant (verschieben)
 Die virtuelle Maschine ist in _*Vagrantfile*_ beschrieben.
@@ -57,7 +58,6 @@ Todo (verschieben)
    - Fabrik zum Erstellen von Raumschiffen.
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
    - callsign
-
 
 - Spacecraft (verschieben)
    - eindeutige ID, SC-Name,Position GPS,verfolgt sc,
