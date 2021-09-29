@@ -19,6 +19,10 @@ RUN adduser \
   --disabled-login \
   kirk
 
+COPY ./.bashrc      /home/kirk
+COPY ./.profile     /home/kirk
+COPY ./.zshrc       /home/kirk
+
 COPY ./.bashrc      /root/
 COPY ./.profile     /root/
 COPY ./.zshrc       /root/
