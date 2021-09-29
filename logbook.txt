@@ -13,3 +13,6 @@ vor 14.09.21
 
 - 20.09.21
   Captain Kirk war das erste mal an Bord ...
+
+- 25.09.21
+  In der Galaxy gibt es ein neues Werkzeug, LunarVim. Die Crew hat es organisiert.
