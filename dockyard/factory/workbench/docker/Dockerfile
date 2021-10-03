@@ -1,4 +1,4 @@
-FROM zshusers/zsh
+FROM enterprise-full-packed:latest
 
 RUN apt update
 RUN apt upgrade
