@@ -17,6 +17,8 @@
         name:    "{{ username }}"
         comment: "{{ fullname }}"
         home:    "{{ home }}"
+        groups:  "sudo"
+        append:  "yes"
         shell:   /usr/bin/zsh
 
     - name: copy .bashrc
