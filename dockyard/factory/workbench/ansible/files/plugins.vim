@@ -29,8 +29,8 @@ Plug 'https://github.com/tpope/vim-fugitive.git'
 
 " python support, completion
 "
-Plug 'https://github.com/Shougo/deoplete.nvim.git' , { 'do': ':UpdateRemotePlugins' }
-Plug 'https://github.com/deoplete-plugins/deoplete-jedi.git'
+"Plug 'https://github.com/Shougo/deoplete.nvim.git' , { 'do': ':UpdateRemotePlugins' }
+"Plug 'https://github.com/deoplete-plugins/deoplete-jedi.git'
 " gdb
 Plug 'https://github.com/sakhnik/nvim-gdb.git' , { 'do': ':!./install.sh' }
 " fzf

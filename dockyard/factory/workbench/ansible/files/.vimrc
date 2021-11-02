@@ -12,9 +12,11 @@ if has("autocmd")
   autocmd bufwritepost $MYVIMRC source $MYVIMRC
 endif
 "
-" automatisches installieren von vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+" wenn nicht vorhanden plug.vim installieren, installation plugins mit autocmd
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -37,10 +39,10 @@ Plug 'https://github.com/tpope/vim-fugitive.git'
 "Plug 'https://github.com/tpope/vim-devicon.git'
 
 " deoplete for vim8.1+
-Plug 'https://github.com/Shougo/deoplete.nvim.git' , { 'do': ':UpdateRemotePlugins' }
-Plug 'https://github.com/deoplete-plugins/deoplete-jedi.git'
-Plug 'https://github.com/roxma/vim-hug-neovim-rpc'
-Plug 'https://github.com/roxma/nvim-yarp.git'
+"Plug 'https://github.com/Shougo/deoplete.nvim.git' , { 'do': ':UpdateRemotePlugins' }
+"Plug 'https://github.com/deoplete-plugins/deoplete-jedi.git'
+"Plug 'https://github.com/roxma/vim-hug-neovim-rpc'
+"Plug 'https://github.com/roxma/nvim-yarp.git'
 
 " gdb
 Plug 'https://github.com/sakhnik/nvim-gdb.git' , { 'do': ':!./install.sh' }
