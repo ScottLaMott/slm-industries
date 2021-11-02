@@ -10,6 +10,7 @@ RUN apt upgrade -y
 #RUN apt install -y bat
 RUN apt upgrade -y binutils
 RUN apt upgrade -y build-essential
+RUN apt upgrade -y curl
 RUN apt upgrade -y fd-find
 RUN apt upgrade -y fzf
 RUN apt upgrade -y git
