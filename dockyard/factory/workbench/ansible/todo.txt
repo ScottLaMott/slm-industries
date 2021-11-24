@@ -1,0 +1,1 @@
+- packetinstallation als playbook, nicht mit docker build
