@@ -1,0 +1,34 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: Install packages
+  hosts: enterprise-container         # siehe ./hosts, datei mit managbaren systemen
+  become: True
+  tasks:
+
+    # multiple packages
+    - name: install packages
+      become: True
+      become_user: root
+      apt:
+        pkg:
+          - atop
+          - autotools-dev
+          - bat
+          - cmatrix
+          - cowsay
+          - debconf-utils
+          - fd-find
+          - git
+          - locate
+          - lolcat
+          - neofetch
+          - neovim
+          - net-tools
+          - nmap
+          - powerline
+          - powerline-doc
+          - speedtest-cli
+          - tree
+          - zsh
+        update_cache: True
