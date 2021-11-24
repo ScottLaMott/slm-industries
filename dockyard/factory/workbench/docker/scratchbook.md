@@ -18,5 +18,18 @@ die erste Enterprise
   - ein Image aus der Workbench
   - docker build .
   - docker run -i -t container-id
+  - dotbare in user kirk installieren
+      ```
+      git clone https://github.com/kazhala/dotbare.git ~/.dotbare
+      dotbare finit -u https://github.com/ScottLaMott/.cfg
+      ```
+  - vim plugin manager ???
 
 - based-packed und full-packed container in der erprobungsphase
+
+
+die zweite Enterprise
+---
+- docker build mit image aus dockerhub (debian:bullseye)
+- docker build mit image aus dockerhub (debian:bullseye)
+
