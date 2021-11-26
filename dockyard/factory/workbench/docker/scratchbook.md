@@ -13,7 +13,7 @@ wie wird es gemacht (enterprise-bauplan)
 - ubuntu base image bauen (ubuntu/focal)
 
 die erste Enterprise
--
+---
 - Dockerfile.enterprise-becks-dc-001, die erste enterprise
   - ein Image aus der Workbench
   - docker build .
@@ -31,5 +31,12 @@ die erste Enterprise
 die zweite Enterprise
 ---
 - docker build mit image aus dockerhub (debian:bullseye)
-- docker build mit image aus dockerhub (debian:bullseye)
-
+```
+docker build -f enterprise-init.Dockerfile -t bullseye-init  .
+```
+- in neuem container anmelden und ssh-server starten
+- in neuem container benutzer erstellen und passwort vergeben
+- mit ansible benutzer anlegen (scotty, kirk, etc, ...)
+```
+ansible-playbook -e username=scotty -e fullname='Montgomery Scott' -e home=/home/scotty -i hosts  -l enterprise-container playbooks/add-user.yaml
+```
