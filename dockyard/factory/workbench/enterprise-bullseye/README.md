@@ -11,6 +11,7 @@ enterprise aus debian/bullseye-image
   - howto build
 
 - scotty mit ansible-playbook erzeugen
-- password für scotty vergeben, mit docker exec -i passwd change
-- ssh-copyid für scotty
+  - ssh-key nach scotty ~/.ssh kopieren
+  - password für scotty vergeben, mit docker exec -i passwd change
+  - ssh-copyid für scotty
 - mit ssh scotty@enterprise anmelden
