@@ -1,1 +1,1 @@
-enterprise-full-packed.Dockerfile
+enterprise-init.Dockerfile
