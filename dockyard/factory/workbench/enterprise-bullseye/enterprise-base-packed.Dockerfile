@@ -20,6 +20,7 @@ RUN apt upgrade -y net-tools
 RUN apt upgrade -y nmap
 RUN apt upgrade -y openssh-server
 RUN apt upgrade -y ripgrep
+RUN apt upgrade -y software-properties-common
 RUN apt upgrade -y sudo
 RUN apt upgrade -y silversearcher-ag
 RUN apt upgrade -y zsh
