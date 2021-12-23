@@ -7,14 +7,14 @@
   tasks:
 
     # multiple packages
-    - name: install player
+    - name: install packages
       become: True
       become_user: root
       apt:
         pkg:
-          - gcc
+          - mpg123
         update_cache: True
 
     # system default local
-    - name: copy locale
-      copy: src=../files/test-data/music/*   dest=/mnt owner=root group=root
+    - name: copy music
+      copy: src=../files/test-data/music/   dest=/mnt/music owner=root group=root
