@@ -27,7 +27,6 @@ die erste Enterprise
 
 - based-packed und full-packed container in der erprobungsphase
 
-
 die zweite Enterprise
 ---
 - docker build mit image aus dockerhub (debian:bullseye)
@@ -40,3 +39,6 @@ docker build -f enterprise-init.Dockerfile -t bullseye-init  .
 ```
 ansible-playbook -e username=scotty -e fullname='Montgomery Scott' -e home=/home/scotty -i hosts  -l enterprise-container playbooks/add-user.yaml
 ```
+- TODO
+  ssh-service beim booten starten
+    - run level ???
