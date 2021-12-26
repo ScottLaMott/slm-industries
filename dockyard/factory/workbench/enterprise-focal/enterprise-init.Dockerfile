@@ -4,8 +4,8 @@
 #   - very small base package
 #   - ssh von becks als root
 
-FROM debian:bullseye
-LABEL tag     = bullseye-init
+FROM ubuntu:focal
+LABEL tag     = focal-init
 LABEL version = 0.1
 
 RUN apt update
@@ -13,8 +13,6 @@ RUN apt upgrade -y
 
 ###
 RUN apt upgrade -y init-system-helpers
-RUN apt upgrade -y iputils-ping
-RUN apt upgrade -y locales-all
 RUN apt upgrade -y openssh-server
 RUN apt upgrade -y python
 RUN apt upgrade -y vim

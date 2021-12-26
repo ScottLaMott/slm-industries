@@ -6,7 +6,7 @@
 #
 ---
 
-- name: Add user
+- name: Add user "{{ username }}"
   hosts: all                       # siehe ./hosts, datei mit managbaren systemen
   become: True
   tasks:
@@ -28,20 +28,21 @@
         state: directory
 
     - name: copy id_rsa.pub
+      # copy: src=../files/id_rsa.pub   dest={{ home }}/.ssh/authorized_keys owner={{ username }} group={{ username }}
       copy: src=../files/id_rsa.pub   dest={{ home }}/.ssh/authorized_keys owner={{ username }} group={{ username }}
 
     ### profiles und config files
     - name: copy .bashrc
       copy: src=../files/.bashrc       dest={{ home }} owner={{ username }} group={{ username }}
 
+    - name: copy .inputrc
+      copy: src=../files/.inputrc      dest={{ home }} owner={{ username }} group={{ username }}
+
     - name: copy .vimrc
       copy: src=../files/.vimrc        dest={{ home }} owner={{ username }} group={{ username }}
 
-    - name: copy tmux.conf
-      copy: src=../files/.tmux.conf   dest={{ home }}/.tmux.conf    owner={{ username }} group={{ username }}
-
-    - name: copy .inputrc
-      copy: src=../files/.inputrc      dest={{ home }} owner={{ username }} group={{ username }}
+    - name: copy .zshrc
+      copy: src=../files/.zshrc        dest={{ home }} owner={{ username }} group={{ username }}
 
     ### neovim profile
     - name: copy init.vim

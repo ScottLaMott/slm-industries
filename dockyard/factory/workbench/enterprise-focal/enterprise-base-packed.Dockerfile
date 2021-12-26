@@ -1,8 +1,8 @@
 #
 # debian/bullseye mit base package
 #
-FROM bullseye-init:latest
-LABEL tag     = bullseye-base-packed
+FROM focal-init:latest
+LABEL tag     = focal-base-packed
 LABEL version = 0.1
 
 #RUN apt install -y bat
@@ -10,6 +10,7 @@ RUN apt upgrade -y binutils
 RUN apt upgrade -y build-essential
 RUN apt upgrade -y curl
 RUN apt upgrade -y fd-find
+RUN apt upgrade -y fuse
 RUN apt upgrade -y fzf
 RUN apt upgrade -y git
 RUN apt upgrade -y less
