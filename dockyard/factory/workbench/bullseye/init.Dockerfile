@@ -1,8 +1,7 @@
 ###########################################
 #
 #   debian/bullseye
-#   - very small base package
-#   - ssh von becks als root
+#   - initial base container 
 
 FROM debian:bullseye
 LABEL tag     = init

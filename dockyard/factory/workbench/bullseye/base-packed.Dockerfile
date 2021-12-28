@@ -1,6 +1,8 @@
+###########################################
 #
-# debian/bullseye mit base package
-#
+#   debian/bullseye
+#   - base package
+
 FROM init:latest
 LABEL tag     = base-packed
 LABEL version = 0.1

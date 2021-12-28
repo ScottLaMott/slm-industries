@@ -1,6 +1,9 @@
+###############################################
 #
-# debian/bullseye mit base package
+#   debian/bullseye
+#   - container for neovim-test 
 #
+
 FROM base-packed:latest
 LABEL tag     = lvim
 LABEL version = 0.1
