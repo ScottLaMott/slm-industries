@@ -40,5 +40,5 @@ compinit
 # prompt system
 autoload -Uz promptinit
 promptinit
-prompt fade
+prompt adam2
 
