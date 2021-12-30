@@ -1,6 +1,6 @@
 ###############################################
 #
-#   debian/bullseye
+#   debian/jammy
 #   - container for neovim-test 
 #
 

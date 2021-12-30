@@ -1,6 +1,6 @@
 ###########################################
 #
-#   debian/bullseye
+#   debian/jammy
 #   - initial base container 
 
 FROM ubuntu:jammy
