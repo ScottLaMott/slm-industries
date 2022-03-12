@@ -1,0 +1,27 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Configure lunar-vim
+  hosts: all
+  become: True
+  become_user: root
+  tasks:
+
+    - name: Download nvim.appimage
+      get_url:
+        url: https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+        dest: /usr/local/bin/nvim.appimage
+        mode: 0555
+
+    - name: Download nvim source
+      get_url:
+        url: https://github.com/neovim/neovim/archive/refs/tags/v0.6.0.tar.gz
+        dest: /home/scotty
+
+    - name: Add alias to /etc/zsh/zshrc
+      tags: example2              # ???
+      lineinfile:
+        path: /etc/zsh/zshrc
+        line: "\n#\nalias nvim='nvim.appimage --appimage-extract-and-run'"
+        state: present
+        backup: yes
+      register: example2out       # ???
