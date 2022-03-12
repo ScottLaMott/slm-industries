@@ -1,1 +1,0 @@
-- hostname durch docker vergeben
