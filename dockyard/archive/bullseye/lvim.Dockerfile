@@ -1,11 +1,16 @@
+###############################################
 #
-# debian/bullseye mit base package
+#   debian/bullseye
+#   - container for neovim-test 
 #
+
 FROM base-packed:latest
 LABEL tag     = lvim
 LABEL version = 0.1
 
-#RUN apt install -y bat
+# remove repository-nvim (0.4.4), to old
+RUN apt purge -y neovim
+
 RUN apt install -y cargo
 RUN apt install -y cmake
 RUN apt install -y gettext

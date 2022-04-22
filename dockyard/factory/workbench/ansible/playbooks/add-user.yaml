@@ -34,14 +34,14 @@
     - name: copy .bashrc
       copy: src=../files/.bashrc       dest={{ home }} owner={{ username }} group={{ username }}
 
-    - name: copy .inputrc
-      copy: src=../files/.inputrc      dest={{ home }} owner={{ username }} group={{ username }}
-
     - name: copy .vimrc
       copy: src=../files/.vimrc        dest={{ home }} owner={{ username }} group={{ username }}
 
-    - name: copy .zshrc
-      copy: src=../files/.zshrc        dest={{ home }} owner={{ username }} group={{ username }}
+    - name: copy tmux.conf
+      copy: src=../files/.tmux.conf   dest={{ home }}/.tmux.conf    owner={{ username }} group={{ username }}
+
+    - name: copy .inputrc
+      copy: src=../files/.inputrc      dest={{ home }} owner={{ username }} group={{ username }}
 
     ### neovim profile
     - name: copy init.vim

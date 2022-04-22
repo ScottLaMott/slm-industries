@@ -16,3 +16,7 @@ vor 14.09.21
 
 - 25.09.21
   In der Galaxy gibt es ein neues Werkzeug, LunarVim. Die Crew hat es organisiert.
+
+- 29.12.21
+  test von docker-container
+- 
