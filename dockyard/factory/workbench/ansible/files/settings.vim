@@ -11,7 +11,7 @@ filetype plugin indent on
 "--- general
 set guicursor=
 set background=dark
-set termguicolors
+"set termguicolors
 set nobackup
 set nowritebackup
 set noswapfile			" (~)
