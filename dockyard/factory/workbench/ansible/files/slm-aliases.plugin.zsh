@@ -22,9 +22,6 @@ alias hg='history | grep '
 # ansible not found
 #alias ansp='ansible -m ping'
 
-# finder (silversearcher-ag)
-alias fd='fdfind'
-
 # fuzzy finder
 alias f='fzf'
 alias v='vim $(fzf)'
