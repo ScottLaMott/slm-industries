@@ -6,6 +6,7 @@ alias pgo='ping -c1 -W5 www.google.com'
 alias p='ping -c 3 -w5'
 
 # ls
+alias ls='lsd'
 alias la='ls -la'
 alias ll='ls -l'
 alias lR='ls -lR'
