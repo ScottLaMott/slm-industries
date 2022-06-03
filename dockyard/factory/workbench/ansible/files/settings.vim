@@ -20,6 +20,6 @@ set splitbelow			" neues window nach rechts
 set number relativenumber
 set nocursorline
 set nocursorcolumn
-set scrolloff=999
+set scrolloff=14
 set path+=**			" für z. B. find-ex-command
 set clipboard+=unnamedplus      " use system clipboard
