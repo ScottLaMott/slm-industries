@@ -19,4 +19,6 @@ vor 14.09.21
 
 - 29.12.21
   test von docker-container
-- 
+
+- 23.09.22 eine neue Zeitrechnung, NIXOS ist in der Werft.....
+
