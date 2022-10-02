@@ -12,3 +12,7 @@
 
 - enterprise bauen
 
+## Fragen
+- Hostsystem (hier tiger)
+  - warum funktioniert virsh nicht? (virsh list --all -> keine Anzeige, slm-nios-vm läuft aber)
+    - falsche domain? (system - user)
