@@ -18,11 +18,8 @@ Thank you for visiting https://asciiart.website/
 tree: Missing argument to -L option.
 This ASCII pic can be found at https://asciiart.website/index.php?art=television/star%20trek
 
-## Die Enterprise-Werft
+## Die Enterprise-Werft (statischer Verzeichnisbaum)
 ```
-#
-# statisch Abbild
-#
 dockyard/
 ├── archive
 │   ├── bullseye
@@ -30,11 +27,12 @@ dockyard/
 │   ├── enterprise-bullseye
 │   ├── enterprise-focal
 │   └── vagrant
-├── construction
-│   └── vagrant
 ├── factory
 │   └── workbench
-└── production
+├── production
+└── construction
+    ├── vagrant
+    └── nixos
 
-11 directories
+12 directories
 ```
