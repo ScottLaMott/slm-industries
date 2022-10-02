@@ -1,6 +1,7 @@
-virt-install  --name        enterprise-v0.1 \
+virt-install \
+  --name        enterprise-nixos-1 \
   --os-type     Linux \
-  --os-variant  archlinux \
+  --os-variant  nixos \
   --memory      8192 \
   --vcpu        4 \
   --graphics    spice \
