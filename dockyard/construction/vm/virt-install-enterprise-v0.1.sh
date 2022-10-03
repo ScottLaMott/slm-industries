@@ -1,3 +1,8 @@
+#!/bin/sh
+#
+# vm generation
+#
+
 virt-install \
   --name        enterprise-nixos-1 \
   --os-type     Linux \

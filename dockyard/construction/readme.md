@@ -1,5 +1,5 @@
 # Konstruktion
 ---
-- in verzeichnis vagrant erste Versuche mit vagrant
-- in nixos wird die enterprise auf nix-basis gebaut
+- im Verzeichnis _nixos_ wird die enterprise auf nix-basis gebaut
+- in verzeichnis _vagrant_ erste Versuche mit vagrant
 
