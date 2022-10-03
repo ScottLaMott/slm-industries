@@ -20,7 +20,11 @@ This ASCII pic can be found at https://asciiart.website/index.php?art=television
 
 ## Die Enterprise-Werft (statischer Verzeichnisbaum)
 ```
-dockyard/
+# you get it in vim
+#:r !tree -td -L 2
+
+10 directories
+dockyard
 ├── archive
 │   ├── bullseye
 │   ├── docker
@@ -32,7 +36,8 @@ dockyard/
 ├── production
 └── construction
     ├── vagrant
-    └── nixos
+    ├── nixos
+    └── vm
 
-12 directories
+13 directories
 ```
