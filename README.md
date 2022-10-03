@@ -20,8 +20,8 @@ This ASCII pic can be found at https://asciiart.website/index.php?art=television
 
 ## Die Enterprise-Werft (statischer Verzeichnisbaum)
 ```
-# you get it in vim
-#:r !tree -td -L 2
+# you get it in vim with
+#:r !tree -td -L 2 dockyard
 
 10 directories
 dockyard
