@@ -15,29 +15,10 @@
 
 ```
 Thank you for visiting https://asciiart.website/
-tree: Missing argument to -L option.
 This ASCII pic can be found at https://asciiart.website/index.php?art=television/star%20trek
 
-## Die Enterprise-Werft (statischer Verzeichnisbaum)
+## Die Enterprise-Werft
+...
 ```
-# you get it in vim with
-#:r !tree -td -L 2 dockyard
-
-10 directories
-dockyard
-├── archive
-│   ├── bullseye
-│   ├── docker
-│   ├── enterprise-bullseye
-│   ├── enterprise-focal
-│   └── vagrant
-├── factory
-│   └── workbench
-├── production
-└── construction
-    ├── vagrant
-    ├── nixos
-    └── vm
-
-13 directories
+...
 ```
