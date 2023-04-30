@@ -1,7 +1,7 @@
 #!/run/current-system/sw/bin/bash
-cd ~/ws/enterprise
+cd ~/ws/slm-industries
 
-session="enterprise-incorp"
+session="slm-industries"
 
 tmux new-session      -d -s $session   # new session, new window named/indexed 2
 
