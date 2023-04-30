@@ -26,3 +26,7 @@ vor 14.09.21
 
 - 09.12.22, slm ist mal wieder an Bord, es ist nicht viel passiert. Vielleicht über die Tage.
 
+- 29.04.23, slm ist mal wieder an Bord, heute wurde gearbeitet
+  - git verbessert, pullen/pushen mit neuer url, protokoll ssh
+  - groben Bauplan gemacht in enterprise verzeichnis. (Spacecraft, Spacenet, Dockyard)
+
