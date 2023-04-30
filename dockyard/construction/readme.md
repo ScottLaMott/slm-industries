@@ -36,3 +36,5 @@ total 4
 
 - in verzeichnis _vagrant_ erste Versuche mit vagrant (too heavy!)
 
+- nixos-vms und virt-manager-vms pid vergleichen. 'pgrep -fla qemu'
+
