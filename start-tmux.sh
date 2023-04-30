@@ -7,8 +7,7 @@ tmux new-session      -d -s $session   # new session, new window named/indexed 2
 
 window=1
 tmux rename-window    -t $session:$window 'edit'   # rename window 1
-tmux send-keys        -t $session:$window 'vim .' C-m
-
+tmux send-keys        -t $session:$window 'cat pictures/ascii-art/enterprise-short.ascii' C-m
 window=2
 tmux new-window       -t $session:$window -n 'build'
 tmux send-keys        -t $session:$window 'nf' C-m
