@@ -31,3 +31,9 @@ vor 14.09.21
   - groben Bauplan gemacht in enterprise verzeichnis. (Spacecraft, Spacenet, Dockyard)
 
 - 30.04.23, repository in slm-industries umbenannt. Scott LaMott wird zum CEO ernannt
+            neue Firmenstruktur
+                Verzeichnis / tree hier ......
+
+- 01.05.23, Captian Kirk war zum erstenmal auf der _enterprise-0-1_. Er war mehr als zufrieden, aber es gibt auch noch viel zu erledigen.
+            Packen wirs an ...!
+
