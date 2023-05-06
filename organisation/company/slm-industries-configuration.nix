@@ -97,7 +97,7 @@ imports =
     home.stateVersion = "22.11";
     home.packages = with pkgs;
     [
-      gdu powerline-fonts
+      cmatrix gdu powerline-fonts
       # xdg-user-dirs
     ];
     xdg = { enable = true; };
