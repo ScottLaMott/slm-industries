@@ -57,9 +57,6 @@ imports =
   #  "caps:escape"; # map caps to escape.
   #};
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   #--- list installed packages system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -68,7 +65,8 @@ imports =
     bat brave btop
     curl
     dmenu
-    fd file font-awesome_4 fzf
+    fd file fzf
+    #fd file font-awesome_4 fzf
     git
     htop
     ipcalc
@@ -192,8 +190,8 @@ imports =
       set-option -g default-terminal "screen-256color"
     '';
     plugins = [
-      # pkgs.tmuxPlugins.nord
-      pkgs.tmuxPlugins.gruvbox
+      pkgs.tmuxPlugins.nord
+      #pkgs.tmuxPlugins.gruvbox
       pkgs.tmuxPlugins.resurrect
       pkgs.tmuxPlugins.continuum
     ];
