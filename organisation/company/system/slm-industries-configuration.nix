@@ -66,7 +66,6 @@ imports =
     curl
     dmenu
     fd file fzf
-    #fd file font-awesome_4 fzf
     git
     htop
     ipcalc
