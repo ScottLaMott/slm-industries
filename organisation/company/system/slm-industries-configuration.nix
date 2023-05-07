@@ -117,7 +117,7 @@ imports =
       zplug = {
         enable = true;
         zplugHome = ./zsh/zplug;
-        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;
+        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;    FIXME
         plugins = [
           { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
           # { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; ?? on:"zsh-users/zsh-completions" ?? }
@@ -125,7 +125,7 @@ imports =
       };
       initExtra = ''
         #------------------------------------------------------------------------
-        # declared in home.nix with programs.zsh.initExtra / slm
+        # declared by home-manager-modul / slm
         #
 
         # own new slm-zshrc
@@ -162,7 +162,7 @@ imports =
       };
       extraConfig  = ''
         """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-        " declared in home.nix / by slm
+        # declared by home-manager-modul / slm
         "
         " source slm settings
         source $XDG_CONFIG_HOME/vim/settings.vim
@@ -209,7 +209,7 @@ imports =
 
   #--- fonts
   fonts.fonts = with pkgs; [
-    font-awesome_4
+    font-awesome
   ];
 }
 
