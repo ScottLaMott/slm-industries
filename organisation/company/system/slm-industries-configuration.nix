@@ -116,8 +116,17 @@ imports =
       };
       zplug = {
         enable = true;
-        zplugHome = ./zsh/zplug;
-        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;    FIXME
+        #zplugHome = ./zsh/zplug;
+        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;  #  FIXME
+        #zplugHome = $XDG_CONFIG_HOME/zsh/zplug;    #  FIXME
+        #zplugHome = "${XDG_CONFIG_HOME}/zsh/zplug";  #  FIXME
+        #zplugHome = "$XDG_CONFIG_HOME/zsh/zplug";  #  FIXME
+        #zplugHome = "${config.xdg.dataHome}/zsh/zplug";
+        #zplugHome = ${config.xdg.dataHome}/zsh/zplug;
+        #zplugHome = "$XDG_DATA_HOME/zsh/zplug";  #  FIXME
+        # zplugHome = $XDG_DATA_HOME/zsh;
+        #zplugHome = $XDG_CONFIG_HOME/zsh;
+        #zplugHome = ./zplug-xxx;
         plugins = [
           { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
           # { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; ?? on:"zsh-users/zsh-completions" ?? }
@@ -162,7 +171,7 @@ imports =
       };
       extraConfig  = ''
         """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-        # declared by home-manager-modul / slm
+        " declared by home-manager-modul / slm
         "
         " source slm settings
         source $XDG_CONFIG_HOME/vim/settings.vim
