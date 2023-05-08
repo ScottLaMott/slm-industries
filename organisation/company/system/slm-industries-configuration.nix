@@ -26,15 +26,14 @@ imports =
 
   #--- networking
   networking = {
-    hostName = "slmi-vm"; # Define your hostname.
-    # enable networking
+    hostName = "slmi-vm";
     networkmanager.enable = true;
   };
 
-  # Set your time zone.
+  #--- set time zone
   time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
+  #--- select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
@@ -49,7 +48,7 @@ imports =
     resolutions = [ { x = 1600; y = 900; } ];
     windowManager.awesome.enable = true;  #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
-    xkbOptions = "caps:escape";
+    xkbOptions = "caps:escape";           #--- map caps to escape
   };
 
   #--- list installed packages system profile. To search, run: $ nix search wget
@@ -113,7 +112,7 @@ imports =
         #zplugHome = ./zsh/zplug;
         #zplugHome = ./zplug-xxx;
 
-        # FIXME FIXME ---------------------------------------
+        # FIXME FIXME FIXME ---------------------------------------
         # alle ungültig weil SHELL-Environment
         #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;
         #zplugHome = $XDG_CONFIG_HOME/zsh/zplug;
@@ -127,7 +126,7 @@ imports =
         #zplugHome = "${config.xdg.configHome}/zsh/zplug";
         #zplugHome = $config.xdg.dataHome/zsh/zplug;
         #zplugHome = ${config.xdg.dataHome}/zsh/zplug;
-        # FIXME FIXME ---------------------------------------
+        # FIXME FIXME FIXME ---------------------------------------
 
         plugins = [
           { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
