@@ -49,16 +49,10 @@ imports =
     resolutions = [ { x = 1600; y = 900; } ];
     windowManager.awesome.enable = true;  #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
+    xkbOptions = "caps:escape";
   };
 
-  # Configure keymap in X11 FIXME
-  #services.xserver.xkbOptions = {
-    # "eurosign:e";
-  #  "caps:escape"; # map caps to escape.
-  #};
-
-  #--- list installed packages system profile. To search, run:
-  # $ nix search wget
+  #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
     alacritty
@@ -117,16 +111,24 @@ imports =
       zplug = {
         enable = true;
         #zplugHome = ./zsh/zplug;
-        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;  #  FIXME
-        #zplugHome = $XDG_CONFIG_HOME/zsh/zplug;    #  FIXME
-        #zplugHome = "${XDG_CONFIG_HOME}/zsh/zplug";  #  FIXME
-        #zplugHome = "$XDG_CONFIG_HOME/zsh/zplug";  #  FIXME
-        #zplugHome = "${config.xdg.dataHome}/zsh/zplug";
-        #zplugHome = ${config.xdg.dataHome}/zsh/zplug;
-        #zplugHome = "$XDG_DATA_HOME/zsh/zplug";  #  FIXME
-        # zplugHome = $XDG_DATA_HOME/zsh;
-        #zplugHome = $XDG_CONFIG_HOME/zsh;
         #zplugHome = ./zplug-xxx;
+
+        # FIXME FIXME ---------------------------------------
+        # alle ungültig weil SHELL-Environment
+        #zplugHome = ${XDG_CONFIG_HOME}/zsh/zplug;
+        #zplugHome = $XDG_CONFIG_HOME/zsh/zplug;
+        #zplugHome = "${XDG_CONFIG_HOME}/zsh/zplug";
+        #zplugHome = "$XDG_DATA_HOME/zsh/zplug";
+        #zplugHome = $XDG_DATA_HOME/zsh;
+        #zplugHome = $XDG_CONFIG_HOME/zsh;
+        #zplugHome = "$XDG_CONFIG_HOME/zsh/zplug";
+
+        #zplugHome = "${config.xdg.dataHome}/zsh/zplug";
+        #zplugHome = "${config.xdg.configHome}/zsh/zplug";
+        #zplugHome = $config.xdg.dataHome/zsh/zplug;
+        #zplugHome = ${config.xdg.dataHome}/zsh/zplug;
+        # FIXME FIXME ---------------------------------------
+
         plugins = [
           { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
           # { name = "zsh-users/zsh-autosuggestions"; tags = [ defer:2 ]; ?? on:"zsh-users/zsh-completions" ?? }
@@ -143,10 +145,6 @@ imports =
         [ -f  $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages ]  && source $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages
 
         export LESS='-j5 -R'
-
-        # remap caps to escape
-        setxkbmap -option caps:escape
-
         #------------------------------------------------------------------------
       '';
     }; #--- zsh configuration end
@@ -196,7 +194,7 @@ imports =
         "--info=inline"
         "--prompt='fzf-> '"
         "--scroll-off=5"
-  #      "--preview=bat"
+        # "--preview=bat"
         ];
       changeDirWidgetCommand = "fd --type d --hidden";
     }; #--- fzf configuration
@@ -225,7 +223,7 @@ imports =
       TMUX_FZF_LAUNCH_KEY="C-f"
     '';
     plugins = [
-      pkgs.tmuxPlugins.onedark-theme
+      pkgs.tmuxPlugins.gruvbox
       pkgs.tmuxPlugins.resurrect
       pkgs.tmuxPlugins.continuum
       pkgs.tmuxPlugins.tmux-fzf
