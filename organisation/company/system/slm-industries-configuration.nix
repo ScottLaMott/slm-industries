@@ -221,12 +221,16 @@ imports =
     extraConfig = ''
       set-option -g status-left-length 20
       set-option -g default-terminal "screen-256color"
+      # tmux-fzf plugin
+      TMUX_FZF_LAUNCH_KEY="C-f"
     '';
     plugins = [
-      pkgs.tmuxPlugins.nord
+      pkgs.tmuxPlugins.onedark-theme
+      #pkgs.tmuxPlugins.nord
       #pkgs.tmuxPlugins.gruvbox
       pkgs.tmuxPlugins.resurrect
       pkgs.tmuxPlugins.continuum
+      pkgs.tmuxPlugins.tmux-fzf
     ];
   };
 
