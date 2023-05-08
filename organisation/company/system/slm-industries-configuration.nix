@@ -226,8 +226,6 @@ imports =
     '';
     plugins = [
       pkgs.tmuxPlugins.onedark-theme
-      #pkgs.tmuxPlugins.nord
-      #pkgs.tmuxPlugins.gruvbox
       pkgs.tmuxPlugins.resurrect
       pkgs.tmuxPlugins.continuum
       pkgs.tmuxPlugins.tmux-fzf
