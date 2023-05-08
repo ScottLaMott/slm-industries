@@ -8,13 +8,14 @@
 { config, pkgs, ... }: {
 
 imports =
-  [ # Include the results of the hardware scan.
+  [ #--- Include the results of the hardware scan.
       ./hardware-configuration.nix
       <home-manager/nixos>
+      # FIXME /home/slm/ws/slm-industries/organisation/company/system/slmi-tmux.nix
   ];
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data were taken
+  #--- This value determines the NixOS release from which the
+  #--- default settings for stateful data were taken
   system.stateVersion = "22.11";
 
   #--- bootloader
