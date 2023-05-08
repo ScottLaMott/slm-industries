@@ -160,7 +160,7 @@ imports =
         ];
       };
       initExtra = ''
-        #------------------------------------------------------------------------
+        #----------------------------------------------------------
         # declared by home-manager-modul / slm
         #
 
@@ -169,7 +169,7 @@ imports =
         [ -f  $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages ]  && source $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages
 
         export LESS='-j5 -R'
-        #------------------------------------------------------------------------
+        #----------------------------------------------------------
       '';
     }; #--- zsh configuration end
 
