@@ -218,8 +218,7 @@ imports =
     extraConfig = ''
       set-option -g status-left-length 20
       set-option -g default-terminal "screen-256color"
-      # tmux-fzf plugin
-      TMUX_FZF_LAUNCH_KEY="C-f"
+      TMUX_FZF_LAUNCH_KEY="C-f"        # tmux-fzf plugin c-a c-f
     '';
     plugins = [
       pkgs.tmuxPlugins.gruvbox
