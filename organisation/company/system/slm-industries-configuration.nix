@@ -167,7 +167,7 @@ imports =
         tabstop = 2;
       };
       extraConfig  = ''
-        """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        """""""""""""""""""""""""""""""""""""""""""""""""""""
         " declared by home-manager-modul / slm
         "
         " source slm settings
@@ -175,7 +175,7 @@ imports =
         " source slm mappings
         source $XDG_CONFIG_HOME/vim/maps.vim
         "
-        """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        """""""""""""""""""""""""""""""""""""""""""""""""""""
      '';
     }; #--- vim configuration end
 
@@ -205,9 +205,6 @@ imports =
 
   }; #--- user home-manager configuration end
 
-  #--- shell environment
-  programs.vim.defaultEditor = true;
-
   #--- tmux configuration
   programs.tmux = {
     enable = true;
@@ -227,6 +224,9 @@ imports =
       pkgs.tmuxPlugins.tmux-fzf
     ];
   };
+
+  #--- shell environment
+  programs.vim.defaultEditor = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
