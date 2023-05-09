@@ -31,6 +31,14 @@ imports =
     networkmanager.enable = true;
   };
 
+  #--- filesysem
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/nixos";
+      fsType = "ext4";
+    };
+  };
+
   #--- set time zone
   time.timeZone = "Europe/Berlin";
 
@@ -225,10 +233,11 @@ imports =
 
     #--- git configuration
     programs.git = {
+      enable = true;
       userName = "Scott LaMott";
       userEmail = "slm@slmi-industries";
       aliases = {
-        gs = "git status";
+        s = "status";
       };
     };
 
