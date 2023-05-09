@@ -223,16 +223,19 @@ imports =
       changeDirWidgetCommand = "fd --type d --hidden";
     }; #--- fzf configuration
 
+    #--- git configuration
+    programs.git = {
+      userName = "Scott LaMott";
+      userEmail = "slm@slmi-industries";
+      aliases = {
+        gs = "git status";
+      };
+    };
+
     #--- xdg configuration
     xdg = {
       enable = true;
     }; #--- xdg configuration
-
-    #--- git configuration
-    programs.git = {
-     userName = "Scott LaMott";
-     userEmail = "slm@slmi-industries";
-    };
 
     #--- tmux configuration
     programs.tmux = {
