@@ -170,7 +170,7 @@ imports =
       };
       initExtra = ''
         #----------------------------------------------------------
-        # declared by home-manager-modul / slm
+        # declared by configuration.nix / slm
         #
 
         # own new slm-zshrc
@@ -202,11 +202,9 @@ imports =
       };
       extraConfig  = ''
         """""""""""""""""""""""""""""""""""""""""""""""""""""
-        " declared by home-manager-modul / slm
+        " declared by configuration.nix / slm
         "
-        " source slm settings
         source $XDG_CONFIG_HOME/vim/settings.vim
-        " source slm mappings
         source $XDG_CONFIG_HOME/vim/maps.vim
         "
         """""""""""""""""""""""""""""""""""""""""""""""""""""
