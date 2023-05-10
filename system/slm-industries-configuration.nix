@@ -83,6 +83,7 @@ imports =
     xclip
     zathura
     wget
+    speedtest-cli
   ];
 
   #--- user accounts
