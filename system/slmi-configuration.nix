@@ -14,15 +14,17 @@ imports =
       # FIXME /home/slm/ws/slm-industries/organisation/company/system/slmi-tmux.nix
   ];
 
-  #--- This value determines the NixOS release from which the
-  #--- default settings for stateful data were taken
-  system.stateVersion = "22.11";
-
   #--- bootloader
   boot.loader.grub = {
     enable = true;
     version = 2;
     device = "/dev/sda";
+  };
+
+  system = {
+    #--- This value determines the NixOS release from which the default settings for stateful data were taken
+    stateVersion = "22.11";
+    copySystemConfiguration = true;
   };
 
   #--- networking
@@ -272,11 +274,6 @@ imports =
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  system.copySystemConfiguration = true;
 
   # add zsh to /etc/shells
   environment.shells = with pkgs; [ zsh ];
