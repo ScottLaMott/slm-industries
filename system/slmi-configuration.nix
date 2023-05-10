@@ -78,7 +78,7 @@ imports =
     ranger ripgrep rofi
     screen silver-searcher speedtest-cli
     stow sxiv tshark
-    tcpdump tig toi toilet tree tldr
+    tcpdump tig tio toilet tree tldr
     wget
     xclip
     zathura
