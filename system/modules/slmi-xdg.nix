@@ -1,7 +1,7 @@
 #--- xdg configuration
 { config, lib, pkgs, modulesPath, ... }: {
 
-  programs.xdg = {
+  xdg = {
     enable = true;
   };
 
