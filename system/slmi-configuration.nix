@@ -125,6 +125,8 @@ imports =
         #--- network
         pgo="ping -c1 -W5 www.google.com";
         p="ping -c 3 -w5";
+        #--- git
+        gs="git status";
         #--- ls / df
         ls="lsd";
         la="ls -la";
