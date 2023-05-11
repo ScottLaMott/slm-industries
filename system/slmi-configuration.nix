@@ -200,7 +200,6 @@ imports =
       '';
     }; #--- zsh configuration end
 
-
     #--- fzf configuration
     programs.fzf = {
       enable = true;
