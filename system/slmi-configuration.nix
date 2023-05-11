@@ -52,6 +52,14 @@ imports =
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
+  #--- fonts
+  fonts.fonts = with pkgs; [
+    font-awesome
+  ];
+
+  #--- enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
   #--- enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -61,6 +69,9 @@ imports =
     displayManager.lightdm.enable = true; #--- enable login manager
     xkbOptions = "caps:escape";           #--- map caps to escape
   };
+
+  #--- add zsh to /etc/shells
+  environment.shells = with pkgs; [ zsh ];
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -87,6 +98,9 @@ imports =
     wget
     speedtest-cli
   ];
+
+  #--- shell environment
+  programs.vim.defaultEditor = true;
 
   #--- user accounts
   users.users.slm = {
@@ -271,18 +285,5 @@ imports =
 
   }; #--- user home-manager configuration end
 
-  #--- shell environment
-  programs.vim.defaultEditor = true;
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # add zsh to /etc/shells
-  environment.shells = with pkgs; [ zsh ];
-
-  #--- fonts
-  fonts.fonts = with pkgs; [
-    font-awesome
-  ];
 }
 
