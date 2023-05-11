@@ -116,7 +116,13 @@ imports =
     home.packages = with pkgs;
     [
       cmatrix gdu powerline-fonts
-      # xdg-user-dirs
+    ];
+
+    imports = [
+      ./modules/slmi-git.nix
+      ./modules/slmi-fzf.nix
+      ./modules/slmi-tmux.nix
+      ./modules/slmi-vim.nix
     ];
 
     #--- zsh configuration
@@ -199,31 +205,6 @@ imports =
         #----------------------------------------------------------
       '';
     }; #--- zsh configuration end
-
-    #--- fzf configuration
-    programs.fzf = {
-      enable = true;
-      enableZshIntegration = true;
-      defaultCommand = "fd --type f --hidden";
-      defaultOptions = [
-        "--header-first"
-        "--layout=reverse"
-        "--height=80%"
-        "--cycle"
-        "--border=rounded"
-        "--info=inline"
-        "--prompt='fzf-> '"
-        "--scroll-off=5"
-        # "--preview=bat"
-        ];
-      changeDirWidgetCommand = "fd --type d --hidden";
-    }; #--- fzf configuration
-
-    imports = [
-      ./modules/slmi-git.nix
-      ./modules/slmi-tmux.nix
-      ./modules/slmi-vim.nix
-    ];
 
     #--- xdg configuration
     xdg = {
