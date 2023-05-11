@@ -123,6 +123,7 @@ imports =
       ./modules/slmi-fzf.nix
       ./modules/slmi-tmux.nix
       ./modules/slmi-vim.nix
+      ./modules/slmi-xdg.nix
     ];
 
     #--- zsh configuration
@@ -205,11 +206,6 @@ imports =
         #----------------------------------------------------------
       '';
     }; #--- zsh configuration end
-
-    #--- xdg configuration
-    xdg = {
-      enable = true;
-    }; #--- xdg configuration
 
   }; #--- user home-manager configuration end
 
