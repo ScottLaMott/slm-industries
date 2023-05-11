@@ -10,8 +10,8 @@
 imports =
   [ #--- Include the results of the hardware scan.
       ./hardware-configuration.nix
+      #./modules/slmi-tmux.nix
       <home-manager/nixos>
-      # FIXME /home/slm/ws/slm-industries/organisation/company/system/slmi-tmux.nix
   ];
 
   #--- bootloader
@@ -200,34 +200,6 @@ imports =
       '';
     }; #--- zsh configuration end
 
-    #--- vim configuration
-    programs.vim = {
-      enable = true;
-      plugins = with pkgs.vimPlugins; [
-        # -- colorscheme
-        awesome-vim-colorschemes vim-airline vim-airline-themes
-        # -- the best of the rest
-        fzf-vim goyo markdown-preview-nvim limelight-vim vim-nix
-        vim-startify vim-snippets vim-vinegar vim-fugitive ultisnips
-      ];
-      #--- settings
-      settings = {
-        number = true;
-        relativenumber  = false;
-        expandtab = true;
-        shiftwidth = 2;
-        tabstop = 2;
-      };
-      extraConfig  = ''
-        """""""""""""""""""""""""""""""""""""""""""""""""""""
-        " declared by configuration.nix / slm
-        "
-        source $XDG_CONFIG_HOME/vim/settings.vim
-        source $XDG_CONFIG_HOME/vim/maps.vim
-        "
-        """""""""""""""""""""""""""""""""""""""""""""""""""""
-     '';
-    }; #--- vim configuration end
 
     #--- fzf configuration
     programs.fzf = {
@@ -248,40 +220,16 @@ imports =
       changeDirWidgetCommand = "fd --type d --hidden";
     }; #--- fzf configuration
 
-    #--- git configuration
-    programs.git = {
-      enable = true;
-      userName = "Scott LaMott";
-      userEmail = "slm@slmi-industries";
-      aliases = {
-        s = "status";
-      };
-    };
+    imports = [
+      ./modules/slmi-git.nix
+      ./modules/slmi-tmux.nix
+      ./modules/slmi-vim.nix
+    ];
 
     #--- xdg configuration
     xdg = {
       enable = true;
     }; #--- xdg configuration
-
-    #--- tmux configuration
-    programs.tmux = {
-      enable = true;
-      baseIndex = 1;
-      escapeTime = 1;
-      shortcut = "a";
-      newSession = true;
-      extraConfig = ''
-        set-option -g status-left-length 20
-        set-option -g default-terminal "screen-256color"
-        TMUX_FZF_LAUNCH_KEY="C-f"        # tmux-fzf plugin c-a c-f
-      '';
-      plugins = [
-        pkgs.tmuxPlugins.gruvbox
-        pkgs.tmuxPlugins.resurrect
-        pkgs.tmuxPlugins.continuum
-        pkgs.tmuxPlugins.tmux-fzf
-      ];
-    };
 
   }; #--- user home-manager configuration end
 

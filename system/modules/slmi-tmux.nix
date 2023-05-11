@@ -19,4 +19,4 @@
       pkgs.tmuxPlugins.tmux-fzf
     ];
   };
-};
+}
