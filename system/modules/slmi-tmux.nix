@@ -1,6 +1,6 @@
 #--- tmux configuration
-{ config, lib, pkgs, modulesPath, ... }:
-{
+{ config, lib, pkgs, modulesPath, ... }: {
+
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -19,4 +19,5 @@
       pkgs.tmuxPlugins.tmux-fzf
     ];
   };
+
 }
