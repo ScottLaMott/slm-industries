@@ -1,4 +1,4 @@
-#--- fzf configuration
+#--- fzf configuration / home-manager
 { config, lib, pkgs, modulesPath, ... }: {
 
   programs.fzf = {
