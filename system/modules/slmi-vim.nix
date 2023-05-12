@@ -1,4 +1,4 @@
-#--- vim configuration
+#--- vim configuration / home-manager
 { config, lib, pkgs, modulesPath, ... }:
 {
   #--- vim configuration

@@ -1,4 +1,4 @@
-#--- zsh configuration
+#--- zsh configuration / home-manager
 { config, lib, pkgs, modulesPath, ... }: {
 
   programs.zsh = {
