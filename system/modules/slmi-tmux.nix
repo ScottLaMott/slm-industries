@@ -10,6 +10,7 @@
     extraConfig = ''
       set-option -g status-left-length 20
       set-option -g default-terminal "screen-256color"
+      set-option -g mouse on
       TMUX_FZF_LAUNCH_KEY="C-f"        # tmux-fzf plugin c-a c-f
     '';
     plugins = [
