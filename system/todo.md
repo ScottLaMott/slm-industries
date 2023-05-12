@@ -1,6 +1,11 @@
 ### TODO
 
-- git fehler, immer wieder rebase !!! FIXME
+- Installation auf Bare Metal
+  - Installations USB-Stich
+  - Laptop (t460s) partitionieren
+  - Installation starten
+- NAS in Betrieb nehmen
+- git Fehler, immer wieder rebase !!! FIXME
 
 - symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
 - nix-build testen, symlink fehler
