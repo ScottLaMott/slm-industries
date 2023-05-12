@@ -1,0 +1,1 @@
+slmi-hardware-configuration.nix
