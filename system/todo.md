@@ -9,10 +9,11 @@
   - Installations USB-Stich
   - Laptop (t460s) partitionieren
   - Installation starten
+- _*LICHTORGEL*_
 
 ## DONE
 - zsh color-theme-chooser installiert, github-read.me
-- Paketmodule gebaut
+- eigene Paketmodule gebaut
   - Module werden in _*configuration.nix*_ importiert, 'imports`-Aufruf in HomeManager und in Systemconfiguration.
   ```
   > ls -lR modules
