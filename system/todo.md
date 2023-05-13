@@ -5,7 +5,7 @@
   - Laptop (t460s) partitionieren
   - Installation starten
 - NAS in Betrieb nehmen
-- vim und zsh extra configs einchecken
+- vim und zsh (conf ohne home-manager) extra configs einchecken
 - rofi installieren
 
 - git Fehler, immer wieder rebase !!! FIXME
