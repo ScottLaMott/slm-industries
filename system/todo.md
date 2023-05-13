@@ -5,10 +5,9 @@
   - Laptop (t460s) partitionieren
   - Installation starten
 - NAS in Betrieb nehmen
-- vim und zsh (conf ohne home-manager) extra configs einchecken
+- vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
 - rofi installieren
 
-- git Fehler, immer wieder rebase !!! FIXME
 
 - symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
 - nix-build testen, symlink fehler
@@ -27,3 +26,7 @@
   -rw-r--r-- 1 slm users  119 May 12 20:07 slmi-xdg.nix
   -rw-r--r-- 1 slm users 2540 May 12 20:07 slmi-zsh.nix
   ```
+- git Fehler, immer wieder rebase !!! FIXME
+  - Lösung
+    - beim editieren aufpassen, gleichzeitiges aendern in verschiedenen vim-sessions
+
