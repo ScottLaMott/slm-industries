@@ -3,9 +3,8 @@
 #--- vim configuration / home-manager
 #---
 
-{ config, lib, pkgs, modulesPath, ... }:
-{
-  #--- vim configuration
+{ config, lib, pkgs, modulesPath, ... }: {
+
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
