@@ -1,19 +1,17 @@
-### TODO
+## TODO
 
+- nix-build testen, symlink fehler
+- NAS in Betrieb nehmen
+- vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
+- rofi konfigurieren
+- FIXME symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
 - Installation auf Bare Metal
   - Installations USB-Stich
   - Laptop (t460s) partitionieren
   - Installation starten
-- NAS in Betrieb nehmen
-- vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
-- rofi installieren
 
-
-- symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
-- nix-build testen, symlink fehler
-
-### DONE
-- zsh color-theme-chooser installiert
+## DONE
+- zsh color-theme-chooser installiert, github-read.me
 - Paketmodule gebaut
   - Module werden in _*configuration.nix*_ importiert, 'imports`-Aufruf in HomeManager und in Systemconfiguration.
   ```
@@ -29,4 +27,5 @@
 - git Fehler, immer wieder rebase !!! FIXME
   - Lösung
     - beim editieren aufpassen, gleichzeitiges aendern in verschiedenen vim-sessions
-
+- rofi installiert
+- luarocks installiert
