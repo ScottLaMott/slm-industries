@@ -21,6 +21,7 @@
     killall
     lsd
     lua
+    lua52Packages.luarocks-nix
     nmap
     neofetch
     neovim
