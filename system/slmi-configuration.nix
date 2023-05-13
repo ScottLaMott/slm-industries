@@ -1,17 +1,16 @@
 #---------------------------------------------------
-# slm@slm-industries.xyz
 #
-# configuration.nix / System Configuration für slmi-vm
+# slmi-configuration.nix / System Configuration für slmi-vm
 #
 #---------------------------------------------------
 
 { config, pkgs, ... }: {
 
 imports =
-  [ #--- Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./modules/slmi-environment.nix
-      <home-manager/nixos>
+  [
+    ./hardware-configuration.nix
+    ./modules/slmi-environment.nix
+    <home-manager/nixos>
   ];
 
   #--- bootloader
