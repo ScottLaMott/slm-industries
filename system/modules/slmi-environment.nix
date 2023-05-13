@@ -6,7 +6,6 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim
     alacritty
     bat
     brave
@@ -46,9 +45,9 @@
     tldr
     wget
     xclip
-    zathura
+    vim
     wget
-    speedtest-cli
+    zathura
   ];
 
 }
