@@ -23,8 +23,12 @@
       """""""""""""""""""""""""""""""""""""""""""""""""""""
       " declared by configuration.nix / slm
       "
-      source $XDG_CONFIG_HOME/vim/settings.vim
-      source $XDG_CONFIG_HOME/vim/maps.vim
+      if !empty(glob("$XDG_CONFIG_HOME/vim/settings.vim"))
+        source $XDG_CONFIG_HOME/vim/settings.vim
+      endif
+      if !empty(glob("$XDG_CONFIG_HOME/vim/maps.vim"))
+        source $XDG_CONFIG_HOME/vim/maps.vim
+      endif
       "
       """""""""""""""""""""""""""""""""""""""""""""""""""""
    '';
