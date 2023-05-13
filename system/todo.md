@@ -5,6 +5,9 @@
   - Laptop (t460s) partitionieren
   - Installation starten
 - NAS in Betrieb nehmen
+- vim und zsh extra configs einchecken
+- rofi installieren
+
 - git Fehler, immer wieder rebase !!! FIXME
 
 - symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
