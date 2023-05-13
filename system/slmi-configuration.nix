@@ -33,14 +33,6 @@ imports =
     networkmanager.enable = true;
   };
 
-  #--- filesysem
-  fileSystems = {
-    "/" = {
-      device = "/dev/disk/by-label/nixos";
-      fsType = "ext4";
-    };
-  };
-
   #--- set time zone
   time.timeZone = "Europe/Berlin";
 
