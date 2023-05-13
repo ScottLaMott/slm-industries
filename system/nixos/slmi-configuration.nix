@@ -80,6 +80,8 @@ imports =
       cmatrix gdu powerline-fonts
     ];
 
+    #rofi.enable=true FIXME
+
     imports = [
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
