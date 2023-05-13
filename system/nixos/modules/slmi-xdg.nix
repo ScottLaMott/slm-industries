@@ -1,4 +1,8 @@
+#----------------------------------------------------------
+#---
 #--- xdg configuration / home-manager
+#---
+
 { config, lib, pkgs, modulesPath, ... }: {
 
   xdg = {
