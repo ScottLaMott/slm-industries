@@ -13,33 +13,33 @@
     enableSyntaxHighlighting = true;
     dotDir = ".config/zsh";
     shellAliases = {
-      ".." = "cd ..";
-      c="clear";
-      cp="cp -i";
-      mv="mv -i";
-      rm="rm -i";
-      #--- edit
-      v="vim";
-      vs="vim -S s.vim";
-      n="nvim";
-      #--- network
-      pgo="ping -c1 -W5 www.google.com";
-      p="ping -c 3 -w5";
-      #--- git
-      gs="git status";
-      #--- ls / df
-      ls="lsd";
-      la="ls -la";
-      ll="ls -l";
-      lR="ls -lR";
-      dfe="df -t ext4";    # fs-type ext4
-      #--- history
-      hg="history | grep ";
-      #--- eyecandy hi hi
-      nf="clear; neofetch";
-      cm="cmatrix -u9";
-      cmr="cmatrix -u9 -r";
-      cct="/usr/bin/theme.sh -i2";
+      ".."  =    "cd ..";
+      c     =    "clear";
+      cp    =    "cp -i";
+      mv    =    "mv -i";
+      rm    =    "rm -i";
+      #---        edit
+      v     =    "vim";
+      vs    =    "vim -S s.vim";
+      n     =    "nvim";
+      #---        network
+      pgo   =    "ping -c1 -W5 www.google.com";
+      p     =    "ping -c 3 -w5";
+      #---        git
+      gs    =     "git status";
+      #---        ls / df
+      ls    =    "lsd";
+      la    =    "ls -la";
+      ll    =    "ls -l";
+      lR    =    "ls -lR";
+      dfe   =    "df -t ext4";    # fs-type ext4
+      #---        history
+      hg    =     "history | grep ";
+      #---        eyecandy hi hi
+      nf    =    "clear; neofetch";
+      cm    =    "cmatrix -u9";
+      cmr   =    "cmatrix -u9 -r";
+      cct   =    "/usr/bin/theme.sh -i2";
     };
     history = {
       save = 100000;
