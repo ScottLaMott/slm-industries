@@ -1,20 +1,21 @@
-## TODO
-
+## TODO First
 - nix-build testen, symlink fehler
 - NAS in Betrieb nehmen
 - vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
-- rofi konfigurieren
-- FIXME symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild`
+- FIXME symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild\`
 - Installation auf Bare Metal
   - Installations USB-Stich
   - Laptop (t460s) partitionieren
   - Installation starten
-- _*LICHTORGEL*_
+- *LICHTORGEL*
+
+## TODO
+- Transparence (alacritty)
 
 ## DONE
 - zsh color-theme-chooser installiert, github-read.me
 - eigene Paketmodule gebaut
-  - Module werden in _*configuration.nix*_ importiert, 'imports`-Aufruf in HomeManager und in Systemconfiguration.
+  - Module werden in *configuration.nix* importiert, 'imports\`-Aufruf in HomeManager und in Systemconfiguration.
   ```
   > ls -lR modules
   total 24
@@ -30,3 +31,4 @@
     - beim editieren aufpassen, gleichzeitiges aendern in verschiedenen vim-sessions
 - rofi installiert
 - luarocks installiert
+- rofi in .config/awesome/rc.lua konfiguriert
