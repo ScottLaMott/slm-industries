@@ -7,9 +7,9 @@
   - Installations USB-Stich
   - Laptop (t460s) partitionieren
   - Installation starten
-- *LICHTORGEL*
-
+- zsh-completion checken, z.B. bei systemctl, journalctl usw.
 ## TODO
+- *LICHTORGEL*
 - Transparence (alacritty)
 
 ## DONE
