@@ -78,7 +78,8 @@
       cmatrix gdu powerline-fonts
     ];
 
-    #rofi.enable=true FIXME
+    programs.rofi.enable=true;      # FIXME
+    programs.alacritty.enable=true;
 
     imports = [
       ./modules/slmi-git.nix
