@@ -1,4 +1,6 @@
 ## TODO First
+
+- alacritty.yml in Home-Manager integrieren
 - nix-build testen, symlink fehler
 - NAS in Betrieb nehmen
 - vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
@@ -10,6 +12,7 @@
 - zsh-completion checken, z.B. bei systemctl, journalctl usw.
 ## TODO
 - *LICHTORGEL*
+- themes in alacritty
 - Transparence (alacritty)
 
 ## DONE
