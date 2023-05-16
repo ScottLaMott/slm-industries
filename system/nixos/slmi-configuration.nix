@@ -76,12 +76,15 @@
     home.packages = with pkgs;
     [
       cmatrix gdu powerline-fonts
+      zsh zsh-completions zsh-autocomplete
     ];
 
     programs.rofi.enable=true;      # FIXME
     programs.alacritty.enable=true;
+    #programs.alacritty.settings= { }; # FIXME
 
     imports = [
+#      ./modules/slmi-alacritty.nix
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
       ./modules/slmi-tmux.nix
