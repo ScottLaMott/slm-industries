@@ -26,6 +26,7 @@
     vim
     wget
     zathura
+#    zsh zsh-completions zsh-autocomplete
   ];
 
 }
