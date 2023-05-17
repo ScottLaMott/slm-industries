@@ -9,6 +9,7 @@
     enable = true;
     baseIndex = 1;
     escapeTime = 1;
+    keyMode = "vi";
     shortcut = "a";
     newSession = true;
     extraConfig = ''
