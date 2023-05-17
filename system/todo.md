@@ -1,21 +1,17 @@
-## TODO First
-
-- alacritty.yml in Home-Manager integrieren
+## TODO First ------------------------------------------------
+- alacritty
+  - in Home-Manager integrieren (alacritty.yml)
+  - themes repository korrekt konfigurieren
 - nix-build testen, symlink fehler
 - NAS in Betrieb nehmen
 - vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
 - FIXME symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild\`
-- Installation auf Bare Metal
-  - Installations USB-Stich
-  - Laptop (t460s) partitionieren
   - Installation starten
 - zsh-completion checken, z.B. bei systemctl, journalctl usw.
-## TODO
-- *LICHTORGEL*
-- themes in alacritty
+#### TODO ----------------------------------------------------
 - Transparence (alacritty)
-
-## DONE
+- *LICHTORGEL*
+## DONE ------------------------------------------------------
 - zsh color-theme-chooser installiert, github-read.me
 - eigene Paketmodule gebaut
   - Module werden in *configuration.nix* importiert, 'imports\`-Aufruf in HomeManager und in Systemconfiguration.
@@ -34,4 +30,9 @@
     - beim editieren aufpassen, gleichzeitiges aendern in verschiedenen vim-sessions
 - rofi installiert
 - luarocks installiert
+- vim-obsession installiert
 - rofi in .config/awesome/rc.lua konfiguriert
+- themes in alacritty werden in .config/alacritty/alaritty.yml konfiguriert
+- Installation auf Bare Metal
+  - Installations USB-Stick erstellt
+  - Laptop (t460s), in /dev/sda6 mit uefi boot installiert
