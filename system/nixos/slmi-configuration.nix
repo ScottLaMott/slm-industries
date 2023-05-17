@@ -80,7 +80,7 @@
     ];
 
     programs.rofi.enable=true;      # FIXME
-    programs.alacritty.enable=true;
+    #programs.alacritty.enable=true;
     #programs.alacritty.settings= { }; # FIXME
 
     imports = [
