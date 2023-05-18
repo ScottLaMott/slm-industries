@@ -12,7 +12,8 @@
       awesome-vim-colorschemes vim-airline vim-airline-themes
       # -- the best of the rest
       fzf-vim goyo markdown-preview-nvim limelight-vim vim-nix
-      vim-startify vim-snippets vim-vinegar vim-fugitive ultisnips
+      vim-startify vim-snippets vim-vinegar vim-fugitive vim-obsession
+      ultisnips
     ];
     #--- settings
     settings = {
