@@ -1,7 +1,6 @@
 ## TODO First ------------------------------------------------
 - alacritty
   - in Home-Manager integrieren (alacritty.yml)
-  - themes repository korrekt konfigurieren
 - nix-build testen, symlink fehler
 - NAS in Betrieb nehmen
 - vim und zsh (conf ohne home-manager) extra configs einchecken oder im Home-Manager verwalten.
@@ -32,7 +31,9 @@
 - luarocks installiert
 - vim-obsession installiert
 - rofi in .config/awesome/rc.lua konfiguriert
-- themes in alacritty werden in .config/alacritty/alaritty.yml konfiguriert
+- alacritty
+  - in ~/.config/alacritty symlink auf ~/ws/slm-industries/system/extra-config/alacritty/alacritty.yml
+  - github-repo mit themes in .config/alacritty clonen
 - Installation auf Bare Metal
   - Installations USB-Stick erstellt
   - Laptop (t460s), in /dev/sda6 mit uefi boot installiert
