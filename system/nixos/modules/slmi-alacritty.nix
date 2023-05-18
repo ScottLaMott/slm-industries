@@ -46,9 +46,6 @@ window:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
   #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background, but no title bar buttons
   decorations: full
 
   # Startup Mode (changes require restart)
@@ -58,8 +55,6 @@ window:
   #   - Maximized
   #   - Fullscreen
   #
-  # Values for `startup_mode` (macOS only):
-  #   - SimpleFullscreen
   startup_mode: Windowed
 
   # Window title
@@ -132,22 +127,6 @@ font:
     x: 0
     y: 0
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina screens
-  # it is recommended to set `use_thin_strokes` to `false`
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  # use_thin_strokes: true
-
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
@@ -157,14 +136,14 @@ draw_bold_text_with_bright_colors: true
 # uncomment to choose
 #
 import:
-  #- ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
+  - ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
+  #- ~/.config/alacritty/alacritty-theme/themes/papercolor_dark.yaml
+  #- ~/.config/alacritty/alacritty-theme/themes/terminal_app.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/smoooooth.yaml
-  - ~/.config/alacritty/alacritty-theme/themes/terminal_app.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/dome_one.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/afterglow.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/campbell.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/dark_pastels.yaml
-  #- ~/.config/alacritty/alacritty-theme/themes/papercolor_dark.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/afterglow.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/argonaut.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/atom_one_light.yaml
@@ -387,17 +366,6 @@ live_config_reload: true
 # directory of the parent process will be used.
 working_directory: None
 
-# Windows 10 ConPTY backend (Windows only)
-#
-# This will enable better color support and may resolve other issues,
-# however this API and its implementation is still young and so is
-# disabled by default, as stability may not be as good as the winpty
-# backend.
-#
-# Alacritty will fall back to the WinPTY automatically if the ConPTY
-# backend cannot be initialized.
-enable_experimental_conpty_backend: false
-
 # Send ESC (\x1b) before characters when alt is pressed.
 alt_send_esc: true
 
@@ -502,9 +470,6 @@ debug:
 #   - ToggleFullscreen
 #   - None
 #
-# Values for `action` (macOS only):
-#   - ToggleSimpleFullscreen: Enters fullscreen without occupying another space
-#
 # Values for `command`:
 #   The `command` field must be a map containing a `program` string and
 #   an `args` array of command line parameter strings.
@@ -525,19 +490,6 @@ key_bindings:
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-
-  # (macOS only)
-  #- { key: Key0,   mods: Command, action: ResetFontSize    }
-  #- { key: Equals, mods: Command, action: IncreaseFontSize }
-  #- { key: Add,    mods: Command, action: IncreaseFontSize }
-  #- { key: Minus,  mods: Command, action: DecreaseFontSize }
-  #- { key: K,      mods: Command, action: ClearHistory     }
-  #- { key: K,      mods: Command, chars: "\x0c"            }
-  #- { key: V,      mods: Command, action: Paste            }
-  #- { key: C,      mods: Command, action: Copy             }
-  #- { key: H,      mods: Command, action: Hide             }
-  #- { key: Q,      mods: Command, action: Quit             }
-  #- { key: W,      mods: Command, action: Quit             }
 
   #  - { key: Paste,                   action: Paste                            }
   #  - { key: Copy,                    action: Copy                             }
