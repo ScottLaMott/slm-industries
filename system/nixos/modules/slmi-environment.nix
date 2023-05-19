@@ -10,6 +10,7 @@
     bat brave btop
     curl
     dmenu
+    ethtool
     feh fd file fzf
     git
     htop
