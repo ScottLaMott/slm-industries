@@ -76,7 +76,6 @@
     home.packages = with pkgs;
     [
       cmatrix gdu powerline-fonts
-      zsh zsh-completions zsh-autocomplete
     ];
 
     programs.rofi.enable=true;      # FIXME
