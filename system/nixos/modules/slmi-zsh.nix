@@ -18,7 +18,7 @@
       #zplugHome = ./zsh/zplug;
       #zplugHome = ./zplug-xxx;
       plugins = [
-        # { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
+        { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
       ];
     };
 
@@ -52,7 +52,7 @@
       rm    =    "rm -i";
       #---        edit
       v     =    "vim";
-      vs    =    "vim -S s.vim";
+      vs    =    "vim -S .session.vim";
       n     =    "nvim";
       #---        network
       pgo   =    "ping -c1 -W5 www.google.com";
