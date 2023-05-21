@@ -6,6 +6,7 @@
 - FIXME symlink hardware-configuration.nix auf slmi-hardware-configuration.nix ist workaround. Ohne den Link Fehler bei 'nixos-rebuild\`
   - Installation starten
 ### TODO
+- zsh extra-config auslagern, dev-zsh branch benutzen !! fett
 - alacritty
   - in Home-Manager integrieren (alacritty.yml)
   - ohne Fensterrahmen/-dekoration
