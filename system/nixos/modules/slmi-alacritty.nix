@@ -136,10 +136,10 @@ draw_bold_text_with_bright_colors: true
 # uncomment to choose
 #
 import:
-  - ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
+  #- ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/papercolor_dark.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/terminal_app.yaml
-  #- ~/.config/alacritty/alacritty-theme/themes/smoooooth.yaml
+  - ~/.config/alacritty/alacritty-theme/themes/smoooooth.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/dome_one.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/afterglow.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/campbell.yaml
