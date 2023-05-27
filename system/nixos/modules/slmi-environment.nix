@@ -26,7 +26,7 @@
     xclip
     vim
     wget
-    zathura
+    zathura zellij
   ];
 
 }
