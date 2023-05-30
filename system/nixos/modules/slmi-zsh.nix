@@ -14,7 +14,7 @@
     dotDir = ".config/zsh"; # FIXME
 
     zplug = {
-      enable = false;
+      enable = true;
       #zplugHome = ./zsh/zplug;
       #zplugHome = ./zplug-xxx;
       plugins = [
