@@ -1,6 +1,9 @@
 #--- environment configuration / NixOS
 { config, lib, pkgs, ... }: {
 
+  #--- completion for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
+
   #--- add zsh to /etc/shells
   environment.shells = with pkgs; [ zsh ];
 
