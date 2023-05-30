@@ -1,5 +1,6 @@
 ### FIRST
-- zsh-completion checken, z.B. bei systemctl, journalctl usw.
+- zsh-completion checken, z.B. bei systemctl, journalctl, zellij usw.
+  - Kommando compinstall test, erstellt neue completions ???
 - HomeManager konfigurieren
   - Fehler bei Benutzung der configuration.nix auf neuem System. Inbetriebnahme T460s
 - nix-build testen, symlink fehler
