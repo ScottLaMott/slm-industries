@@ -1,6 +1,4 @@
 ### FIRST
-- zsh-completion checken, z.B. bei systemctl, journalctl, zellij usw.
-  - Kommando compinstall test, erstellt neue completions ???
 - HomeManager konfigurieren
   - Fehler bei Benutzung der configuration.nix auf neuem System. Inbetriebnahme T460s
 - nix-build testen, symlink fehler
@@ -48,3 +46,9 @@
 - Installation auf Bare Metal
   - Installations USB-Stick erstellt
   - Laptop (t460s), in /dev/sda6 mit uefi boot installiert
+- zsh-completion checken, z.B. bei systemctl, journalctl, zellij usw.
+  - in configuration.nix (WICHTIG)
+  ```
+  #--- completion for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
+  ```
