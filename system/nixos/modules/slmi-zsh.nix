@@ -31,7 +31,7 @@
       [ -f  $XDG_CONFIG_HOME/zsh/slm-zshrc ]                && source $XDG_CONFIG_HOME/zsh/slm-zshrc
       [ -f  $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages ]  && source $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages
 
-      export LESS='-j5 -R'
+      export LESS='-j8 -R'
 
       # wallpaper mit feh
 
