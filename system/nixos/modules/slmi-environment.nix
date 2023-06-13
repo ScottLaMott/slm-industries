@@ -21,12 +21,13 @@
     killall
     lsd lua lua52Packages.luarocks-nix
     nmap neofetch neovim nodejs
-    pulsemixer pure-prompt python
+    pciutils pulsemixer pure-prompt python
     ranger ripgrep rofi
     screen silver-searcher speedtest-cli stow sxiv
     tshark tcpdump tig tio toilet tree tldr
     wget
     xclip
+    usbutils
     vim
     wget
     zathura zellij
