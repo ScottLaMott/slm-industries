@@ -27,10 +27,10 @@
     tshark tcpdump tig tio toilet tree tldr
     wget
     xclip
-    usbutils
+    unzip usbutils
     vim
     wget
-    zathura zellij
+    zathura zellij zip unzip
   ];
 
 }
