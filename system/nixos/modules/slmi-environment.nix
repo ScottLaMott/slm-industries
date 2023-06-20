@@ -17,7 +17,7 @@
     feh fd file fzf
     git
     htop
-    ipcalc
+    inxi ipcalc
     killall
     lsd lua lua52Packages.luarocks-nix
     nmap neofetch neovim nodejs
