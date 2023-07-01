@@ -17,9 +17,10 @@
     feh fd file fzf
     git
     htop
-    inxi ipcalc
+    iftop inxi ipcalc iptraf-ng
     killall
     lsd lua lua52Packages.luarocks-nix
+    mixxx
     nmap neofetch neovim nodejs
     pciutils pulsemixer pure-prompt python
     ranger ripgrep rofi
