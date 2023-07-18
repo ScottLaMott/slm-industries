@@ -47,6 +47,7 @@ window:
   #     - none: Neither borders nor title bar
   #
   decorations: full
+  #decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -55,7 +56,8 @@ window:
   #   - Maximized
   #   - Fullscreen
   #
-  startup_mode: Windowed
+  #startup_mode: Windowed
+  startup_mode: Fullscreen
 
   # Window title
   title: Alacritty
@@ -268,7 +270,8 @@ bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-window.opacity: 1.0
+#window.opacity: 1.0
+window.opacity: 0.0
 
 # Mouse bindings
 #
