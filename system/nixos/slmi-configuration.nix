@@ -24,6 +24,9 @@
     copySystemConfiguration = true;
   };
 
+  #--- virtualisation
+  virtualisation.lxd.enable = true;
+
   #--- networking
   networking = {
     hostName = "slmi-vm";
@@ -66,7 +69,7 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "ldx" ];
     shell = pkgs.zsh;
   };
 
@@ -80,10 +83,10 @@
 
     programs.rofi.enable=true;      # FIXME
     programs.alacritty.enable=true;
-    #programs.alacritty.settings= { }; # FIXME
+    programs.alacritty.settings= { }; # FIXME
 
     imports = [
-      ./modules/slmi-alacritty.nix
+      ##./modules/slmi-alacritty.nix
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
       ./modules/slmi-tmux.nix
