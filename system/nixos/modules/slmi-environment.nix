@@ -9,12 +9,13 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    alacritty
+    acpi alacritty
     bat brave btop
     curl
     dmenu
     ethtool
     feh fd file fzf
+    firefox
     git
     htop
     iftop inxi ipcalc iptraf-ng
