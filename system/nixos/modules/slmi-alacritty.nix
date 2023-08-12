@@ -25,9 +25,9 @@ window:
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 0
+    y: 0
 
   # Window padding (changes require restart)
   #
@@ -47,7 +47,6 @@ window:
   #     - none: Neither borders nor title bar
   #
   decorations: full
-  #decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -56,8 +55,8 @@ window:
   #   - Maximized
   #   - Fullscreen
   #
-  #startup_mode: Windowed
-  startup_mode: Fullscreen
+  startup_mode: Windowed
+  #startup_mode: Fullscreen
 
   # Window title
   title: Alacritty
@@ -138,8 +137,8 @@ draw_bold_text_with_bright_colors: true
 # uncomment to choose
 #
 import:
-  - ~/.config/alacritty/alacritty-theme/themes/campbell.yaml
-  #- ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
+  #- ~/.config/alacritty/alacritty-theme/themes/campbell.yaml
+  - ~/.config/alacritty/alacritty-theme/themes/xterm.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/papercolor_dark.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/terminal_app.yaml
   #- ~/.config/alacritty/alacritty-theme/themes/smoooooth.yaml
