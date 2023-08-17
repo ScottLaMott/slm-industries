@@ -67,6 +67,9 @@
       dfe   =    "df -t ext4";    # fs-type ext4
       #---        history
       hg    =     "history | grep ";
+      #---        tmux
+      ta    =     "tmux attach";
+      tl    =     "tmux switch-client -l";
       #---        eyecandy hi hi
       nf    =    "clear; neofetch";
       cm    =    "cmatrix -u9";
