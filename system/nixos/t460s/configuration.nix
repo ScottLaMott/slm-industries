@@ -27,10 +27,11 @@
     hostName = "slmi-vm";
     networkmanager.enable = true;
   };
-  
+
   #--- virtualisation
+  virtualisation.lxc.enable = true;
   virtualisation.lxd.enable = true;
-  
+
   #--- bluetooth
   hardware.bluetooth.enable = true;
 
@@ -66,7 +67,7 @@
   fonts.fonts = with pkgs; [
     font-awesome
   ];
-  
+
   #--- man pages
   # documentation.dev.enable = true;
 
