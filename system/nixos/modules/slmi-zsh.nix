@@ -45,36 +45,47 @@
     };
 
     shellAliases = {
+
       ".."  =    "cd ..";
       c     =    "clear";
       cp    =    "cp -i";
       mv    =    "mv -i";
       rm    =    "rm -i";
+
       #---        edit
       v     =    "vim";
       vs    =    "vim -S .session.vim";
       n     =    "nvim";
+
       #---        network
       pgo   =    "ping -c1 -W5 www.google.com";
       p     =    "ping -c 3 -w5";
+      ns    =    "nmcli connection show";
+      nd    =    "nmcli device show";
+
       #---        git
       gs    =     "git status";
+
       #---        ls / df
       ls    =    "lsd";
       la    =    "ls -la";
       ll    =    "ls -l";
       lR    =    "ls -lR";
       dfe   =    "df -t ext4";    # fs-type ext4
+
       #---        history
       hg    =     "history | grep ";
+
       #---        tmux
       ta    =     "tmux attach";
       tl    =     "tmux switch-client -l";
+
       #---        eyecandy hi hi
       nf    =    "clear; neofetch";
       cm    =    "cmatrix -u9";
       cmr   =    "cmatrix -u9 -r";
       cct   =    "/usr/bin/theme.sh -i2";
+
     };
   };
 
