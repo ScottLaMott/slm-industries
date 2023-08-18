@@ -20,7 +20,7 @@
     htop
     iftop inxi ipcalc iptraf-ng
     killall
-    lsd lua lua52Packages.luarocks-nix lxc lxd
+    lsd lua lua52Packages.luarocks-nix lxd
     man-db mixxx mutt
     nmap neofetch neovim nodejs
     pciutils pulsemixer pure-prompt python
