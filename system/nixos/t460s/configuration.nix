@@ -29,7 +29,6 @@
   };
 
   #--- virtualisation
-  virtualisation.lxc.enable = true;
   virtualisation.lxd.enable = true;
 
   #--- bluetooth
