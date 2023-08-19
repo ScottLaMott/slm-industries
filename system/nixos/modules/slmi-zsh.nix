@@ -15,10 +15,9 @@
 
     zplug = {
       enable = true;
-      #zplugHome = ./zsh/zplug;
-      #zplugHome = ./zplug-xxx;
       plugins = [
         { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
+        { name = "endaaman/lxd-completion-zsh"; }
       ];
     };
 
