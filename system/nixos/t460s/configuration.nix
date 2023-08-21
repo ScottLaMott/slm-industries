@@ -24,8 +24,9 @@
 
   #--- networking
   networking = {
-    hostName = "slmi-vm";
     networkmanager.enable = true;
+    hostName = "slmi-vm";
+    #nameservers = [ "127.0.0.53" ];
   };
 
   #--- virtualisation
