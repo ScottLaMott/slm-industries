@@ -1,34 +1,33 @@
-# vi mode command line mode
+#---------------------------------------------------
+#---
+#--- slm-zshrc
+#---
+
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=100000
 bindkey -v
 
-# history settings
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+# completion --------------------------
+zmodload zsh/complist
+#
+# Use vim keys in tab complete menu:
+zstyle ':completion:*' menu select
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
 
-# wenn plugins existieren dann plugins sourcen
-[[ -f ~/.local/plugins/slm-aliases.plugin.zsh ]]           && source ~/.local/plugins/slm-aliases.plugin.zsh
-[[ -f ~/.local/plugins/slm-colored-man-pages.plugin.zsh ]] && source ~/.local/plugins/slm-colored-man-pages.plugin.zsh
-[[ -f ~/.local/plugins/slm-fzf.plugin.zsh ]]               && source ~/.local/plugins/slm-fzf.plugin.zsh
-#[[ -f ~/.local/plugins/slm-powerline.plugin.zsh ]]         && source ~/.local/plugins/slm-powerline.plugin.zsh
+# color -------------------------------
+# autoload -U colors && colors
 
-# fzf shortcuts und completion
-[[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-[[ -f /usr/share/doc/fzf/examples/completion.zsh ]]   && source /usr/share/doc/fzf/examples/completion.zsh
-
-# You may need to manually set your language environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-export EDITOR='nvim'
-
-# ssh ???
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# jump to insert mode / begin of line in command line history
-zle-history-line-set () { zle vi-beginning-of-line; }
+# slm ---------------------------------
+# Jump to begin of line / insert mode command line history
+zle-history-line-set () {
+    zle vi-beginning-of-line;
+    zle vi-cmd-mode;
+}
 zle -N zle-history-line-set
 
 # The following lines were added by compinstall
@@ -36,9 +35,42 @@ zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+#
+
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+	git clone https://github.com/zplug/zplug ~/.zplug
+	source ~/.zplug/init.zsh && zplug update --self
+fi
+
+# Essential
+source ~/.zplug/init.zsh
+
+# Make sure to use double quotes to prevent shell expansion
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "endaaman/lxd-completion-zsh"
+
+
+# Add a bunch more of your favorite packages!
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+	printf "Install? [y/N]: "
+	if read -q; then
+        	echo; zplug install
+        else
+        	echo
+        fi
+fi
+
+zplug load
+
+# eigene plugins, nich im git-repos
+source .local/plugins/slm-aliases.plugin.zsh
+source .local/plugins/slm-colored-man-pages.plugin.zsh
 
 # prompt system
 autoload -Uz promptinit
 promptinit
 prompt oliver
-
