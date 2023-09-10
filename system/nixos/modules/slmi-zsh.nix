@@ -66,7 +66,7 @@
       gs    =     "git status";
 
       #---        ls / df
-      ls    =    "lsd";
+      ls    =    "exa";
       la    =    "ls -la";
       ll    =    "ls -l";
       lR    =    "ls -lR";
