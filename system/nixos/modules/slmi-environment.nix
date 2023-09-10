@@ -9,11 +9,11 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    acpi alacritty
-    bat brave btop
+    acpi alacritty ansible
+    bat brave brightnessctl btop
     curl
     dmenu
-    ethtool
+    ethtool exa
     feh fd file fzf
     firefox
     git
@@ -21,11 +21,11 @@
     iftop inxi ipcalc iptraf-ng
     killall
     lsd lua lua52Packages.luarocks-nix lxd
-    man-db mixxx mutt
+    man-db mutt
     nmap neofetch neovim nodejs
     pciutils pulsemixer pure-prompt python
     ranger ripgrep rofi
-    screen silver-searcher speedtest-cli stow sxiv
+    screen silver-searcher speedtest-cli sshpass stow sxiv
     tshark tcpdump tig tio toilet tree tldr
     wget
     xclip
