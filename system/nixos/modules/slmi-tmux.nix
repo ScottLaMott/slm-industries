@@ -13,6 +13,12 @@
     shortcut = "a";
     newSession = true;
     historyLimit = 100000;
+    plugins = [
+      pkgs.tmuxPlugins.gruvbox
+      pkgs.tmuxPlugins.tmux-fzf
+      pkgs.tmuxPlugins.resurrect
+      pkgs.tmuxPlugins.continuum
+    ];
     extraConfig = ''
       set-option -g status-left-length 20
       set-option -g default-terminal "screen-256color"
@@ -29,13 +35,11 @@
       bind-key -n M-b switch-client -l
       bind-key -n M-p switch-client -p
       bind-key -n M-n switch-client -n
+      set -g @resurrect-dir '~/.tmux/resurrect'
+      set -g @resurrect-strategy-vim 'session'
+      set -g @resurrect-processes 'journalctl watch btop man ssh'
+      set -g @continuum-restore 'on'
     '';
-    plugins = [
-      pkgs.tmuxPlugins.gruvbox
-      pkgs.tmuxPlugins.resurrect
-      pkgs.tmuxPlugins.continuum
-      pkgs.tmuxPlugins.tmux-fzf
-    ];
   };
 
 }
