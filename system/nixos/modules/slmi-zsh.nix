@@ -72,6 +72,11 @@
       lR    =    "ls -lR";
       dfe   =    "df -t ext4";    # fs-type ext4
 
+      #---        lxc / lxd
+      cls   =    "lxc ls -cns4S -fcompact";
+      clsr  =    "lxc ls -cns4S -fcompact status=running";
+      clss  =    "lxc ls -cns4S -fcompact status=stopped";
+
       #---        history
       hg    =     "history | grep ";
 
