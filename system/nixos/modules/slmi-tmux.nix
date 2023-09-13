@@ -30,8 +30,8 @@
       bind-key -n M-k select-pane -U
       bind-key -n M-l select-pane -R
       bind-key -n M-z resize-pane -Z
-      bind-key -n M-s split-window -v
-      bind-key -n M-v split-window -h
+      bind-key -n M-s split-window -v -c "#{pane_current_path}"
+      bind-key -n M-v split-window -h -c "#{pane_current_path}"
       bind-key -n M-b switch-client -l
       bind-key -n M-p switch-client -p
       bind-key -n M-n switch-client -n
