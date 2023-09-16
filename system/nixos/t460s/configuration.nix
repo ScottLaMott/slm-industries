@@ -25,7 +25,7 @@
   #--- networking
   networking = {
     networkmanager.enable = true;
-    hostName = "slmi-vm";
+    hostName = "slmi";
     #nameservers = [ "127.0.0.53" ];
   };
 
@@ -100,7 +100,7 @@
     home.stateVersion = "22.11";
     home.packages = with pkgs;
     [
-      cmatrix gdu powerline-fonts
+      atop cmatrix gdu mixxx powerline-fonts
     ];
 
     programs.rofi.enable=true;      # FIXME
