@@ -22,6 +22,13 @@
     copySystemConfiguration = true;
   };
 
+  #--- workaround nach upgrade auf 23.05
+  nixpkgs.config = {
+    permittedInsecurePackages = [
+      "python-2.7.18.6"
+    ];
+  };
+
   #--- networking
   networking = {
     networkmanager.enable = true;
@@ -73,6 +80,7 @@
 
   #--- enable the OpenSSH daemon.
   services.openssh.enable = true;
+  services.openssh.settings.PasswordAuthentication = false;
 
   #--- enable the X11 windowing system.
   services.xserver = {
@@ -86,6 +94,8 @@
 
   #--- shell environment
   programs.vim.defaultEditor = true;
+
+  programs.zsh.enable = true;
 
   #--- user accounts
   users.users.slm = {
