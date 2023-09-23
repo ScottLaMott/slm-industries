@@ -32,7 +32,21 @@
   #--- networking
   networking = {
     networkmanager.enable = true;
-    hostName = "slmi";
+    hostName   = "slmi";
+    extraHosts =
+      ''
+        # ubuntu-container
+        10.151.127.45   u-1
+        10.151.127.175  u-2
+        10.151.127.36   u-ansible
+        10.151.127.156  u-tmux
+        10.151.127.92   ubuntu-23-04
+        # enterprise-container
+        10.151.127.24   enterprise-test
+        10.151.127.235  enterprise-v-0-1
+        10.151.127.47   et-1
+      '';
+
     #nameservers = [ "127.0.0.53" ];
   };
 
@@ -79,8 +93,11 @@
   # documentation.dev.enable = true;
 
   #--- enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.settings.PasswordAuthentication = false;
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = false;
+    settings.X11Forwarding = true;
+  };
 
   #--- enable the X11 windowing system.
   services.xserver = {
