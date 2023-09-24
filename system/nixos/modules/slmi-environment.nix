@@ -23,6 +23,7 @@
     lsd lua lua52Packages.luarocks-nix lxd
     man-db mutt
     nmap neofetch neovim nodejs
+    openssh
     pciutils pulsemixer pure-prompt python
     ranger ripgrep rofi
     screen silver-searcher speedtest-cli sshpass stow sxiv
@@ -32,6 +33,7 @@
     unzip usbutils
     vim
     wget
+    xorg.xhost xorg.xeyes
     zathura zellij zip unzip
   ];
 
