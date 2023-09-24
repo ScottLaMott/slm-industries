@@ -29,4 +29,4 @@ zle-history-line-set () {
 }
 zle -N zle-history-line-set
 
-feh --bg-fill $XDG_CONFIG_HOME/wallpaper/background-wallpaper # FIXME
+# feh --bg-fill $XDG_CONFIG_HOME/wallpaper/background-wallpaper # FIXME kein X11
