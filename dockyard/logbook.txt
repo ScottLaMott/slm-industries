@@ -37,3 +37,4 @@ vor 14.09.21
 - 01.05.23, Captian Kirk war zum erstenmal auf der _enterprise-0-1_. Er war mehr als zufrieden, aber es gibt auch noch viel zu erledigen.
             Packen wirs an ...!
 
+- 20.09.23, es tut sich was mit ubuntu-containern und ansible
