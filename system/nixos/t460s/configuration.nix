@@ -40,11 +40,13 @@
         10.151.127.175  u-2
         10.151.127.36   u-ansible
         10.151.127.156  u-tmux
+        10.151.127.191  u-test
+        10.151.127.121  u-zplug
         10.151.127.92   ubuntu-23-04
         # enterprise-container
-        10.151.127.24   enterprise-test
         10.151.127.235  enterprise-v-0-1
         10.151.127.47   et-1
+        10.151.127.24   et-2
       '';
 
     #nameservers = [ "127.0.0.53" ];
