@@ -1,6 +1,6 @@
 #---------------------------------------------------
 #---
-#--- slmi-configuration.nix / System Configuration für slmi-vm
+#--- slmi-configuration.nix / System Configuration für slmi-industries
 #---
 
 { config, pkgs, ... }: {
@@ -32,7 +32,7 @@
   #--- networking
   networking = {
     networkmanager.enable = true;
-    hostName   = "slmi";
+    hostName   = "slmi-industries";
     extraHosts =
       ''
         # ubuntu-container
@@ -113,8 +113,8 @@
 
   #--- shell environment
   programs.vim.defaultEditor = true;
-
   programs.zsh.enable = true;
+  programs.ssh.forwardX11 = true;
 
   #--- user accounts
   users.users.slm = {
