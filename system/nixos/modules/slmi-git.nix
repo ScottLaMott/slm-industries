@@ -8,7 +8,7 @@
   programs.git = {
     enable = true;
     userName = "Scott LaMott";
-    userEmail = "slm@slmi-vm";
+    userEmail = "slm@slmi-industries";
     aliases = {
       s = "status";
     };
