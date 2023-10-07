@@ -36,17 +36,19 @@
     extraHosts =
       ''
         # ubuntu-container
-        10.151.127.45   u-1
-        10.151.127.175  u-2
-        10.151.127.36   u-ansible
-        10.151.127.156  u-tmux
-        10.151.127.191  u-test
-        10.151.127.121  u-zplug
-        10.151.127.92   ubuntu-23-04
+        10.151.127.10   ubuntu-23-04
+        10.151.127.101  u-1
+        10.151.127.102  u-2
+        10.151.127.110  u-test
+        10.151.127.111  u-ansible
+        10.151.127.112  u-tmux
+        10.151.127.113  u-zplug
         # enterprise-container
-        10.151.127.235  enterprise-v-0-1
-        10.151.127.47   et-1
-        10.151.127.24   et-2
+        10.151.127.200  enterprise-v-0-1
+        10.151.127.201  et-1
+        10.151.127.202  et-2
+        # other containers
+        10.151.127.120  alpine
       '';
 
     #nameservers = [ "127.0.0.53" ];
@@ -115,6 +117,7 @@
   programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
   programs.ssh.forwardX11 = true;
+  #programs.hyprland.enable = true;
 
   #--- user accounts
   users.users.slm = {
