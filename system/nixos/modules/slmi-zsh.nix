@@ -8,7 +8,7 @@
   programs.zsh = {
     enable = true;
     defaultKeymap = "viins";
-    enableCompletion = true;
+    enableCompletion = false;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     dotDir = ".config/zsh"; # FIXME
@@ -22,6 +22,9 @@
       ];
     };
 
+    #initExtraFirst = ''
+    #  zmodload zsh/zprof
+    #'';
     initExtra = ''
       #----------------------------------------------------------
       # declared by configuration.nix / slm
@@ -36,6 +39,7 @@
       # wallpaper mit feh
 
       #----------------------------------------------------------
+      #zprof
     '';
 
     history = {
