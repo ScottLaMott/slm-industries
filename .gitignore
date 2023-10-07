@@ -1,1 +1,6 @@
+# files
 .session.vim
+result
+
+# directories
+tmp
