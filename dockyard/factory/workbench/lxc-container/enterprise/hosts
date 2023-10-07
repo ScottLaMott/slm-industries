@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+#---
+#--- inventory-file
+#---
+
+[all]
+
+#--- enterprise container
+[enterprise]
+enterprise-v-0-1  ansible_ssh_host=10.151.127.235
+
+[enterprise:vars]
+ansible_ssh_user=slm
+
+#--- enterprise test container
+[enterprise_test]
+et-1
+#et-1              ansible_ssh_host=10.151.127.47
+enterprise-test   ansible_ssh_host=10.151.127.24
+
+[enterprise_test:vars]
+ansible_ssh_user          = slm
+ansible_private_key_file  = /home/slm/credentials/ssh-keypairs/enterprise
+ansible_become            = true
+ansible_become_user       = root
+ansible_become_ask_pass   = true
+enable_task_debugger      = true

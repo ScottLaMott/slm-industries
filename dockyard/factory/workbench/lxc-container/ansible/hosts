@@ -1,0 +1,8 @@
+######################################################################################
+#
+# inventory-file
+
+[enterprise]
+enterprise-test   ansible_ssh_host=10.151.127.24       ansible_ssh_port=22 ansible_ssh_user=slm
+enterprise-v-0-1  ansible_ssh_host=10.151.127.235      ansible_ssh_port=22 ansible_ssh_user=slm
+

@@ -1,0 +1,9 @@
+- packetinstallation als playbook, nicht mit docker build
+
+- lvim ide
+  - appimage downloaden
+    wget https://github.com/neovim/neovim/releases/download/v0.6.0/nvim.appimage
+  - appimage ausführbar machen
+    chmod +x nvim.appimage
+  - appimage ausführen
+    nvim.appimage --appimage-extract-and-run
