@@ -49,6 +49,7 @@
         10.151.127.202  et-2
         # other containers
         10.151.127.120  alpine
+        10.151.127.121  alpine-test
       '';
 
     #nameservers = [ "127.0.0.53" ];
