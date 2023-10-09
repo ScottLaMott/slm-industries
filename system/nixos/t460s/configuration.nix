@@ -32,7 +32,7 @@
   #--- networking
   networking = {
     networkmanager.enable = true;
-    hostName   = "slmi-industries";
+    hostName   = "slm-industries";
     extraHosts =
       ''
         # ubuntu-container
