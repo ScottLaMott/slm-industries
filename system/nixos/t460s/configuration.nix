@@ -29,6 +29,12 @@
     ];
   };
 
+  #--- nfs mount
+  fileSystems."/mnt/homes" =
+  { device = "alpha:/volume1/homes";
+    fsType = "nfs";
+  };
+
   #--- networking
   networking = {
     networkmanager.enable = true;
@@ -47,9 +53,11 @@
         10.151.127.200  enterprise-v-0-1
         10.151.127.201  et-1
         10.151.127.202  et-2
-        # other containers
+        # alpine containers
         10.151.127.120  alpine
-        10.151.127.121  alpine-test
+        10.151.127.130  alpine-test
+        10.151.127.131  a-1
+        10.151.127.132  a-2
       '';
 
     #nameservers = [ "127.0.0.53" ];
