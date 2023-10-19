@@ -9,10 +9,23 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       # -- colorscheme
-      awesome-vim-colorschemes vim-airline vim-airline-themes
+      awesome-vim-colorschemes
+      vim-airline
+      vim-airline-themes
+
       # -- the best of the rest
-      fzf-vim goyo markdown-preview-nvim limelight-vim vim-nix
-      vim-startify vim-surround vim-snippets vim-vinegar vim-fugitive vim-obsession
+      fzf-vim
+      goyo
+      markdown-preview-nvim
+      limelight-vim
+      vim-commentary
+      vim-fugitive
+      vim-nix
+      vim-obsession
+      vim-snippets
+      vim-startify
+      vim-surround
+      vim-vinegar
       ultisnips
     ];
     #--- settings
