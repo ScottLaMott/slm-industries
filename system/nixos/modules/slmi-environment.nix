@@ -24,7 +24,7 @@
     nmap neofetch neovim nodejs
     openssh
     pciutils pulsemixer pure-prompt python
-    ranger ripgrep rofi
+    ranger ripgrep
     screen silver-searcher speedtest-cli sshpass stow sxiv
     tshark tcpdump tig tio toilet tree tldr
     wget
