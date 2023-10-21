@@ -15,7 +15,6 @@
     dmenu
     ethtool exa
     feh fd file fzf
-    firefox
     git
     htop
     iftop inxi ipcalc iptraf-ng
