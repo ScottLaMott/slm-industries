@@ -148,7 +148,6 @@
     #programs.alacritty.settings= { }; # FIXME
 
     imports = [
-      # ./modules/slmi-alacritty.nix
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
       ./modules/slmi-rofi.nix
@@ -157,7 +156,6 @@
       ./modules/slmi-xdg.nix
       ./modules/slmi-zsh.nix
     ];
-
   }; #--- user home-manager configuration end
 
 }
