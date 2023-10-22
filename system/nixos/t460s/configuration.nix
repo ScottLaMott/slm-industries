@@ -150,7 +150,7 @@
     imports = [
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
-      ./modules/slmi-rofi.nix
+      # ./modules/slmi-rofi.nix
       ./modules/slmi-tmux.nix
       ./modules/slmi-vim.nix
       ./modules/slmi-xdg.nix
