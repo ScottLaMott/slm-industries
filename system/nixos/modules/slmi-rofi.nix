@@ -9,6 +9,7 @@
     enable=true;
     theme="sidebar";
     terminal="alacritty";
+    configPath="$XDG_CONFIG_HOME/rofi/config.rasi";
   };
 
 }
