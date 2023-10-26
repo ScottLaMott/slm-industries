@@ -69,7 +69,7 @@
   #--- bluetooth
   hardware.bluetooth.enable = true;
 
-  #--- Enable sound with pipewire.
+  #--- enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -150,7 +150,7 @@
     imports = [
       ./modules/slmi-git.nix
       ./modules/slmi-fzf.nix
-      # ./modules/slmi-rofi.nix
+      ./modules/slmi-rofi.nix
       ./modules/slmi-tmux.nix
       ./modules/slmi-vim.nix
       ./modules/slmi-xdg.nix
