@@ -32,6 +32,8 @@
     '';
 
     #initExtraFirst = ''
+    #  #
+    #  # profile zsh-startup
     #  zmodload zsh/zprof
     #'';
 
