@@ -24,7 +24,7 @@
 
     envExtra = ''
       #----------------------------------------------------------
-      # envExtra declared by configuration.nix / slm
+      # envExtra declared for .zshenv in slm-zsh.nix
       #
 
       # expand PATH
@@ -37,7 +37,7 @@
 
     initExtra = ''
       #----------------------------------------------------------
-      # initExtra declared by configuration.nix / slm
+      # initExtra declared by .zshrc in slm-zsh.nix
       #
 
       # own new slm-zshrc
