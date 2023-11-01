@@ -22,12 +22,22 @@
       ];
     };
 
+    envExtra = ''
+      #----------------------------------------------------------
+      # envExtra declared by configuration.nix / slm
+      #
+
+      # expand PATH
+      PATH=.local/bin:$PATH
+    '';
+
     #initExtraFirst = ''
     #  zmodload zsh/zprof
     #'';
+
     initExtra = ''
       #----------------------------------------------------------
-      # declared by configuration.nix / slm
+      # initExtra declared by configuration.nix / slm
       #
 
       # own new slm-zshrc
