@@ -142,6 +142,7 @@
     home.packages = with pkgs;
     [
       atop cmatrix gdu mixxx powerline-fonts
+      sl terminal-parrot
     ];
 
     programs.alacritty.enable=true;
