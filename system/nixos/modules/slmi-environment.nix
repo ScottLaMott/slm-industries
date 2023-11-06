@@ -9,31 +9,71 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    acpi alacritty ansible
-    bat brave brightnessctl btop
+    acpi
+    alacritty
+    ansible
+    bat
+    brave
+    brightnessctl
+    btop
     curl
     dmenu
-    ethtool exa
-    feh fd file fzf
+    ethtool
+    exa
+    feh
+    fd
+    file
+    fzf
     git
     htop
-    iftop inxi ipcalc iptraf-ng
+    iftop
+    inxi
+    ipcalc
+    iptraf-ng
     killall
-    lsd lua lua52Packages.luarocks-nix lxd
-    man-db mutt
-    nmap neofetch neovim nodejs
+    lsd
+    lua
+    lua52Packages.luarocks-nix
+    lxd
+    man-db
+    nmap
+    mutt
+    neofetch
+    neovim
+    nodejs
     openssh
-    pciutils pulsemixer pure-prompt python
-    ranger ripgrep
-    screen silver-searcher speedtest-cli sshpass stow sxiv
-    tshark tcpdump tig tio toilet tree tldr
+    pciutils
+    pulsemixer
+    pure-prompt
+    python
+    ranger
+    ripgrep
+    screen
+    silver-searcher
+    speedtest-cli
+    sshpass
+    stow
+    sxiv
+    tcpdump
+    tig
+    tio
+    tmux-xpanes
+    tldr
+    toilet
+    tree
+    tshark
     wget
     xclip
-    unzip usbutils
+    unzip
+    usbutils
     vim
     wget
-    xorg.xhost xorg.xeyes
-    zathura zellij zip unzip
+    xorg.xhost
+    xorg.xeyes
+    zathura
+    zellij
+    zip
+    unzip
   ];
 
 }
