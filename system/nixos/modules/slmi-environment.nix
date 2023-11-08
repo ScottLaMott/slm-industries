@@ -31,6 +31,7 @@
     ipcalc
     iptraf-ng
     killall
+    lf
     lsd
     lua
     lua52Packages.luarocks-nix
