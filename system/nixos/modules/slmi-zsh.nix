@@ -16,6 +16,7 @@
     zplug = {
       enable = true;
       plugins = [
+        # { name = "hlissner/zsh-autopair"; }
         { name = "hlissner/zsh-autopair"; tags = [ defer:2 ]; }
         { name = "endaaman/lxd-completion-zsh"; }
         { name = "agkozak/zsh-z"; }

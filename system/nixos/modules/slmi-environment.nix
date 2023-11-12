@@ -32,6 +32,7 @@
     iptraf-ng
     killall
     lf
+    libsixel
     lsd
     lua
     lua52Packages.luarocks-nix
