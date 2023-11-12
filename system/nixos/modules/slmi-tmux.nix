@@ -35,6 +35,7 @@
       bind-key -n M-b switch-client -l
       bind-key -n M-p switch-client -p
       bind-key -n M-n switch-client -n
+      bind-key -n M-d set-window-option synchronize-pane
       set -g @resurrect-dir '~/.tmux/resurrect'
       set -g @resurrect-strategy-vim 'session'
       set -g @resurrect-processes 'journalctl watch btop man ssh'
