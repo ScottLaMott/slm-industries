@@ -7,7 +7,7 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./modules/slmi-environment.nix
+    ./modules/environment.nix
     <home-manager/nixos>
   ];
 
@@ -149,13 +149,13 @@
     #programs.alacritty.settings= { }; # FIXME
 
     imports = [
-      ./modules/slmi-git.nix
-      ./modules/slmi-fzf.nix
-      ./modules/slmi-rofi.nix
-      ./modules/slmi-tmux.nix
-      ./modules/slmi-vim.nix
-      ./modules/slmi-xdg.nix
-      ./modules/slmi-zsh.nix
+      ./modules/git.nix
+      ./modules/fzf.nix
+      ./modules/rofi.nix
+      ./modules/tmux.nix
+      ./modules/vim.nix
+      ./modules/xdg.nix
+      ./modules/zsh.nix
     ];
   }; #--- user home-manager configuration end
 
