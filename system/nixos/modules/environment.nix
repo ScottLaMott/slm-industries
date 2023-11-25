@@ -36,6 +36,7 @@
     lsd
     lua
     lua52Packages.luarocks-nix
+    lukesmithxyz-st
     lxd
     man-db
     nmap
