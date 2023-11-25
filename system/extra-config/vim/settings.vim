@@ -9,15 +9,15 @@ syntax on
 filetype plugin indent on
 
 "--- general
-set cursorline
-"set termguicolors " macht den bildschirm schwarz/weiß
+" set cursorline
+" set termguicolors " macht den bildschirm schwarz/weiß
 set noswapfile
 set nobackup
 set nowritebackup
 set path+=**			                    " für z. B. find-ex-command
 set clipboard+=unnamedplus            " use system clipboard
 set ignorecase                        " while searching
-set hlsearch                          " highlight match
+set nohlsearch                        " highlight match
 
 set background=dark
 set scrolloff=100
@@ -51,7 +51,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " set colors --> gruvbox nord jellybeans molokai happy_hacking habamax
-colorscheme lunaperche
+colorscheme atom
 
 " set vim-airline --> bubblegum violet alduin molokai gruvbox
 let g:airline_theme="dark_minimal"

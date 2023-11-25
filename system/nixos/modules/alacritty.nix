@@ -11,6 +11,7 @@
     settings = {
       font.size = 9;
       window.opacity = 0.9;
+      window.padding.x = 8;
     };
   };
 }
