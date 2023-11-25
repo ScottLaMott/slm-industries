@@ -14,7 +14,7 @@
       font.y = 2;
       window.opacity = 0.9;
       window.padding.x = 8;
-      window.padding.y = 8;
+      window.padding.y = 3;
       cursor.style.shape = "Underline";
       cursor.style.blinking = "Always";
       cursor.blink_interval = 150;
