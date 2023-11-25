@@ -10,7 +10,8 @@
     baseIndex = 1;
     escapeTime = 1;
     keyMode = "vi";
-    shortcut = "a";
+    prefix = "M-a";
+    # shortcut = "a";
     newSession = true;
     historyLimit = 100000;
     plugins = [
