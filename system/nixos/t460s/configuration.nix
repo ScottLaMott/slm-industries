@@ -141,20 +141,27 @@
     home.stateVersion = "22.11";
     home.packages = with pkgs;
     [
-      atop cmatrix gdu mixxx powerline-fonts
-      sl terminal-parrot
+      atop
+      cmatrix
+      gdu
+      mixxx
+      picom
+      powerline-fonts
+      sl
+      terminal-parrot
     ];
 
-    programs.alacritty.enable=true;
-    #programs.alacritty.settings= { }; # FIXME
+    # services.picom.enable = true;         # für Terminal Transparenz
 
     imports = [
+      ./modules/alacritty.nix
       ./modules/git.nix
       ./modules/fzf.nix
       ./modules/rofi.nix
       ./modules/tmux.nix
       ./modules/vim.nix
       ./modules/xdg.nix
+      ./modules/xsession.nix
       ./modules/zsh.nix
     ];
   }; #--- user home-manager configuration end
