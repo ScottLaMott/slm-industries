@@ -158,6 +158,7 @@
       ./modules/git.nix
       ./modules/fzf.nix
       ./modules/rofi.nix
+      ./modules/picom.nix
       ./modules/tmux.nix
       ./modules/vim.nix
       ./modules/xdg.nix
