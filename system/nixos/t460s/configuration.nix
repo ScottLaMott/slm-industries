@@ -146,6 +146,8 @@
       gdu
       mixxx
       picom
+      # picom-jonaburg    # FIXME
+      # picom-next        # FIXME
       powerline-fonts
       sl
       terminal-parrot

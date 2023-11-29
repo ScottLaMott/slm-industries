@@ -77,6 +77,7 @@
     zellij
     zip
     unzip
+    # picom-jonaburg
   ];
 
 }
