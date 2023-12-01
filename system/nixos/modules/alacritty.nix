@@ -12,7 +12,7 @@
       font.size = 9;
       font.x = 0;
       font.y = 2;
-      window.opacity = 0.9;
+      window.opacity = 0.8;
       window.padding.x = 8;
       window.padding.y = 3;
       cursor.style.shape = "Underline";
