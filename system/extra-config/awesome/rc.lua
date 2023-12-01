@@ -51,7 +51,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.useless_gap = 7
+beautiful.useless_gap = 4
 
 --- FIXME beautiful.wallpaper.maximized("~/ws/slm-industries/system/wallpaper/wall.png", s)
 --- beautiful.wallpaper.maximized("~/ws/slm-industries/system/wallpaper/wall.png", s, true)
