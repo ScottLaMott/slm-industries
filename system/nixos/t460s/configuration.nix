@@ -30,8 +30,8 @@
   };
 
   #--- nfs mount
-  fileSystems."/mnt/homes" =
-  { device = "alpha:/volume1/homes";
+  fileSystems."/mnt/homes" = {
+    device = "alpha:/volume1/homes";
     fsType = "nfs";
   };
 
@@ -146,14 +146,10 @@
       gdu
       mixxx
       picom
-      # picom-jonaburg    # FIXME
-      # picom-next        # FIXME
       powerline-fonts
       sl
       terminal-parrot
     ];
-
-    # services.picom.enable = true;         # für Terminal Transparenz
 
     imports = [
       ./modules/alacritty.nix
