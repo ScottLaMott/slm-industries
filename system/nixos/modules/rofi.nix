@@ -15,6 +15,7 @@
     };
     # configPath="/home/slm/.config/rofi/config.rasi";
     # theme="/home/slm/.config/rofi/launchers/type-slm/style-slm.rasi";
+    theme="/home/slm/.config/rofi/launchers/type-4/style-3.rasi";
   };
 
 }
