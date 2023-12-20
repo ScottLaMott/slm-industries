@@ -49,6 +49,7 @@
     pulsemixer
     pure-prompt
     python
+    qemu
     ranger
     ripgrep
     screen
