@@ -45,7 +45,8 @@
         10.151.127.10   ubuntu-23-04
         10.151.127.101  u-1
         10.151.127.102  u-2
-        10.151.127.110  u-test
+        10.151.127.109  u-23-10
+        10.151.127.70   u-23-10-nng
         10.151.127.111  u-ansible
         10.151.127.112  u-tmux
         10.151.127.113  u-zplug
@@ -65,6 +66,7 @@
 
   #--- virtualisation
   virtualisation.lxd.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   #--- bluetooth
   hardware.bluetooth.enable = true;
@@ -132,7 +134,7 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = [ "networkmanager" "wheel" "lxd" ];
+    extraGroups = [ "networkmanager" "wheel" "lxd" "libvirtd"];
     shell = pkgs.zsh;
   };
 
