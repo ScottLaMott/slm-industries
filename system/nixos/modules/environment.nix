@@ -56,7 +56,6 @@
     silver-searcher
     speedtest-cli
     sshpass
-    stow
     sxiv
     tcpdump
     tig
@@ -68,14 +67,12 @@
     tshark
     wget
     xclip
-    unzip
     usbutils
     vim
     wget
     xorg.xhost
     xorg.xeyes
     zathura
-    zellij
     zip
     unzip
     # picom-jonaburg
