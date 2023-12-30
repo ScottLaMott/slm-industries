@@ -102,8 +102,9 @@
       ta    =     "tmux attach";
       tl    =     "tmux switch-client -l";
 
-      #---        virsh
-      virsh    =   "virsh --connect=qemu:///system";
+      #---        libvirt
+      virsh       =   "virsh --connect=qemu:///system";
+      virt-viewer =   "virt-viewer --connect=qemu:///system --attach";
 
       #---        eyecandy hi hi
       nf    =    "clear; neofetch";
