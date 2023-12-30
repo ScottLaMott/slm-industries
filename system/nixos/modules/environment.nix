@@ -25,6 +25,7 @@
     file
     fzf
     git
+    guestfs-tools
     htop
     iftop
     inxi
@@ -32,6 +33,7 @@
     iptraf-ng
     killall
     lf
+    libguestfs
     libsixel
     lsd
     lua
@@ -69,6 +71,9 @@
     xclip
     usbutils
     vim
+    virt-manager
+    virt-top
+    virt-viewer
     wget
     xorg.xhost
     xorg.xeyes
