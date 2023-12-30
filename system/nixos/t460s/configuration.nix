@@ -61,12 +61,17 @@
         10.151.127.132  a-2
       '';
 
+    # extraHosts = {
+    #   imports = ./modules/extrahosts.nix;
+    # };
+
     #nameservers = [ "127.0.0.53" ];
   };
 
   #--- virtualisation
   virtualisation.lxd.enable = true;
   virtualisation.libvirtd.enable = true;
+  hardware.opengl.enable = true;
 
   #--- bluetooth
   hardware.bluetooth.enable = true;
