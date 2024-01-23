@@ -143,6 +143,8 @@
     shell = pkgs.zsh;
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   #--- user home-manager configuration
   home-manager.users.slm = { pkgs, ... }: {
     home.stateVersion = "22.11";
@@ -170,6 +172,8 @@
       ./modules/xsession.nix
       ./modules/zsh.nix
     ];
+
+
   }; #--- user home-manager configuration end
 
 }
