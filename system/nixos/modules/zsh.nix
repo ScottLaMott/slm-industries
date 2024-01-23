@@ -82,6 +82,7 @@
 
       #---        git
       gs    =     "git status";
+      grs   =     "git remote show origin";
 
       #---        ls / df
       ls    =    "exa";
@@ -103,8 +104,9 @@
       tl    =     "tmux switch-client -l";
 
       #---        libvirt
-      virsh       =   "virsh --connect=qemu:///system";
-      virt-viewer =   "virt-viewer --connect=qemu:///system --attach";
+      virsh        =  "virsh --connect=qemu:///system";
+      virt-viewer  =  "virt-viewer --connect=qemu:///system --attach";
+      virt-manager =  "virt-manager --connect=qemu:///system";
 
       #---        eyecandy hi hi
       nf    =    "clear; neofetch";
