@@ -21,5 +21,7 @@ in
       toilet -f future 'slm-industries . . .'
       echo
       git status
+      echo
+      acpi
     '';
   }
