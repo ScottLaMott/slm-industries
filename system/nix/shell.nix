@@ -9,7 +9,7 @@ in
       cmatrix
       figlet
       sl
-      vim
+      tio
     ];
 
     GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
@@ -23,5 +23,6 @@ in
       git status
       echo
       acpi
+      # tmux
     '';
   }
