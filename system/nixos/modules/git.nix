@@ -10,7 +10,7 @@
     userName = "Scott LaMott";
     userEmail = "slm@slm-industries";
     extraConfig = {
-      core = { editor = "vim"; };
+      core = { editor = "nvim"; };
     };
     aliases = {
       s = "status";
