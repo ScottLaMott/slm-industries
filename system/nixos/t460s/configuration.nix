@@ -2,9 +2,11 @@
 #---
 #--- slmi-configuration.nix / System Configuration für slmi-industries
 #---
-
-{ config, pkgs, ... }: {
-
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./modules/environment.nix
@@ -12,9 +14,15 @@
   ];
 
   #--- bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.efi.efiSysMountPoint = "/boot/efi";
+
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    efi.efiSysMountPoint = "/boot/efi";
+  };
 
   system = {
     #--- This value determines the NixOS release from which the default settings for stateful data were taken
@@ -30,36 +38,35 @@
   };
 
   #--- nfs mount
-  fileSystems."/mnt/homes" = {
-    device = "alpha:/volume1/homes";
-    fsType = "nfs";
-  };
+  # fileSystems."/mnt/homes" = {
+  #   device = "alpha:/volume1/homes";
+  #   fsType = "nfs";
+  # };
 
   #--- networking
   networking = {
     networkmanager.enable = true;
-    hostName   = "slm-industries";
-    extraHosts =
-      ''
-        # ubuntu-container
-        10.151.127.10   ubuntu-23-04
-        10.151.127.101  u-1
-        10.151.127.102  u-2
-        10.151.127.109  u-23-10
-        10.151.127.70   u-23-10-nng
-        10.151.127.111  u-ansible
-        10.151.127.112  u-tmux
-        10.151.127.113  u-zplug
-        # enterprise-container
-        10.151.127.200  enterprise-v-0-1
-        10.151.127.201  et-1
-        10.151.127.202  et-2
-        # alpine containers
-        10.151.127.120  alpine
-        10.151.127.130  alpine-test
-        10.151.127.131  a-1
-        10.151.127.132  a-2
-      '';
+    hostName = "slm-industries";
+    extraHosts = ''
+      # ubuntu-container
+      10.151.127.10   ubuntu-23-04
+      10.151.127.101  u-1
+      10.151.127.102  u-2
+      10.151.127.109  u-23-10
+      10.151.127.70   u-23-10-nng
+      10.151.127.111  u-ansible
+      10.151.127.112  u-tmux
+      10.151.127.113  u-zplug
+      # enterprise-container
+      10.151.127.200  enterprise-v-0-1
+      10.151.127.201  et-1
+      10.151.127.202  et-2
+      # alpine containers
+      10.151.127.120  alpine
+      10.151.127.130  alpine-test
+      10.151.127.131  a-1
+      10.151.127.132  a-2
+    '';
 
     # extraHosts = {
     #   imports = ./modules/extrahosts.nix;
@@ -123,10 +130,15 @@
   services.xserver = {
     enable = true;
     layout = "de";
-    resolutions = [ { x = 1600; y = 900; } ];
-    windowManager.awesome.enable = true;  #--- enable window manager
+    resolutions = [
+      {
+        x = 1600;
+        y = 900;
+      }
+    ];
+    windowManager.awesome.enable = true; #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
-    xkbOptions = "caps:escape";           #--- map caps to escape
+    xkbOptions = "caps:escape"; #--- map caps to escape
   };
 
   #--- shell environment
@@ -139,17 +151,16 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = [ "networkmanager" "wheel" "lxd" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "lxd" "libvirtd"];
     shell = pkgs.zsh;
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #--- user home-manager configuration
-  home-manager.users.slm = { pkgs, ... }: {
+  home-manager.users.slm = {pkgs, ...}: {
     home.stateVersion = "22.11";
-    home.packages = with pkgs;
-    [
+    home.packages = with pkgs; [
       atop
       cmatrix
       gdu
@@ -172,9 +183,5 @@
       ./modules/xsession.nix
       ./modules/zsh.nix
     ];
-
-
   }; #--- user home-manager configuration end
-
 }
-
