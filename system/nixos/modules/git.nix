@@ -8,7 +8,7 @@
   programs.git = {
     enable = true;
     userName = "Scott LaMott";
-    userEmail = "slm@slmi-industries";
+    userEmail = "slm@slm-industries";
     extraConfig = {
       core = { editor = "vim"; };
     };
