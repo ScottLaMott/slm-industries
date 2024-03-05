@@ -19,7 +19,7 @@
     curl
     dmenu
     ethtool
-    exa
+    eza
     feh
     fd
     file
