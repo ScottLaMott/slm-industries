@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -23,6 +23,27 @@
       fsType = "vfat";
     };
 
+  fileSystems."/var/lib/lxd/shmounts" =
+    { device = "tmpfs";
+      fsType = "tmpfs";
+    };
+
+  fileSystems."/var/lib/lxd/devlxd" =
+    { device = "tmpfs";
+      fsType = "tmpfs";
+    };
+
+  fileSystems."/var/lib/lxd/storage-pools/default" =
+    { device = "/var/lib/lxd/disks/default.img";
+      fsType = "btrfs";
+      options = [ "loop" ];
+    };
+
+  fileSystems."/var/lib/lxd/storage-pools/lxc-container" =
+    { device = "/dev/disk/by-uuid/fd614eb1-cbbe-47bf-8cf3-a7ed5fb865df";
+      fsType = "btrfs";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -31,6 +52,9 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
+  # networking.interfaces.lxdbr0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth4e64f073.useDHCP = lib.mkDefault true;
+  # networking.interfaces.virbr0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp4s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wwp0s20f0u2i12.useDHCP = lib.mkDefault true;
 
