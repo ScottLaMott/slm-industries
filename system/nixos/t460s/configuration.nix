@@ -150,9 +150,11 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+
   #--- user home-manager configuration
   home-manager.users.slm = {pkgs, ...}: {
-    home.stateVersion = "22.11";
+    programs.zsh.enable = true;
+    home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
       cmatrix
