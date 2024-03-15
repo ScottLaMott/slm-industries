@@ -111,7 +111,6 @@
       #---        tmux
       ta = "tmux attach";
       tl = "tmux switch-client -l";
-      tmux="tmux -f ~/ws/projects/nix-flakes/tmux-flake/result/etc/tmux.conf";
 
       #---        libvirt
       virsh = "virsh --connect=qemu:///system";
