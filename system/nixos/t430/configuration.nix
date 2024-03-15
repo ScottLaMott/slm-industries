@@ -1,6 +1,6 @@
 #---------------------------------------------------
 #---
-#--- slmi-configuration.nix / System Configuration für slmi-industries
+#--- slmi-configuration.nix / System Configuration für nixos-t430
 #---
 {
   config,
@@ -9,41 +9,61 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./modules/environment.nix
+    <home-manager/nixos>
   ];
 
-  # Bootloader.
+  #--- bootloader
   boot.loader = {
     grub.enable = true;
     grub.device = "/dev/sda";
     # grub.useOSProber = true;
   };
 
-  networking.hostName = "nixos-t430"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  system = {
+    stateVersion = "23.11";
+    copySystemConfiguration = true;
+  };
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+  #--- workaround nach upgrade auf 23.05
+  nixpkgs.config = {
+    permittedInsecurePackages = [
+      "python-2.7.18.7"
+    ];
+  };
 
-  # Set your time zone.
+  #--- networking
+  networking = {
+   networkmanager.enable = true;
+   hostName = "nixos-t430";
+   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  };
+
+  #--- set time zone
   time.timeZone = "Europe/Berlin";
 
-  # Select internationalisation properties.
+  #--- select internationalisation properties
   i18n.defaultLocale = "en_US.UTF-8";
+  console = {
+    font = "Lat2-Terminus16";
+    #keyMap = "de";
+    useXkbConfig = true; # use xkbOptions in tty.
+  };
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.UTF-8";
-    LC_IDENTIFICATION = "de_DE.UTF-8";
-    LC_MEASUREMENT = "de_DE.UTF-8";
-    LC_MONETARY = "de_DE.UTF-8";
-    LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
-    LC_PAPER = "de_DE.UTF-8";
-    LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
+  #--- fonts
+  fonts.packages = with pkgs; [
+    font-awesome
+  ];
+
+  #--- enable the OpenSSH daemon.
+  services.openssh = {
+    enable = true;
+    #--- require public key authentication for better security
+    settings.PasswordAuthentication = true;
+    settings.X11Forwarding = true;
+    settings.KbdInteractiveAuthentication = true;
   };
 
   #--- enable the X11 windowing system.
@@ -63,7 +83,7 @@
 
   # Configure console keymap
   console.keyMap = "de";
-  
+
   #--- shell environment
   programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
@@ -76,6 +96,38 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
+
+  #--- user home-manager configuration
+  home-manager.users.slm = {pkgs, ...}: {
+    programs.zsh.enable = true;
+    home.stateVersion = "23.11";
+    home.packages = with pkgs; [
+      atop
+      cmatrix
+      figlet
+      gdu
+      mixxx
+      picom
+      powerline-fonts
+      sl
+      soco-cli
+      tmux
+      # terminal-parrot
+    ];
+
+    imports = [
+      ./modules/alacritty.nix
+      ./modules/git.nix
+      ./modules/fzf.nix
+      ./modules/rofi.nix
+      ./modules/picom.nix
+      ./modules/tmux.nix
+      ./modules/vim.nix
+      ./modules/xdg.nix
+      ./modules/xsession.nix
+      ./modules/zsh.nix
+    ];
+  }; #--- user home-manager configuration end
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -115,26 +167,10 @@
 
   # List services that you want to enable:
 
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true; 
-    # require public key authentication for better security
-    settings.PasswordAuthentication = true;
-    settings.KbdInteractiveAuthentication = true;
-  };
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
 
 }
