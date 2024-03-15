@@ -48,7 +48,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    #keyMap = "de";
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
@@ -80,9 +79,6 @@
     displayManager.lightdm.enable = true; #--- enable login manager
     xkbOptions = "caps:escape"; #--- map caps to escape
   };
-
-  # Configure console keymap
-  console.keyMap = "de";
 
   #--- shell environment
   programs.vim.defaultEditor = true;
