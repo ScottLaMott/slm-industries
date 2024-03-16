@@ -103,6 +103,7 @@
       figlet
       gdu
       mixxx
+      nix-tree
       picom
       powerline-fonts
       sl
@@ -143,6 +144,8 @@
     git
     inxi
     neofetch
+    nix-tree
+    nix-index
     ranger
     sl
     speedtest-cli
