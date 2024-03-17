@@ -119,8 +119,8 @@
 
       #---        eyecandy hi hi
       nf = "clear; neofetch";
-      cm = "cmatrix -u9";
-      cmr = "cmatrix -u9 -r";
+      cm = "cmatrix -u9 -s";
+      cmr = "cmatrix -u9 -s -r";
       cct = "/usr/bin/theme.sh -i2";
     };
   };
