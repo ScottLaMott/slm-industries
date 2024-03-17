@@ -65,6 +65,10 @@
     #   10.151.127.132  a-2
     # '';
 
+      # imports = [
+      #   ./modules/extrahosts.nix
+      # ];
+
     # extraHosts = {
     #   imports = ./modules/extrahosts.nix;
     # };
@@ -116,7 +120,7 @@
   #--- enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    settings.PasswordAuthentication = false;
+    settings.PasswordAuthentication = true;
     settings.X11Forwarding = true;
   };
 
@@ -177,7 +181,7 @@
       ./modules/tmux.nix
       ./modules/vim.nix
       ./modules/xdg.nix
-      ./modules/xsession.nix
+      # ./modules/xsession.nix
       ./modules/zsh.nix
     ];
   }; #--- user home-manager configuration end
