@@ -20,7 +20,7 @@ set ignorecase                        " while searching
 set nohlsearch                        " highlight match
 
 set background=dark
-set scrolloff=100
+set scrolloff=8
 
 " --- statusline
 set cmdheight=1
