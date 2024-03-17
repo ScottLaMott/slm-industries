@@ -9,6 +9,7 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
+    abcde
     acpi
     alacritty
     ansible
