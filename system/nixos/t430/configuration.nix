@@ -9,7 +9,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/environment.nix
+    ./modules/t430/environment.nix
     <home-manager/nixos>
   ];
 
