@@ -9,7 +9,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/environment.nix
+    ./modules/t460s/environment.nix
     # ./modules/extrahosts.nix
     <home-manager/nixos>
   ];
