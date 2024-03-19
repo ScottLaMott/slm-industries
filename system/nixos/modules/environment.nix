@@ -42,6 +42,7 @@
     lukesmithxyz-st
     lxd
     man-db
+    nix-tree
     nmap
     mutt
     neofetch
