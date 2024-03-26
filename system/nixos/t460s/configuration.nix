@@ -168,6 +168,8 @@
       picom
       powerline-fonts
       sl
+      spotifyd
+      spotify-tui
       soco-cli
       # terminal-parrot
     ];
@@ -185,4 +187,7 @@
       ./modules/zsh.nix
     ];
   }; #--- user home-manager configuration end
+
+nixpkgs.config.allowUnfree = true;
+
 }
