@@ -26,6 +26,7 @@
     file
     fzf
     git
+    glxinfo
     guestfs-tools
     htop
     iftop
