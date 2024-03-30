@@ -89,9 +89,11 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "jackaudio" ];
     shell = pkgs.zsh;
   };
+
+  # users.extraUsers.slm.extraGroups = [ "jackaudio" ];
 
   #--- user home-manager configuration
   home-manager.users.slm = {pkgs, ...}: {
@@ -99,15 +101,19 @@
     home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
+      beets
       cmatrix
       figlet
       gdu
+      hwinfo
       mixxx
       nix-tree
+      picard
       picom
       powerline-fonts
       sl
       soco-cli
+      strawberry
       tmux
       # terminal-parrot
     ];
@@ -171,5 +177,19 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  services.jack = {
+     jackd.enable = true;
+     # support ALSA only programs via ALSA JACK PCM plugin
+     alsa.enable = true;
+     # support ALSA only programs via loopback device (supports programs like Steam)
+     # loopback = {
+       # enable = true;
+       # buffering parameters for dmix device to work with ALSA only semi-professional sound programs
+       # dmixConfig = ''
+       #   period_size 2048
+       # '';
+     # };
+  };
 
 }
