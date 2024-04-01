@@ -112,9 +112,10 @@
       picom
       powerline-fonts
       sl
+      spotifyd
+      spotify-tui
       soco-cli
       strawberry
-      tmux
       # terminal-parrot
     ];
 

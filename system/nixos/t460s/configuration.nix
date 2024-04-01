@@ -14,6 +14,7 @@
     <home-manager/nixos>
   ];
 
+  #--- bootloader
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -21,11 +22,11 @@
   };
 
   system = {
-    #--- This value determines the NixOS release from which the default settings for stateful data were taken
     stateVersion = "23.05";
-    # stateVersion = "22.11";
     copySystemConfiguration = true;
   };
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #--- workaround nach upgrade auf 23.05
   nixpkgs.config = {
@@ -108,7 +109,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    #keyMap = "de";
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
@@ -148,11 +148,10 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "lxd" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd"];
     shell = pkgs.zsh;
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
 
   #--- user home-manager configuration
@@ -161,16 +160,21 @@
     home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
+      beets
       cmatrix
       figlet
       gdu
+      hwinfo
       mixxx
+      nix-tree
+      picard
       picom
       powerline-fonts
       sl
       spotifyd
       spotify-tui
       soco-cli
+      strawberry
       # terminal-parrot
     ];
 
