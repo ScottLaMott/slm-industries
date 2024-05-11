@@ -161,6 +161,7 @@
     home.packages = with pkgs; [
       atop
       beets
+      cava
       cmatrix
       figlet
       gdu
