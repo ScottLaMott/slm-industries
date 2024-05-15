@@ -117,8 +117,6 @@
     shell = pkgs.zsh;
   };
 
-
-
   #--- user home-manager configuration
   home-manager.users.slm = {pkgs, ...}: {
     programs.zsh.enable = true;
