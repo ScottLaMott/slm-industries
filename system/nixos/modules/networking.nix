@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }: {
+{ config, pkgs, ... }: {
   networking.networkmanager.enable = true;
   networking.hostName = "slm-industries";
   networking.extraHosts = 

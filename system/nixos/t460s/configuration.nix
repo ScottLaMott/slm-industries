@@ -9,7 +9,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/t460s/environment.nix
+    ./modules/environment.nix
     ./modules/networking.nix
     <home-manager/nixos>
   ];
@@ -130,6 +130,7 @@
       gdu
       hwinfo
       mixxx
+      nitch
       nix-tree
       picard
       picom
