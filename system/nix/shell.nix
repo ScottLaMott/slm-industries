@@ -10,6 +10,7 @@ in
       figlet
       sl
       tio
+      zsh
     ];
 
     GIT_EDITOR = "${pkgs.neovim}/bin/nvim";
