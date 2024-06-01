@@ -10,8 +10,8 @@
     #--- settings
     settings = {
       font.size = 9;
-      font.x = 0;
-      font.y = 2;
+      # font.x = 0;
+      # font.y = 2;
       window.opacity = 0.8;
       window.padding.x = 0;
       window.padding.y = 0;

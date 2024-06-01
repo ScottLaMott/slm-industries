@@ -1,5 +1,5 @@
   #--- user home-manager configuration
-  
+
 
 { config, lib, pkgs, modulesPath, ... }: {
   home-manager.users.slm = {pkgs, ...}: {
@@ -21,7 +21,6 @@
       powerline-fonts
       sl
       spotifyd
-      spotify-tui
       soco-cli
       strawberry
       # terminal-parrot
