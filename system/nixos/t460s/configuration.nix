@@ -32,7 +32,7 @@
   #--- workaround nach upgrade auf 23.05
   nixpkgs.config = {
     permittedInsecurePackages = [
-      "python-2.7.18.7"
+      "python-2.7.18.8"
     ];
   };
 
@@ -94,16 +94,16 @@
   #--- enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    layout = "de";
     resolutions = [
       {
         x = 1600;
         y = 900;
       }
     ];
+    xkb.layout = "de";
+    xkb.options = "caps:escape"; #--- map caps to escape
     windowManager.awesome.enable = true; #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
-    xkbOptions = "caps:escape"; #--- map caps to escape
   };
 
   #--- shell environment

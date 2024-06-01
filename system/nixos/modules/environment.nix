@@ -41,7 +41,7 @@
     lua
     lua52Packages.luarocks-nix
     lukesmithxyz-st
-    lxd
+    lxd-lts
     man-db
     nix-tree
     nmap

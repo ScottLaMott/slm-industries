@@ -13,7 +13,7 @@
     enable = true;
     defaultKeymap = "viins";
     enableCompletion = false; # FIXME, true macht zsh-startup langsam
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     dotDir = ".config/zsh"; # FIXME
 
