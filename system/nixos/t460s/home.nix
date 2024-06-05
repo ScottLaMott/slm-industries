@@ -11,6 +11,7 @@
       cava
       cmatrix
       figlet
+      glow
       gdu
       hwinfo
       mixxx
@@ -20,7 +21,8 @@
       picom
       powerline-fonts
       sl
-      spotifyd
+      spotifyd playerctl
+      # spotify-tui
       soco-cli
       strawberry
       # terminal-parrot
@@ -28,7 +30,6 @@
 
     imports = [
       ./modules/alacritty.nix
-      # ./modules/alacritty.nix
       ./modules/git.nix
       ./modules/fzf.nix
       ./modules/rofi.nix
