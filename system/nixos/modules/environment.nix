@@ -50,6 +50,7 @@
     nodejs
     openssh
     pciutils
+    pulseaudioFull
     pulsemixer
     pure-prompt
     python
