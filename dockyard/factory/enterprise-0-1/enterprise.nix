@@ -13,7 +13,7 @@
     };
   };
 
-  system.stateVersion               = "22.05"; # Did you read the comment?
+  system.stateVersion = "22.05"; # Did you read the comment?
 
   #--- enable networking
   networking.hostName = "enterprise-0-1";
@@ -28,7 +28,7 @@
   #--- packages installed in system profile
   environment.systemPackages = with pkgs; [
     alacritty brave btop curl fd file fzf gdu git htop
-    killall lf lsd nmap neofetch neovim
+    killall lf lsd nmap neofetch neovim nitch
     ranger ripgrep screen silver-searcher speedtest-cli
     tcpdump tmux tree tldr vim
     wget zsh
@@ -52,7 +52,7 @@
     #--- enable window manager
     windowManager.awesome.enable = true;
     #--- enable desktop manager
-    desktopManager.cinnamon.enable = true;
+    # desktopManager.cinnamon.enable = true;
   };
 
   #--- user configuration

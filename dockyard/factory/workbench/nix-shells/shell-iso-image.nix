@@ -1,3 +1,7 @@
+#
+#  FIXME: vm starten funktioniert nicht
+#
+#
 
 let
   nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-23.11";
