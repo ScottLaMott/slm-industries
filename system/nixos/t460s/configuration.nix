@@ -107,6 +107,17 @@
     displayManager.lightdm.enable = true; #--- enable login manager
   };
 
+  services.spotifyd = {
+    enable = true;
+    settings =
+      {
+        global = {
+          username = "Alex";
+          password = "foo";
+        };
+      };
+  };
+
   #--- shell environment
   programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
