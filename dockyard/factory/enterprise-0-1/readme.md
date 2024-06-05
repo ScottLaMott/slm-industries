@@ -6,7 +6,7 @@
 - _enterprise.nix_, der Bauplan eines NixOS getriebenen Raumschiffes erstellen.
   - Besatzung anlegen
       scotty, kirk, spok, uhura, zulu, chekov, pille. Bilder einbeziehen.
-  - Besatzung konfigurieren, mit home-manager in vm
+  - Besatzung konfigurieren, mit home-manager in vm, home-manager konfiguration in configuration.nix (single user installation? )
   - Kommunikation konfigurieren
   - Unterhaltungsprogramm konfigurieren
   - GPS-Anwendung entwickeln

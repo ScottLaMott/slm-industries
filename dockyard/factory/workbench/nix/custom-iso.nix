@@ -5,12 +5,13 @@
 let
   myisoconfig = { pkgs, ... }: {
     imports = [
-      # "${nixpkgs}/nixos/modules/installer/cd-dvd/iso-image.nix"
+      #"${nixpkgs}/nixos/modules/installer/cd-dvd/iso-image.nix"
       # oder lokaler clone von nixpkgs
-      # "/home/slm/ws/nixpkgs/nixos/modules/installer/cd-dvd/iso-image.nix"
       "/home/slm/ws/nixpkgs/nixos/modules/installer/cd-dvd/iso-image.nix"
       # oder lokale kopie von nixpkgs/...
-      # "slm-iso-image.nix"
+      # # FIXME: "./slm-iso-image.nix"
+      # "/home/slm/ws/slm-industries/dockyard/factory/workbench/nix/slm-iso-image.nix"
+      # /home/slm/ws/slm-industries/dockyard/factory/workbench/nix/slm-iso-image.nix
     ];
 
     # building faster
