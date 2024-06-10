@@ -20,14 +20,9 @@
     zplug = {
       enable = true;
       plugins = [
-        # { name = "hlissner/zsh-autopair"; }
-        # {
-          # name = "hlissner/zsh-autopair";
-          # tags = "defer:2";
-          # tags = [ "defer:2" ];
-        # }
-        {name = "endaaman/lxd-completion-zsh";}
-        {name = "agkozak/zsh-z";}
+        { name = "hlissner/zsh-autopair"; tags = [ "defer:2" ]; }
+        { name = "endaaman/lxd-completion-zsh"; }
+        { name = "agkozak/zsh-z"; }
       ];
     };
 
@@ -49,7 +44,7 @@
 
     initExtra = ''
       #----------------------------------------------------------
-      # initExtra declared by .zshrc in slm-zsh.nix
+      # initExtra declared by .zshrc in zsh.nix
       #
 
       # own new slm-zshrc
