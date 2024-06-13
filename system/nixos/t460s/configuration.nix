@@ -87,8 +87,8 @@
   #--- enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    # settings.PasswordAuthentication = true;
-    settings.PasswordAuthentication = false;
+    settings.PasswordAuthentication = true;
+    # settings.PasswordAuthentication = false;
     settings.X11Forwarding = true;
   };
 
