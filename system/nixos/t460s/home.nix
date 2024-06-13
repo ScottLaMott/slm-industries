@@ -47,5 +47,4 @@
     ];
   }; #--- user home-manager configuration end
 
-  # xdg.configFile."awesome/rc.lua".source = ./dots/rc.lua; # FIXME
 }
