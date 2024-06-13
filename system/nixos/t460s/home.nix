@@ -7,25 +7,30 @@
     home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
-      beets
-      cava
-      cmatrix
       figlet
       glow
       gdu
       hwinfo
-      mixxx
       nitch
       nix-tree
-      picard
       picom
+      playerctl
       powerline-fonts
+
+      # fun
+      cmatrix
       sl
-      spotifyd playerctl
-      # spotify-tui
-      soco-cli
-      strawberry
       # terminal-parrot
+
+      # music
+      beets
+      cava
+      mixxx
+      picard
+      soco-cli
+      spotifyd
+      spotify-player
+      strawberry
     ];
 
     imports = [
@@ -42,4 +47,5 @@
     ];
   }; #--- user home-manager configuration end
 
+  # xdg.configFile."awesome/rc.lua".source = ./dots/rc.lua; # FIXME
 }
