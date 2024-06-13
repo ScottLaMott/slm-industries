@@ -112,6 +112,9 @@
       virt-viewer = "virt-viewer --connect=qemu:///system --attach";
       virt-manager = "virt-manager --connect=qemu:///system";
 
+      #---        music
+      pm = "pulsemixer";
+
       #---        eyecandy hi hi
       nf = "clear; neofetch";
       cni = "clear; neofetch; inxi --full";
