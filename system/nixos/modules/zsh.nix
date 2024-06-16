@@ -26,6 +26,11 @@
       ];
     };
 
+    sessionVariables = {
+      EDITOR = "vim";
+      LESS = "-j10 -R";
+    };
+
     envExtra = ''
       #----------------------------------------------------------
       # envExtra declared for .zshenv in slm-zsh.nix
@@ -49,9 +54,9 @@
 
       # own new slm-zshrc
       [ -f  $XDG_CONFIG_HOME/zsh/slm-zshrc ]                && source $XDG_CONFIG_HOME/zsh/slm-zshrc
-      [ -f  $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages ]  && source $XDG_DATA_HOME/zsh/bin/slm-colored-man-pages
+      [ -f  $XDG_CONFIG_HOME/zsh/slm-colored-man-pages ]    && source $XDG_CONFIG_HOME/zsh/slm-colored-man-pages
 
-      export LESS='-j8 -R'
+      # export LESS='-j8 -R'
 
       # wallpaper mit feh
 
