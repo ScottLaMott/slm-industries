@@ -39,6 +39,7 @@
       ./modules/fzf.nix
       ./modules/rofi.nix
       ./modules/picom.nix
+      ./modules/starship.nix
       ./modules/tmux.nix
       ./modules/vim.nix
       ./modules/xdg.nix
