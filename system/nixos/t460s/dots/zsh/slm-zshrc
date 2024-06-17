@@ -17,11 +17,6 @@ bindkey -v '^?' backward-delete-char
 # color -------------------------------
 # autoload -U colors && colors
 
-# prompt ------------------------------
-fpath=(/home/slm/ws/git-repos/purification $fpath)
-autoload -Uz prompt_purification_setup && prompt_purification_setup
-# prompt oliver yellow
-
 # slm ---------------------------------
 # Jump to begin of line / insert mode command line history
 zle-history-line-set () {
