@@ -32,7 +32,7 @@ set splitright			                  " split window to the right
 
 " --- netrw
 let netrw_banner=1
-let netrw_liststyle=2
+let netrw_liststyle=1
 let netrw_sizestyle="H"
 
 "--- fugitive
