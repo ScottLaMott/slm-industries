@@ -51,7 +51,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " set colors --> gruvbox nord jellybeans molokai happy_hacking habamax
-colorscheme focuspoint
+colorscheme gruvbox
 
 " set vim-airline --> bubblegum violet alduin molokai gruvbox
 let g:airline_theme="dark_minimal"
