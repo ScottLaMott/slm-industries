@@ -1,6 +1,7 @@
-## slm 
-# yazi.toml
+### slm 
+#
 [manager]
-show_hidden = false
-
-# ratio = [1, 2, 5]
+ratio           = [1, 3, 4]
+show_hidden     = false
+sort_dir_first  = true
+scrolloff       = 200
