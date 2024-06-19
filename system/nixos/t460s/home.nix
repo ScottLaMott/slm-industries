@@ -16,6 +16,7 @@
       picom
       playerctl
       powerline-fonts
+      yazi
 
       # fun
       cmatrix
@@ -44,6 +45,7 @@
       ./modules/vim.nix
       ./modules/xdg.nix
       # ./modules/xsession.nix
+      ./modules/yazi.nix
       ./modules/zsh.nix
     ];
   }; #--- user home-manager configuration end
