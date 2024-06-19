@@ -1,13 +1,11 @@
-# T 460s
- 
-## glow test
+# T-460s
+
+Dies ist die Legacy-NixOS-Konfiguration für den T460s
 
 - strich
 - strich
-- strich
-- strich
-- strich
 
-## glow test
+## TODOS
+- tmux-flake integrieren
 
-### glow test
+## DONES
