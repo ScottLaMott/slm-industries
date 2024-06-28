@@ -25,7 +25,7 @@
       set-option -g default-terminal "screen-256color"
       set-option -g mouse on
       set-option -g renumber-windows on
-      set-option -g pane-border-lines double
+      set-option -g pane-border-lines single
       set-option -g pane-border-indicators arrows
       TMUX_FZF_LAUNCH_KEY="C-f"                # tmux-fzf plugin c-a c-f
       bind-key -n M-h select-pane -L
