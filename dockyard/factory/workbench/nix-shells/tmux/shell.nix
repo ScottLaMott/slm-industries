@@ -6,6 +6,7 @@ let
 in
 
   pkgs.mkShell {
+    name = "slm-tmux-shell";
     packages = with pkgs; [
       tmux
       #
@@ -15,7 +16,7 @@ in
     shellHook = ''
       clear
       echo
-      figlet -w120 '    . . . tumx  -  shell . . .'
+      figlet -w120 '    . . . slm  -  tumx  -  shell . . .'
       echo
       echo
     '';
