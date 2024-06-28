@@ -15,7 +15,8 @@
     newSession = true;
     historyLimit = 100000;
     plugins = [
-      pkgs.tmuxPlugins.gruvbox
+      # pkgs.tmuxPlugins.gruvbox
+      pkgs.tmuxPlugins.nord
       pkgs.tmuxPlugins.tmux-fzf
       pkgs.tmuxPlugins.resurrect
       pkgs.tmuxPlugins.continuum
@@ -39,10 +40,17 @@
       bind-key -n M-p switch-client -p
       bind-key -n M-n switch-client -n
       bind-key -n M-d set-window-option synchronize-pane
+
       set -g @resurrect-dir '~/.tmux/resurrect'
       set -g @resurrect-strategy-vim 'session'
-      set -g @resurrect-processes 'journalctl watch btop man ssh'
+      set -g @resurrect-processes 'journalctl watch btop man ssh vim cava spotify_player'
       set -g @continuum-restore 'on'
+      # # for vim
+      # set -g @resurrect-strategy-vim 'session'
+      # # for neovim
+      # set -g @resurrect-strategy-nvim 'session'
+
+      set -g @resurrect-capture-pane-contents 'on'
     '';
   };
 
