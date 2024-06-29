@@ -29,7 +29,6 @@
       mixxx
       picard
       soco-cli
-      spotifyd
       spotify-player
       strawberry
     ];
