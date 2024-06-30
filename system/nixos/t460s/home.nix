@@ -1,6 +1,5 @@
   #--- user home-manager configuration
 
-
 { config, lib, pkgs, modulesPath, ... }: {
   home-manager.users.slm = {pkgs, ...}: {
     programs.zsh.enable = true;
