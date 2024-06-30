@@ -38,7 +38,7 @@
     };
     extraConfig  = ''
       """""""""""""""""""""""""""""""""""""""""""""""""""""
-      " declared by configuration.nix / slm
+      " declared by vim.nix / slm
       "
       if !empty(glob("$XDG_CONFIG_HOME/vim/settings.vim"))
         source $XDG_CONFIG_HOME/vim/settings.vim
