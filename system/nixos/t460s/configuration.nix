@@ -119,7 +119,7 @@
   };
 
   #--- shell environment
-  programs.vim.defaultEditor = true;
+  # programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
   programs.ssh.forwardX11 = true;
 
