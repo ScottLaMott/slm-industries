@@ -71,61 +71,64 @@
     };
 
     shellAliases = {
-      ".." = "cd ..";
-      c = "clear";
-      cp = "cp -i";
-      mv = "mv -i";
-      rm = "rm -i";
+      ".."  = "cd ..";
+      c     = "clear";
+      cp    = "cp -i";
+      mv    = "mv -i";
+      rm    = "rm -i";
 
-      #---        edit
-      v = "vim";
-      vs = "vim -S .session.vim";
-      ns = "nvim -S .session.vim";
-      n = "nvim";
+      #--- edit
+      v     = "vim";
+      vs    = "vim -S .session.vim";
+      ns    = "nvim -S .session.vim";
+      n     = "nvim";
 
-      #---        network
-      pgo = "ping -c1 -W5 www.google.com";
-      p = "ping -c 3 -w5";
-      ncs = "nmcli connection show";
-      nds = "nmcli device show";
+      #--- network
+      pgo   = "ping -c1 -W5 www.google.com";
+      p     = "ping -c 3 -w5";
+      ncs   = "nmcli connection show";
+      nds   = "nmcli device show";
 
-      #---        git
-      gs = "git status";
-      grs = "git remote show origin";
+      #--- git
+      gs    = "git status";
+      grs   = "git remote show origin";
 
-      #---        ls / df
-      ls = "exa";
-      la = "ls -la";
-      ll = "ls -l";
-      lR = "ls -lR";
-      dfe = "df -t ext4"; # fs-type ext4
+      #--- ls / df
+      ls    = "exa";
+      la    = "ls -la";
+      ll    = "ls -l";
+      lR    = "ls -lR";
+      dfe   = "df -t ext4"; # fs-type ext4
 
-      #---        lxc / lxd
-      cls = "lxc ls -cns4S -fcompact";
-      clsr = "lxc ls -cns4S -fcompact status=running";
-      clss = "lxc ls -cns4S -fcompact status=stopped";
+      #--- lxc / lxd
+      cls   = "lxc ls -cns4S -fcompact";
+      clsr  = "lxc ls -cns4S -fcompact status=running";
+      clss  = "lxc ls -cns4S -fcompact status=stopped";
 
-      #---        history
-      hg = "history | grep ";
+      #--- history
+      hg    = "history | grep ";
 
-      #---        tmux
-      ta = "tmux attach";
-      tl = "tmux switch-client -l";
+      #--- tmux
+      ta    = "tmux attach";
+      tl    = "tmux switch-client -l";
 
-      #---        libvirt
-      virsh = "virsh --connect=qemu:///system";
-      virt-viewer = "virt-viewer --connect=qemu:///system --attach";
+      #--- libvirt
+      virsh        = "virsh --connect=qemu:///system";
+      virt-viewer  = "virt-viewer --connect=qemu:///system --attach";
       virt-manager = "virt-manager --connect=qemu:///system";
 
-      #---        music
-      pm = "pulsemixer";
+      #--- nix
+      nie   = "nix-instantiate --eval";
 
-      #---        eyecandy hi hi
-      nf = "clear; neofetch";
-      cni = "clear; neofetch; inxi --full";
-      cm = "cmatrix -u9 -s";
-      cmr = "cmatrix -u9 -s -r";
-      cct = "/usr/bin/theme.sh -i2";
+      #--- music
+      pm    = "pulsemixer";
+
+      #--- eyecandy hi hi
+      nf    = "clear; neofetch";
+      cni   = "clear; neofetch; inxi --full";
+      cm    = "cmatrix -u9 -s";
+      cmr   = "cmatrix -u9 -s -r";
+      cct   = "/usr/bin/theme.sh -i2";
     };
   };
 }
