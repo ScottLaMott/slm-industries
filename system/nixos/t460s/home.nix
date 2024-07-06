@@ -15,6 +15,7 @@
       picom
       playerctl
       powerline-fonts
+      # tmuxp
       yazi
 
       # fun
