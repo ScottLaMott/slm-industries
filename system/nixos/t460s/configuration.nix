@@ -47,13 +47,13 @@
   virtualisation.lxd.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.virtualbox.host.enable = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   #--- bluetooth
   hardware.bluetooth.enable = true;
 
   #--- enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
