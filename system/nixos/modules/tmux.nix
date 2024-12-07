@@ -40,6 +40,13 @@
           set -g @resurrect-capture-pane-contents 'on'
         '';
       }
+      {
+        plugin = tmuxPlugins.weather;
+        # plugin = tmuxPlugins.tmux-floax;
+        extraConfig = ''
+          # set -g @resurrect-capture-pane-contents 'on'
+        '';
+      }
     ];
 
     extraConfig = ''
