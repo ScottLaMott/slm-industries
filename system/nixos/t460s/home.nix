@@ -35,6 +35,7 @@
 
     imports = [
       ./modules/alacritty.nix
+      ./modules/cava.nix
       ./modules/git.nix
       ./modules/fzf.nix
       ./modules/rofi.nix
