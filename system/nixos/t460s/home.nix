@@ -18,9 +18,9 @@
       # tmuxp
       yazi
 
-      # fun
-      cmatrix
-      sl
+      # fun, teilweise in devbox fun-box
+      # cmatrix
+      # sl
       # terminal-parrot
 
       # music
@@ -31,6 +31,9 @@
       soco-cli
       spotify-player
       strawberry
+      #
+      lnav
+      devbox
     ];
 
     imports = [
