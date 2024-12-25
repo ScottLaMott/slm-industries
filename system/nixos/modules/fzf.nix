@@ -8,7 +8,8 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    defaultCommand = "fd --type f --hidden";
+    defaultCommand = "fd --type f";
+    #defaultCommand = "fd --type f --hidden";
     defaultOptions = [
       "--header-first"
       "--layout=reverse"
