@@ -18,6 +18,7 @@
     brightnessctl
     btop
     curl
+    devbox
     dmenu
     ethtool
     eza
@@ -27,9 +28,9 @@
     fzf
     git
     glxinfo
-    guestfs-tools
     htop
     iftop
+    incus
     inxi
     ipcalc
     iptraf-ng
@@ -41,7 +42,7 @@
     lua
     lua52Packages.luarocks-nix
     lukesmithxyz-st
-    lxd-lts
+    # lxd-lts
     man-db
     nix-tree
     nmap
@@ -63,6 +64,7 @@
     sshpass
     sxiv
     tcpdump
+    termshark
     tig
     tio
     tmux-xpanes

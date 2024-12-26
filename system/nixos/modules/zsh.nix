@@ -100,10 +100,11 @@
       lR    = "ls -lR";
       dfe   = "df -t ext4"; # fs-type ext4
 
-      #--- lxc / lxd
-      cls   = "lxc ls -cns4S -fcompact";
-      clsr  = "lxc ls -cns4S -fcompact status=running";
-      clss  = "lxc ls -cns4S -fcompact status=stopped";
+      #--- incus
+      ils   = "incus ls -cns4S -fcompact";
+      ilsr  = "incus ls -cns4S -fcompact status=running";
+      ilss  = "incus ls -cns4S -fcompact status=stopped";
+      ie    = "incus exec";
 
       #--- history
       hg    = "history | grep ";
@@ -119,6 +120,7 @@
 
       #--- nix
       nie   = "nix-instantiate --eval";
+      db    = "devbox";
 
       #--- music
       pm    = "pulsemixer";

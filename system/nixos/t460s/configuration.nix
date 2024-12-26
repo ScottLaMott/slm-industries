@@ -44,9 +44,23 @@
   # };
 
   #--- virtualisation
-  virtualisation.lxd.enable = true;
+  #- incus, lxd nachfolger
+  virtualisation.incus.enable = true;
+  networking.nftables.enable = true;
+  networking.firewall.interfaces.incusbr0.allowedTCPPorts = [
+    53
+    67
+  ];
+  networking.firewall.interfaces.incusbr0.allowedUDPPorts = [
+    53
+    67
+  ];
+
+  #- virtmanager
   virtualisation.libvirtd.enable = true;
-  virtualisation.virtualbox.host.enable = true;
+
+  #--- test ---# virtualisation.virtualbox.host.enable = true;
+
   hardware.graphics.enable = true;
 
   #--- bluetooth
@@ -127,7 +141,7 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
     shell = pkgs.zsh;
   };
 
