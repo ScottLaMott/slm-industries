@@ -1,6 +1,6 @@
 #---------------------------------------------------
 #---
-#--- slmi-configuration.nix / System Configuration für nixos-t430
+#--- slmi-configuration.nix / System Configuration für slmi-industries
 #---
 {
   config,
@@ -9,19 +9,29 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/t430/environment.nix
+    ./modules/environment.nix
+    ./modules/networking.nix
     <home-manager/nixos>
+    ./home.nix
   ];
+  
+  # Use the GRUB 2 boot loader.
+  boot.loader.grub.enable = true;
+  # boot.loader.grub.efiSupport = true;
+  # boot.loader.grub.efiInstallAsRemovable = true;
+  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  # Define on which hard drive you want to install Grub.
+  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   #--- bootloader
-  boot.loader = {
-    grub.enable = true;
-    grub.device = "/dev/sda";
-    # grub.useOSProber = true;
-  };
+  #boot.loader = {
+  #  systemd-boot.enable = true;
+  #  efi.canTouchEfiVariables = true;
+  #  efi.efiSysMountPoint = "/boot/efi";
+  #};
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = "24.11";
     copySystemConfiguration = true;
   };
 
@@ -30,15 +40,55 @@
   #--- workaround nach upgrade auf 23.05
   nixpkgs.config = {
     permittedInsecurePackages = [
-      "python-2.7.18.7"
+      "python-2.7.18.8"
     ];
+    allowUnfree = true;
   };
 
-  #--- networking
-  networking = {
-   networkmanager.enable = true;
-   hostName = "nixos-t430";
-   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #--- nfs mount
+  # fileSystems."/mnt/homes" = {
+  #   device = "alpha:/volume1/homes";
+  #   fsType = "nfs";
+  # };
+
+  #--- virtualisation
+  #- incus, lxd nachfolger
+  virtualisation.incus.enable = true;
+  networking.nftables.enable = true;
+  networking.firewall.interfaces.incusbr0.allowedTCPPorts = [
+    53
+    67
+  ];
+  networking.firewall.interfaces.incusbr0.allowedUDPPorts = [
+    53
+    67
+  ];
+
+  #- virtmanager
+  virtualisation.libvirtd.enable = true;
+
+  #--- test ---# virtualisation.virtualbox.host.enable = true;
+
+  hardware.graphics.enable = true;
+
+  #--- bluetooth
+  hardware.bluetooth.enable = true;
+
+  #--- enable sound with pipewire.
+  # sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
   };
 
   #--- set time zone
@@ -59,29 +109,39 @@
   #--- enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    #--- require public key authentication for better security
     settings.PasswordAuthentication = true;
+    # settings.PasswordAuthentication = false;
     settings.X11Forwarding = true;
-    settings.KbdInteractiveAuthentication = true;
   };
 
   #--- enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    layout = "de";
     resolutions = [
       {
         x = 1600;
         y = 900;
       }
     ];
+    xkb.layout = "de";
+    xkb.options = "caps:escape"; #--- map caps to escape
     windowManager.awesome.enable = true; #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
-    xkbOptions = "caps:escape"; #--- map caps to escape
+  };
+
+  services.spotifyd = {
+    enable = false;
+    settings =
+      {
+        global = {
+          username = "Alex";
+          password = "foo";
+        };
+      };
   };
 
   #--- shell environment
-  programs.vim.defaultEditor = true;
+  # programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
   programs.ssh.forwardX11 = true;
 
@@ -89,108 +149,8 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = [ "networkmanager" "wheel" "jackaudio" ];
+    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
     shell = pkgs.zsh;
-  };
-
-  # users.extraUsers.slm.extraGroups = [ "jackaudio" ];
-
-  #--- user home-manager configuration
-  home-manager.users.slm = {pkgs, ...}: {
-    programs.zsh.enable = true;
-    home.stateVersion = "23.11";
-    home.packages = with pkgs; [
-      atop
-      beets
-      cmatrix
-      figlet
-      gdu
-      hwinfo
-      mixxx
-      nix-tree
-      picard
-      picom
-      powerline-fonts
-      sl
-      spotifyd
-      spotify-tui
-      soco-cli
-      strawberry
-      # terminal-parrot
-    ];
-
-    imports = [
-      ./modules/alacritty.nix
-      ./modules/git.nix
-      ./modules/fzf.nix
-      ./modules/rofi.nix
-      ./modules/picom.nix
-      ./modules/tmux.nix
-      ./modules/vim.nix
-      ./modules/xdg.nix
-      ./modules/xsession.nix
-      ./modules/zsh.nix
-    ];
-  }; #--- user home-manager configuration end
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    acpi
-    alacritty
-    bat
-    brave
-    brightnessctl
-    btop
-    cmatrix
-    fd
-    fzf
-    git
-    inxi
-    neofetch
-    nix-tree
-    nix-index
-    ranger
-    sl
-    speedtest-cli
-    soco-cli
-    tig
-    tmux
-    vim
-    wget
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  services.jack = {
-     jackd.enable = true;
-     # support ALSA only programs via ALSA JACK PCM plugin
-     alsa.enable = true;
-     # support ALSA only programs via loopback device (supports programs like Steam)
-     # loopback = {
-       # enable = true;
-       # buffering parameters for dmix device to work with ALSA only semi-professional sound programs
-       # dmixConfig = ''
-       #   period_size 2048
-       # '';
-     # };
   };
 
 }

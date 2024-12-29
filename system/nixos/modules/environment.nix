@@ -48,6 +48,7 @@
     nmap
     mutt
     neofetch
+    neovim
     nodejs
     openssh
     pciutils
