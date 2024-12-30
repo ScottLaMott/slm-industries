@@ -14,8 +14,8 @@
     <home-manager/nixos>
     ./home.nix
   ];
-  
-  # Use the GRUB 2 boot loader.
+
+  #--- bootloader
   boot.loader.grub.enable = true;
   # boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true;
@@ -23,12 +23,6 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
-  #--- bootloader
-  #boot.loader = {
-  #  systemd-boot.enable = true;
-  #  efi.canTouchEfiVariables = true;
-  #  efi.efiSysMountPoint = "/boot/efi";
-  #};
 
   system = {
     stateVersion = "24.11";
