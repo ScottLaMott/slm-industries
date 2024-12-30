@@ -1,8 +1,8 @@
 { config, pkgs, ... }: {
   networking.networkmanager.enable = true;
-  networking.hostName = "t460s";
+  networking.hostName = "t430";
   # networking.hostName = "slm-industries";
-  networking.extraHosts = 
+  networking.extraHosts =
     ''
       # ubuntu-container
       10.151.127.10   ubuntu-23-04
