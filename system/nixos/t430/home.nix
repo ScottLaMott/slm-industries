@@ -3,7 +3,7 @@
 { config, lib, pkgs, modulesPath, ... }: {
   home-manager.users.slm = {pkgs, ...}: {
     programs.zsh.enable = true;
-    home.stateVersion = "23.11";
+    home.stateVersion = "24.11";
     home.packages = with pkgs; [
       atop
       figlet
@@ -17,12 +17,6 @@
       powerline-fonts
       # tmuxp
       yazi
-
-      # fun, teilweise in devbox fun-box
-      # cmatrix
-      # sl
-      # terminal-parrot
-
       # music
       beets
       cava
@@ -43,6 +37,7 @@
       ./modules/fzf.nix
       ./modules/rofi.nix
       ./modules/picom.nix
+      ./modules/readline.nix
       ./modules/starship.nix
       ./modules/tmux.nix
       ./modules/vim.nix
