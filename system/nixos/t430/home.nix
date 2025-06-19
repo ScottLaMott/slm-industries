@@ -29,7 +29,7 @@
       lnav
       devbox
       theme-sh
-      neovim
+      # neovim
     ];
 
     imports = [
