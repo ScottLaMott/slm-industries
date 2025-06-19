@@ -78,6 +78,7 @@
       rm    = "rm -i";
 
       #--- edit
+      nvim  = "/home/slm/projects/neovim/nvf/result/bin/nvim";
       v     = "vim";
       vs    = "vim -S .session.vim";
       ns    = "nvim -S .session.vim";
@@ -130,7 +131,7 @@
       cni   = "clear; neofetch; inxi --full";
       cm    = "cmatrix -u9 -s";
       cmr   = "cmatrix -u9 -s -r";
-      cct   = "/usr/bin/theme.sh -i2";
+      cct   = "theme.sh -i2";
     };
   };
 }
