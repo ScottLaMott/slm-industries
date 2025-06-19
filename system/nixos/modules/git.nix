@@ -10,7 +10,7 @@
     userName = "Scott LaMott";
     userEmail = "slm@slm-industries";
     extraConfig = {
-      core = { editor = "nvim"; };
+      core = { editor = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim"; };
     };
     aliases = {
       s = "status";
