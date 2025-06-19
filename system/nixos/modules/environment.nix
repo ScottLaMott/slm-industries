@@ -48,7 +48,7 @@
     nmap
     mutt
     neofetch
-    neovim
+    # neovim
     nodejs
     openssh
     pciutils
@@ -87,6 +87,8 @@
     zip
     unzip
     # picom-jonaburg
+    # spotify
+    bucklespring
   ];
 
 }
