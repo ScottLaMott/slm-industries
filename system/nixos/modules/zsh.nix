@@ -78,7 +78,7 @@
       rm    = "rm -i";
 
       #--- edit
-      nvim  = "/home/slm/projects/neovim/nvf/result/bin/nvim";
+      nvim  = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim";
       v     = "vim";
       vs    = "vim -S .session.vim";
       ns    = "nvim -S .session.vim";
