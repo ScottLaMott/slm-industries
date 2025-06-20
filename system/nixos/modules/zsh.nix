@@ -47,9 +47,9 @@
     #  zmodload zsh/zprof
     #'';
 
-    initExtra = ''
+    initContent = ''
       #----------------------------------------------------------
-      # initExtra declared by .zshrc in zsh.nix
+      # initContent declared by .zshrc in zsh.nix
       #
 
       # own new slm-zshrc
