@@ -26,3 +26,4 @@
 
 #### IMPORTANT
 - "hlissner/zsh-autopair" plugin funktioniert nicht
+#- "hlissner/zsh-autopair" plugin funktioniert nicht
