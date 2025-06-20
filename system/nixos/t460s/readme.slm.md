@@ -7,5 +7,6 @@ Dies ist die Legacy-NixOS-Konfiguration für den T460s
 
 ## TODOS
 - tmux-flake integrieren
+- repository auf github verschieben
 
 ## DONES
