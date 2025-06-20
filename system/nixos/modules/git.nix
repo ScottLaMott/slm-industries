@@ -7,6 +7,7 @@
 
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     userName = "Scott LaMott";
     userEmail = "slm@slm-industries";
     extraConfig = {
