@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   networking.networkmanager.enable = true;
-  networking.hostName = "t460s";
+  networking.hostName = "t460s-github";
   # networking.hostName = "slm-industries";
   networking.extraHosts =
     ''
