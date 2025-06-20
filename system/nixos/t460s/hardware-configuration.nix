@@ -28,26 +28,26 @@
       fsType = "vfat";
     };
 
-  fileSystems."/var/lib/lxd/shmounts" =
-    { device = "tmpfs";
-      fsType = "tmpfs";
-    };
-
-  fileSystems."/var/lib/lxd/devlxd" =
-    { device = "tmpfs";
-      fsType = "tmpfs";
-    };
-
-  fileSystems."/var/lib/lxd/storage-pools/default" =
-    { device = "/var/lib/lxd/disks/default.img";
-      fsType = "btrfs";
-      options = [ "loop" ];
-    };
-
-  fileSystems."/var/lib/lxd/storage-pools/lxc-container" =
-    { device = "/dev/disk/by-uuid/fd614eb1-cbbe-47bf-8cf3-a7ed5fb865df";
-      fsType = "btrfs";
-    };
+  # fileSystems."/var/lib/lxd/shmounts" =
+  #   { device = "tmpfs";
+  #     fsType = "tmpfs";
+  #   };
+  #
+  # fileSystems."/var/lib/lxd/devlxd" =
+  #   { device = "tmpfs";
+  #     fsType = "tmpfs";
+  #   };
+  #
+  # fileSystems."/var/lib/lxd/storage-pools/default" =
+  #   { device = "/var/lib/lxd/disks/default.img";
+  #     fsType = "btrfs";
+  #     options = [ "loop" ];
+  #   };
+  #
+  # fileSystems."/var/lib/lxd/storage-pools/lxc-container" =
+  #   { device = "/dev/disk/by-uuid/fd614eb1-cbbe-47bf-8cf3-a7ed5fb865df";
+  #     fsType = "btrfs";
+  #   };
 
   swapDevices = [ ];
 
