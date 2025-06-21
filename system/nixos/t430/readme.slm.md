@@ -3,10 +3,6 @@
 #### WebLinks
 
 #### Todo's
-- OpenSSH korrekt einrichten
-  - mit ssh-key
-- Fzf-Integration
-  - wie (Standalone, Module, ...)?
 - Powermanagment einrichten,
   - Hibernate wenn Deckel geschlossen
 - rofi einrichten
@@ -23,6 +19,10 @@
 - Home Manager einrichten, mit nix-channel
 - BUG: history suchen mit '/'
   - zsh-autopair verursacht Problem
+- OpenSSH korrekt einrichten
+  - mit ssh-key
+- Fzf-Integration
+  - wie (Standalone, Module, ...)?
 
 #### IMPORTANT
 - "hlissner/zsh-autopair" plugin funktioniert nicht
