@@ -1,4 +1,3 @@
-#---------------------------------------------------
 #---
 #--- slmi-configuration.nix / System Configuration für slmi-industries
 #---
@@ -27,7 +26,9 @@
     copySystemConfiguration = true;
   };
 
+  #--- nix package manager options
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.extraOptions = "download-buffer-size = 100000000";
 
   #--- workaround nach upgrade auf 23.05
   nixpkgs.config = {
@@ -41,6 +42,12 @@
   # fileSystems."/mnt/homes" = {
   #   device = "alpha:/volume1/homes";
   #   fsType = "nfs";
+  # };
+  #   options = [
+  #     "x-systemd.automount"
+  #     "x-systemd.idle-timeout=600"
+  #     "noauto"
+  #   ];
   # };
 
   #--- virtualisation
@@ -57,7 +64,7 @@
   ];
 
   #- virtmanager
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.enable = false;
 
   #--- test ---# virtualisation.virtualbox.host.enable = true;
 
@@ -68,7 +75,7 @@
 
   #--- enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -102,7 +109,6 @@
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = true;
-    # settings.PasswordAuthentication = false;
     settings.X11Forwarding = true;
   };
 
@@ -111,8 +117,8 @@
     enable = true;
     resolutions = [
       {
-        x = 1600;
-        y = 900;
+        x = 1920;
+        y = 1080;
       }
     ];
     xkb.layout = "de";
@@ -135,7 +141,14 @@
   #--- shell environment
   # programs.vim.defaultEditor = true;
   programs.zsh.enable = true;
+  programs.zsh.enableGlobalCompInit = false;
   programs.ssh.forwardX11 = true;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
 
   #--- user accounts
   users.users.slm = {
