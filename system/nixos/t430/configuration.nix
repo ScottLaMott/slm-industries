@@ -11,8 +11,9 @@
     ./hardware-configuration.nix
     ./modules/environment.nix
     ./modules/networking.nix
+    ./modules/fonts.nix
     <home-manager/nixos>
-    ./home.nix
+    ./home-manager/home.nix
   ];
 
   #--- bootloader
