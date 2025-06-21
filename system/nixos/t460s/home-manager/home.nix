@@ -37,19 +37,19 @@
     ];
 
     imports = [
-      ./modules/alacritty.nix
-      ./modules/cava.nix
-      ./modules/git.nix
-      ./modules/fzf.nix
-      ./modules/rofi.nix
-      ./modules/picom.nix
-      ./modules/starship.nix
-      ./modules/tmux.nix
-      ./modules/vim.nix
-      ./modules/xdg.nix
-      # ./modules/xsession.nix
-      ./modules/yazi.nix
-      ./modules/zsh.nix
+      ./alacritty.nix
+      ./cava.nix
+      ./git.nix
+      ./fzf.nix
+      ./rofi.nix
+      ./picom.nix
+      ./starship.nix
+      ./tmux.nix
+      ./vim.nix
+      ./xdg.nix
+      # ./xsession.nix
+      ./yazi.nix
+      ./zsh.nix
     ];
   }; #--- user home-manager configuration end
 
