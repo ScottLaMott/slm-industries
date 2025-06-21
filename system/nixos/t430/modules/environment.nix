@@ -14,27 +14,37 @@
     alacritty
     ansible
     bat
+    bc
+    bucklespring
     brave
     brightnessctl
     btop
     curl
+    cachix
+    #--- def
     devbox
     dmenu
+    duf
     ethtool
     eza
     feh
     fd
     file
     fzf
-    git
+    #--- ghi
+    gcc
+    gitAndTools.gitFull
     glxinfo
+    gnumake
     htop
     iftop
     incus
     inxi
     ipcalc
     iptraf-ng
+    #--- kjl
     killall
+    lazygit
     lf
     libguestfs
     libsixel
@@ -42,15 +52,18 @@
     lua
     lua52Packages.luarocks-nix
     lukesmithxyz-st
+    luarocks
     # lxd-lts
+    #--- mno
     man-db
+    mutt
     nix-tree
     nmap
-    mutt
     neofetch
     # neovim
     nodejs
     openssh
+    #--- pqr
     pciutils
     pulseaudioFull
     pulsemixer
@@ -59,10 +72,12 @@
     qemu
     ranger
     ripgrep
+    #--- stu
     screen
     silver-searcher
     speedtest-cli
     sshpass
+    stylua
     sxiv
     tcpdump
     termshark
@@ -70,25 +85,29 @@
     tio
     tmux-xpanes
     tldr
+    tlp
     toilet
     tree
     tshark
     wget
-    xclip
     usbutils
-    vim
+    #--- vwx
     virt-manager
     virt-top
     virt-viewer
+    wavemon
     wget
+    xclip
     xorg.xhost
     xorg.xeyes
+    #--- yz
     zathura
+
+    #--- test
     zip
     unzip
     # picom-jonaburg
     # spotify
-    bucklespring
   ];
 
 }
