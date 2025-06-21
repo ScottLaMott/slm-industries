@@ -14,7 +14,7 @@
     ./modules/networking.nix
     ./modules/tlp.nix
     <home-manager/nixos>
-    ./home.nix
+    ./home-manager/home.nix
   ];
 
   #--- bootloader
