@@ -1,6 +1,6 @@
 #---------------------------------------------------
 #---
-#--- slmi-configuration.nix / System Configuration für slmi-industries
+#--- slmi-configuration.nix / System Configuration für slm-industries
 #---
 {
   config,
