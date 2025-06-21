@@ -1,5 +1,5 @@
 #---
-#--- slmi-configuration.nix / System Configuration für slmi-industries
+#--- slmi-configuration.nix / System Configuration für slm-industries
 #---
 {
   config,
@@ -8,7 +8,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    # ./cachix.nix
+    ./cachix.nix
     ./modules/environment.nix
     ./modules/fonts.nix
     ./modules/networking.nix
