@@ -8,14 +8,18 @@
   programs.alacritty = {
     enable = true;
     #--- themes
-    theme = "alacritty_0_12"; 
+    # theme = "alacritty_0_12"; 
     # theme = "terafox"; 
     # theme = "dracula"; 
     # theme = "dark_pride"; 
     # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
+    theme = "kanagawa_dragon"; 
+    # theme = "kanagawa_wave"; 
+    # theme = "kimbie_dark"; 
     # theme = "wombat"; 
-    # theme = "seoul256-light"; 
+    # theme = "seashells"; 
+    # theme = "smoooooth"; 
     # theme = "terminal_app"; 
     # theme = "solarized_osaka"; 
     # theme = "one_dark"; theme = "one_light"; 
