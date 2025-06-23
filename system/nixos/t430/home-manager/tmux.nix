@@ -20,7 +20,7 @@
 
     plugins = with pkgs; [
       # pkgs.tmuxPlugins.gruvbox
-      tmuxPlugins.nord
+      # pkgs.tmuxPlugins.nord
       tmuxPlugins.tmux-fzf
       # pkgs.tmuxPlugins.resurrect
       {
