@@ -8,6 +8,7 @@
 - rofi einrichten
 - Wallpapers installieren
 - Git gut konfigurieren
+  - git push mit credential-helper
 - NAS-Zugriff
 - Zugriff auf alte Partitions
 
