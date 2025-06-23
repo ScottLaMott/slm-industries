@@ -7,8 +7,8 @@
 
   programs.alacritty = {
     enable = true;
-    theme = "alacritty_0_12"; 
-    # theme = "terafox"; 
+    # theme = "alacritty_0_92"; 
+    theme = "terafox"; 
     # theme = "dracula"; 
     # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
@@ -27,8 +27,8 @@
       # font.y = 2;
       # window.opacity = 0.0;
       # window.opacity = 0.3;
-      # window.opacity = 1.0;
-      window.opacity = 0.7;
+      # window.opacity = 0.7;
+      window.opacity = 1.0;
       window.padding.x = 0;
       window.padding.y = 0;
       # window.padding.x = 8;
