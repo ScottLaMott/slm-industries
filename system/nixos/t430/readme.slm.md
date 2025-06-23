@@ -1,8 +1,8 @@
-### NixOS T430 Konfiguration
+# NixOS T430 Konfiguration #
 
-#### WebLinks
+## WebLinks ##
 
-#### Todo's
+## Todo's ##
 - Powermanagment einrichten,
   - Hibernate wenn Deckel geschlossen
 - rofi einrichten
@@ -12,7 +12,7 @@
 - NAS-Zugriff
 - Zugriff auf alte Partitions
 
-#### Done
+## Done ##
 - alacritty colorscheme in home-manager eingefügt
 - Legacy Boot vs. UEFI Boot in configuration.nix nach Installation
 - awesome WindowManager einrichten, rc.lua von t460s, noch nicht in
@@ -26,6 +26,6 @@
 - Fzf-Integration
   - wie (Standalone, Module, ...)?
 
-#### IMPORTANT
+## IMPORTANT ##
 - "hlissner/zsh-autopair" plugin funktioniert nicht
-#- "hlissner/zsh-autopair" plugin funktioniert nicht
+- "hlissner/zsh-autopair" plugin funktioniert nicht
