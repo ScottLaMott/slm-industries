@@ -26,8 +26,9 @@
       # font.x = 0;
       # font.y = 2;
       # window.opacity = 0.0;
-      window.opacity = 1.0;
-      # window.opacity = 0.8;
+      # window.opacity = 0.3;
+      # window.opacity = 1.0;
+      window.opacity = 0.7;
       window.padding.x = 0;
       window.padding.y = 0;
       # window.padding.x = 8;
