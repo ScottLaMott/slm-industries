@@ -139,7 +139,6 @@
   # für git-push, git anmeldung
   security.pam.services.gdm.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
-  # services.gnome-keyring.enable = true;
 
   #--- shell environment
   # programs.vim.defaultEditor = true;
