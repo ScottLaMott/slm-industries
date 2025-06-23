@@ -12,6 +12,7 @@
 - Zugriff auf alte Partitions
 
 #### Done
+- alacritty colorscheme in home-manager eingefügt
 - Legacy Boot vs. UEFI Boot in configuration.nix nach Installation
 - awesome WindowManager einrichten, rc.lua von t460s, noch nicht in
   NixOS Home-Manager-Konfiguration
