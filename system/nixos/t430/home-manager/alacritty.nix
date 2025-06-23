@@ -7,6 +7,19 @@
 
   programs.alacritty = {
     enable = true;
+    theme = "alacritty_0_12"; 
+    # theme = "terafox"; 
+    # theme = "dracula"; 
+    # theme = "tokyo_night"; 
+    # theme = "ubuntu"; 
+    # theme = "wombat"; 
+    # theme = "seoul256-light"; 
+    # theme = "terminal_app"; 
+    # theme = "solarized_osaka"; 
+    # theme = "one_dark"; theme = "one_light"; 
+    # theme = "papercolor_dark"; 
+    # theme = "github_dark_high_contrast"; theme = "github_dark"; theme = "github_light"; theme = "gruvbox_dark";
+    # theme = "dark_pride"; theme = "moonfly"; theme = "rainbow"; 
     #--- settings
     settings = {
       font.size = 9;
