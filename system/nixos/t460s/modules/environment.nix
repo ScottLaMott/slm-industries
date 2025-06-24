@@ -35,6 +35,7 @@
     gcc
     gitAndTools.gitFull
     glxinfo
+    gnome-keyring
     gnumake
     htop
     iftop
