@@ -3,6 +3,7 @@
 ## WebLinks ##
 
 ## Todo's ##
+- cachix konfigurieren
 - Powermanagment einrichten,
   - Hibernate wenn Deckel geschlossen
 - rofi einrichten
