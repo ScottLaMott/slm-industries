@@ -7,8 +7,6 @@
   - Hibernate wenn Deckel geschlossen
 - rofi einrichten
 - Wallpapers installieren
-- Git gut konfigurieren
-  - git push mit credential-helper, wichtig, geht
 - NAS-Zugriff
 - Zugriff auf alte Partitions
 
@@ -25,7 +23,8 @@
   - mit ssh-key
 - Fzf-Integration
   - wie (Standalone, Module, ...)?
+- Git gut konfigurieren
+  - git push mit credential-helper, wichtig, geht
 
 ## IMPORTANT ##
-- "hlissner/zsh-autopair" plugin funktioniert nicht
 - "hlissner/zsh-autopair" plugin funktioniert nicht
