@@ -15,8 +15,8 @@
     # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
     # theme = "kanagawa_dragon"; 
-    theme = "kanagawa_wave"; 
-    # theme = "kimbie_dark"; 
+    # theme = "kanagawa_wave"; 
+    theme = "kimbie_dark"; 
     # theme = "wombat"; 
     # theme = "seashells"; 
     # theme = "smoooooth"; 
