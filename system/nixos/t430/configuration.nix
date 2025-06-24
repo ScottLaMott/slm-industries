@@ -3,7 +3,6 @@
 #--- slmi-configuration.nix / System Configuration für slm-industries
 #---
 {
-  config,
   pkgs,
   ...
 }: {
