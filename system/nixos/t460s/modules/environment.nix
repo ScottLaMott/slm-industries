@@ -47,6 +47,7 @@
     lazygit
     lf
     libguestfs
+    libsecret 
     libsixel
     lsd
     lua
