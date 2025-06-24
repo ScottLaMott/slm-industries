@@ -4,7 +4,6 @@ Dies ist die Legacy-NixOS-Konfiguration für den T460s
 
 - strich
 - strich
-- strich
 
 ## TODOS
 - markdown preview plugin 
