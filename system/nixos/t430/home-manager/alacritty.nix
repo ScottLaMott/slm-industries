@@ -12,10 +12,10 @@
     # theme = "terafox"; 
     # theme = "dracula"; 
     # theme = "dark_pride"; 
-    theme = "tokyo_night"; 
+    # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
-    theme = "kanagawa_dragon"; 
-    # theme = "kanagawa_wave"; 
+    # theme = "kanagawa_dragon"; 
+    theme = "kanagawa_wave"; 
     # theme = "kimbie_dark"; 
     # theme = "wombat"; 
     # theme = "seashells"; 
@@ -32,12 +32,8 @@
       # font.x = 0;
       # font.y = 2;
 
-      # window.opacity = 0.0;
-      # window.opacity = 0.3;
-      # window.opacity = 0.7;
-      # window.opacity = 0.8;
-      window.opacity = 0.9;
-      # window.opacity = 1.0;
+      # 0.0 full, 1.0 no opacity
+      window.opacity = 0.95;
 
       window.padding.x = 0;
       window.padding.y = 0;
