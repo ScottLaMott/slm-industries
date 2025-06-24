@@ -103,11 +103,6 @@
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
-  #--- fonts
-  fonts.packages = with pkgs; [
-    font-awesome
-  ];
-
   #--- enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
