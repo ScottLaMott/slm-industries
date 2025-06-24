@@ -12,10 +12,10 @@
     # theme = "terafox"; 
     # theme = "dracula"; 
     # theme = "dark_pride"; 
-    theme = "tokyo_night"; 
+    # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
-    theme = "kanagawa_dragon"; 
-    # theme = "kanagawa_wave"; 
+    # theme = "kanagawa_dragon"; 
+    theme = "kanagawa_wave"; 
     # theme = "kimbie_dark"; 
     # theme = "wombat"; 
     # theme = "seashells"; 
