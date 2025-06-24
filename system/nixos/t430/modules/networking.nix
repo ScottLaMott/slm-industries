@@ -1,8 +1,8 @@
-{ config, pkgs, ... }: {
-  networking.networkmanager.enable = true;
-  networking.hostName = "t430-github";
-  networking.extraHosts =
-    ''
+{ ... }: {
+  networking = {
+    networkmanager.enable = true;
+    hostName = "t430-github";
+    extraHosts = ''
       # ubuntu-container
       10.151.127.10   ubuntu-23-04
       10.151.127.101  u-1
@@ -22,4 +22,5 @@
       10.151.127.131  a-1
       10.151.127.132  a-2
     '';
+  };
 }
