@@ -38,3 +38,6 @@ vor 14.09.21
             Packen wirs an ...!
 
 - 20.09.23, es tut sich was mit ubuntu-containern und ansible
+
+- 26.06.25, wir sind zurück und neu organsiert in slm-industries
+
