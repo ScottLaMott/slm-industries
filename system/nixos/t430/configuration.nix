@@ -31,20 +31,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  #--- workaround nach upgrade auf 23.05
-  nixpkgs.config = {
-    # permittedInsecurePackages = [
-    #   "python-2.7.18.8"
-    # ];
-    allowUnfree = true;
-  };
-
-  #--- nfs mount
-  # fileSystems."/mnt/homes" = {
-  #   device = "alpha:/volume1/homes";
-  #   fsType = "nfs";
-  # };
-
   #--- virtualisation
   #- incus, lxd nachfolger
   virtualisation.incus.enable = true;
