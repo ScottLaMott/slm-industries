@@ -17,12 +17,7 @@
 
   #--- bootloader
   boot.loader.grub.enable = true;
-  # boot.loader.grub.efiSupport = true;
-  # boot.loader.grub.efiInstallAsRemovable = true;
-  # boot.loader.efi.efiSysMountPoint = "/boot/efi";
-  # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
-
 
   system = {
     stateVersion = "24.11";
@@ -32,19 +27,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   #--- virtualisation
-  #- incus, lxd nachfolger
   virtualisation.incus.enable = true;
-  networking = {
-    nftables.enable = true;
-    firewall.interfaces.incusbr0.allowedTCPPorts = [
-      53
-      67
-    ];
-    firewall.interfaces.incusbr0.allowedUDPPorts = [
-      53
-      67
-    ];
-  };
 
   #- virtmanager
   virtualisation.libvirtd.enable = true;

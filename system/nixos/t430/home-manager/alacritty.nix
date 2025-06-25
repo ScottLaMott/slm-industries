@@ -10,13 +10,13 @@
     #--- themes
     # theme = "alacritty_0_12"; 
     # theme = "terafox"; 
-    # theme = "dracula"; 
+    theme = "dracula"; 
     # theme = "dark_pride"; 
     # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
     # theme = "kanagawa_dragon"; 
     # theme = "kanagawa_wave"; 
-    theme = "kimbie_dark"; 
+    # theme = "kimbie_dark"; 
     # theme = "wombat"; 
     # theme = "seashells"; 
     # theme = "smoooooth"; 
