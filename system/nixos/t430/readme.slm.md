@@ -4,10 +4,10 @@
 
 ## Todo's ##
 - cachix konfigurieren
+- Wallpapers installieren
 - Powermanagment einrichten,
   - Hibernate wenn Deckel geschlossen
 - rofi einrichten
-- Wallpapers installieren
 - NAS-Zugriff
 - Zugriff auf alte Partitions
 
