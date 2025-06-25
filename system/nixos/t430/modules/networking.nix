@@ -1,4 +1,9 @@
-{ ... }: {
+#----------------------------------------------------------
+#---
+#--- networking configuration
+#---
+
+{ pkgs, ... }: {
   networking = {
     networkmanager.enable = true;
     hostName = "t430-github";
