@@ -10,21 +10,23 @@
     #--- themes
     # theme = "alacritty_0_12"; 
     # theme = "terafox"; 
-    theme = "dracula"; 
+    # theme = "dracula"; # schlecht
     # theme = "dark_pride"; 
     # theme = "tokyo_night"; 
     # theme = "ubuntu"; 
-    # theme = "kanagawa_dragon"; 
+    # theme = "kanagawa_dragon"; # gut
     # theme = "kanagawa_wave"; 
-    # theme = "kimbie_dark"; 
+    # theme = "kimbie_dark";  # gut
     # theme = "wombat"; 
     # theme = "seashells"; 
     # theme = "smoooooth"; 
     # theme = "terminal_app"; 
     # theme = "solarized_osaka"; 
     # theme = "one_dark"; theme = "one_light"; 
-    # theme = "papercolor_dark"; 
+    # theme = "one_dark";
+    # theme = "papercolor_dark"; # gut
     # theme = "github_dark_high_contrast"; theme = "github_dark"; theme = "github_light"; theme = "gruvbox_dark";
+    theme = "github_dark"; # gut
     # theme = "dark_pride"; theme = "moonfly"; theme = "rainbow"; 
     #--- settings
     settings = {
