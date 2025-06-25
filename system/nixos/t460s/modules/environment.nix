@@ -70,7 +70,7 @@
     pulseaudioFull
     pulsemixer
     pure-prompt
-    python
+    python3Full
     qemu
     ranger
     ripgrep
