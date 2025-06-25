@@ -48,19 +48,8 @@
   #--- virtualisation
   #- incus, lxd nachfolger
   virtualisation.incus.enable = true;
-  networking.nftables.enable = true;
-  networking.firewall.interfaces.incusbr0.allowedTCPPorts = [
-    53
-    67
-  ];
-  networking.firewall.interfaces.incusbr0.allowedUDPPorts = [
-    53
-    67
-  ];
-
   #- virtmanager
   virtualisation.libvirtd.enable = false;
-
   #--- test ---# virtualisation.virtualbox.host.enable = true;
 
   hardware.graphics.enable = true;
