@@ -3,6 +3,7 @@
 ## WebLinks ##
 
 ## Todo's ##
+- spotify credentials chechen, nicht gut in configuration
 - cachix konfigurieren
 - Wallpapers installieren
 - Powermanagment einrichten,
