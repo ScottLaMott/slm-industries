@@ -33,14 +33,6 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.extraOptions = "download-buffer-size = 100000000";
 
-  #--- workaround nach upgrade auf 23.05
-  nixpkgs.config = {
-    permittedInsecurePackages = [
-      "python-2.7.18.8"
-    ];
-    allowUnfree = true;
-  };
-
   #--- nfs mount
   # fileSystems."/mnt/homes" = {
   #   device = "alpha:/volume1/homes";
