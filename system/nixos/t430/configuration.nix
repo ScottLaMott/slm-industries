@@ -33,9 +33,9 @@
 
   #--- workaround nach upgrade auf 23.05
   nixpkgs.config = {
-    permittedInsecurePackages = [
-      "python-2.7.18.8"
-    ];
+    # permittedInsecurePackages = [
+    #   "python-2.7.18.8"
+    # ];
     allowUnfree = true;
   };
 
