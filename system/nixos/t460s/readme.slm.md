@@ -7,6 +7,7 @@ Dies ist die Legacy-NixOS-Konfiguration für den T460s
 
 ## TODOS
 - markdown preview plugin 
+- bitwarden-cli installieren und funktionsfähig machen
 - git credential helper
 - github repository privat machen
 - tmux-flake integrieren
