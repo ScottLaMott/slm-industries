@@ -18,3 +18,4 @@
 - bilder und images kopieren
 
 ### done-liste
+- git einrichten, in github
