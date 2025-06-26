@@ -15,10 +15,12 @@
     ansible
     bat
     bc
-    bucklespring
+    bitwarden
+    bitwarden-cli
     brave
     brightnessctl
     btop
+    bucklespring
     curl
     cachix
     #--- def
