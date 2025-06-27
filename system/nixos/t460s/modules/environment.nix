@@ -15,10 +15,10 @@
     ansible
     bat
     bc
-    bucklespring
     brave
     brightnessctl
     btop
+    bucklespring
     curl
     cachix
     #--- def
