@@ -3,21 +3,10 @@
 #--- slm-zshrc
 #---
 
-#--- completion
-zmodload zsh/complist
-#
-# Use vim keys in tab complete menu:
-zstyle ':completion:*' menu select
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
-
 #--- color
 # autoload -U colors && colors
 
-#--- slm 
+#--- slm
 # Jump to begin of line / insert mode command line history
 zle-history-line-set () {
     zle vi-beginning-of-line;
