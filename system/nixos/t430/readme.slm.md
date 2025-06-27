@@ -3,7 +3,7 @@
 ## WebLinks ##
 
 ## Todo's ##
-- bitwarden-client installieren
+- rofi verbessern
 - vaultwarden installieren testen
 - spotify credentials chechen, nicht gut in configuration
 - cachix konfigurieren
@@ -29,6 +29,7 @@
   - wie (Standalone, Module, ...)?
 - Git gut konfigurieren
   - git push mit credential-helper, wichtig, geht
+- bitwarden-client installieren
 
 ## IMPORTANT ##
 - "hlissner/zsh-autopair" plugin funktioniert nicht
