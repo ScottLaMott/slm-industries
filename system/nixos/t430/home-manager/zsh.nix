@@ -12,7 +12,8 @@
   programs.zsh = {
     enable = true;
     defaultKeymap = "viins";
-    enableCompletion = false; # FIXME, true macht zsh-startup langsam
+    # enableCompletion = false; # FIXME, true macht zsh-startup langsam
+    enableCompletion = true; # FIXME, VIELLEICHT gefixt in 25.05, testen
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     dotDir = ".config/zsh"; # FIXME
