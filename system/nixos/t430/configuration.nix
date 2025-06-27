@@ -106,15 +106,14 @@
   services.gnome.gnome-keyring.enable = true;
 
   #--- shell environment
-  # programs.vim.defaultEditor = true;
-  programs.zsh.enable = true;
-  programs.ssh.forwardX11 = true;
+  # programs.ssh.forwardX11 = true;
 
   #--- user accounts
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
     extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
 
