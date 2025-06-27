@@ -16,6 +16,8 @@
       ansible
       bat
       bc
+      bitwarden
+      bitwarden-cli
       bucklespring
       brave
       brightnessctl
