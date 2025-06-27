@@ -3,6 +3,8 @@
 ## WebLinks ##
 
 ## Todo's ##
+- bitwarden-client installieren
+- vaultwarden installieren testen
 - spotify credentials chechen, nicht gut in configuration
 - cachix konfigurieren
 - Wallpapers installieren
