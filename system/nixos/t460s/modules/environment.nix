@@ -15,6 +15,7 @@
     ansible
     bat
     bc
+    bitwarden-cli
     brave
     brightnessctl
     btop
