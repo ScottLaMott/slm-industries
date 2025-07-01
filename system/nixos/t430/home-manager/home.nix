@@ -14,7 +14,7 @@
       nix-tree
       picom
       playerctl
-      powerline-fonts
+      # powerline-fonts
       # tmuxp
       yazi
       # music
