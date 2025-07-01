@@ -19,6 +19,15 @@
       67
     ];
    
+    firewall.interfaces.enterprise0.allowedTCPPorts = [
+      53
+      67
+    ];
+    firewall.interfaces.enterprise0.allowedUDPPorts = [
+      53
+      67
+    ];
+   
     extraHosts = ''
       # enterprise-container
     '';
