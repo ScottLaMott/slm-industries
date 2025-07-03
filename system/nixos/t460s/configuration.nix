@@ -138,6 +138,7 @@
     isNormalUser = true;
     description = "Scott LaMott";
     extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
 
