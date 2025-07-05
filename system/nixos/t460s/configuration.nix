@@ -31,6 +31,7 @@
 
   #--- nix package manager options
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  # nix.settings.sandbox =false;
   nix.extraOptions = "download-buffer-size = 100000000";
 
   #--- nfs mount
@@ -47,7 +48,7 @@
 
   #--- virtualisation
   #- incus, lxd nachfolger
-  virtualisation.incus.enable = true;
+  virtualisation.incus.enable = false;
   #- virtmanager
   virtualisation.libvirtd.enable = false;
   #--- test ---# virtualisation.virtualbox.host.enable = true;
