@@ -48,7 +48,7 @@
 
   #--- virtualisation
   #- incus, lxd nachfolger
-  virtualisation.incus.enable = false;
+  virtualisation.incus.enable = true;
   #- virtmanager
   virtualisation.libvirtd.enable = false;
   #--- test ---# virtualisation.virtualbox.host.enable = true;
