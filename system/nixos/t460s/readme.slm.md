@@ -14,3 +14,5 @@ Dies ist die Legacy-NixOS-Konfiguration für den T460s
 - repository auf github verschieben
 
 ## DONES
+## LINKS
+[nixpkgs - build status](https://hydra.nixos.org/job/nixpkgs/trunk/unstable#tabs-constituents)
