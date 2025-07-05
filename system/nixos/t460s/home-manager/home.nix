@@ -31,6 +31,7 @@
       soco-cli
       spotify-player
       strawberry
+      theme-sh
       #
       lnav
       devbox

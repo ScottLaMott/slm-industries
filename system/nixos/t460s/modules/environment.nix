@@ -40,7 +40,7 @@
     gnumake
     htop
     iftop
-    incus
+    # incus
     inxi
     ipcalc
     iptraf-ng
