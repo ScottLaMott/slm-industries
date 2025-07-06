@@ -12,7 +12,7 @@
   programs.zsh = {
     enable = true;
     defaultKeymap = "viins";
-    enableCompletion = false; # FIXME, true macht zsh-startup langsam
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     dotDir = ".config/zsh"; # FIXME
@@ -41,12 +41,6 @@
       EDITOR=nvim
     '';
 
-    #initExtraFirst = ''
-    #  #
-    #  # profile zsh-startup
-    #  zmodload zsh/zprof
-    #'';
-
     initContent = ''
       #----------------------------------------------------------
       # initContent declared by .zshrc in zsh.nix
@@ -56,7 +50,16 @@
       [ -f  $XDG_CONFIG_HOME/zsh/slm-zshrc ]                && source $XDG_CONFIG_HOME/zsh/slm-zshrc
       [ -f  $XDG_CONFIG_HOME/zsh/slm-colored-man-pages ]    && source $XDG_CONFIG_HOME/zsh/slm-colored-man-pages
 
-      # export LESS='-j8 -R'
+      #--- completion
+      zmodload zsh/complist
+      #
+      # use vim keys in tab complete menu:
+      zstyle ':completion:*' menu select
+      bindkey -M menuselect 'h' vi-backward-char
+      bindkey -M menuselect 'k' vi-up-line-or-history
+      bindkey -M menuselect 'l' vi-forward-char
+      bindkey -M menuselect 'j' vi-down-line-or-history
+      bindkey -v '^?' backward-delete-char
 
       # wallpaper mit feh
 
