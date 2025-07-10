@@ -19,8 +19,8 @@
     mouse         = true;
 
     plugins = with pkgs; [
-      # pkgs.tmuxPlugins.gruvbox
-      tmuxPlugins.nord
+      tmuxPlugins.gruvbox
+      # tmuxPlugins.nord
       tmuxPlugins.tmux-fzf
       # pkgs.tmuxPlugins.resurrect
       {
@@ -37,6 +37,7 @@
         extraConfig = ''
           # set -g status-right 'Continuum status: #{continuum_status}' ### FIXME:
           set -g @continuum-restore 'on'
+          set -g @continuum-boot 'on'
           set -g @resurrect-capture-pane-contents 'on'
         '';
       }
@@ -44,7 +45,7 @@
         plugin = tmuxPlugins.weather;
         # plugin = tmuxPlugins.tmux-floax;
         extraConfig = ''
-          # set -g @resurrect-capture-pane-contents 'on'
+          # set -g @resurrect-capture-pane-contents 'on' #!!! FIXME
         '';
       }
     ];
@@ -52,8 +53,10 @@
     extraConfig = ''
       set-option -g status-left-length 20
       set-option -g renumber-windows on
-      set-option -g pane-border-lines single
-      set-option -g pane-border-indicators arrows
+      set-option -g pane-border-lines heavy
+      set-option -g pane-border-indicators colour
+
+      set-option -ag status-right '#{?pane_synchronized, #[bg=yellow]SYNC#[default],}'
 
       bind-key -n M-h select-pane -L
       bind-key -n M-j select-pane -D
