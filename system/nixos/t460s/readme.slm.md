@@ -16,4 +16,4 @@ Dies ist die Legacy-NixOS-Konfiguration für den T460s
 ## DONES
 ## LINKS
 [nixpkgs - build status](https://hydra.nixos.org/job/nixpkgs/trunk/unstable#tabs-constituents)
-[Rebuild NixOS Offline](https://discourse.nixos.org/t/rebuild-nixos-offline/3679)
+[Rebuild NixOS Offline - build](https://discourse.nixos.org/t/rebuild-nixos-offline/3679)
