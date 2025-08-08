@@ -82,6 +82,8 @@
     sshpass
     stylua
     sxiv
+    tcl
+    tclreadline
     tcpdump
     termshark
     tig
