@@ -15,6 +15,11 @@
     configFile."zsh/slm-colored-man-pages".source = ../dots/zsh/slm-colored-man-pages;
     
     configFile."yazi/yazi.toml".source   = ../dots/yazi/yazi.toml;
+    
+    configFile."tcl".enable   = true;
+    configFile."tcl".source   = ../dots/tcl/tclshrc;
+    configFile."tcl".target   = "../.tclshrc";
+  
   };
 
 }
