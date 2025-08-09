@@ -36,7 +36,8 @@
     configFile."tcl".target   = "../.tclshrc";
   
     configFile."input".enable   = true;
-    configFile."input".text   = "set editing-mode vi";
+    configFile."input".text   = " set editing-mode vi ";
+    configFile."input".source   = ../dots/readline/inputrc;
     configFile."input".target   = "../.inputrc";
   
   };
