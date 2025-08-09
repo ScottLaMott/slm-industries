@@ -75,6 +75,7 @@
     qemu
     ranger
     ripgrep
+    rlwrap
     #--- stu
     screen
     silver-searcher
