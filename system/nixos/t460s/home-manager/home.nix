@@ -44,6 +44,7 @@
       ./fzf.nix
       ./rofi.nix
       ./picom.nix
+      ./readline.nix
       ./starship.nix
       ./tmux.nix
       ./vim.nix

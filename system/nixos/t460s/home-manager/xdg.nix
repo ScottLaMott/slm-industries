@@ -22,7 +22,7 @@
     
     configFile."zsh".enable = true;
     configFile."zsh".source = ../dots/zsh/slm-zshrc;
-    configFile."zsh".target = "zsh/zshrc";
+    configFile."zsh".target = "zsh/slm-zshrc";
     
     configFile."zsh-slm-colored-man-pages".source = ../dots/zsh/slm-colored-man-pages;
     
@@ -34,12 +34,6 @@
     configFile."tcl".enable   = true;
     configFile."tcl".source   = ../dots/tcl/tclshrc;
     configFile."tcl".target   = "../.tclshrc";
-  
-    configFile."input".enable   = true;
-    configFile."input".text   = " set editing-mode vi ";
-    configFile."input".source   = ../dots/readline/inputrc;
-    configFile."input".target   = "../.inputrc";
-  
   };
 
 }
