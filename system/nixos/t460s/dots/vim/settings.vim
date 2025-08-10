@@ -10,17 +10,20 @@ filetype plugin indent on
 
 "--- general
 " set cursorline
-" set termguicolors " macht den bildschirm schwarz/weiß
 set noswapfile
 set nobackup
 set nowritebackup
 set path+=**			                    " für z. B. find-ex-command
 set clipboard+=unnamedplus            " use system clipboard
-set ignorecase                        " while searching
 set nohlsearch                        " highlight match
+set tabstop=2
+set nocursorcolumn
+set ignorecase                        " while searching
+set smartindent
+set wrap
 
-set background=dark
 set scrolloff=8
+set background=dark
 
 " --- statusline
 set cmdheight=1
