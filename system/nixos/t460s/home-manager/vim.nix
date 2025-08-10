@@ -36,6 +36,7 @@
       expandtab = true;
       shiftwidth = 2;
       tabstop = 2;
+      undofile = true;
     };
     extraConfig  = ''
       """""""""""""""""""""""""""""""""""""""""""""""""""""
