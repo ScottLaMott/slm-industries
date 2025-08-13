@@ -8,7 +8,7 @@
   networking = {
    
     networkmanager.enable = true;
-    hostName = "t460";
+    hostName = "t460s-nixos";
     nftables.enable = true;
     
     firewall.interfaces.incusbr0.allowedTCPPorts = [
