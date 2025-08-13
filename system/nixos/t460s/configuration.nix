@@ -128,6 +128,8 @@
   programs.zsh.enableGlobalCompInit = false;
   programs.ssh.forwardX11 = true;
 
+  programs.wireshark.enable = true;
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add any missing dynamic libraries for unpackaged programs
@@ -138,7 +140,7 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
