@@ -13,8 +13,8 @@
       nitch
       nix-tree
       picom
-      playerctl
       powerline-fonts
+      theme-sh
       # tmuxp
       yazi
 
@@ -28,10 +28,10 @@
       cava
       mixxx
       picard
+      playerctl
       soco-cli
       spotify-player
       strawberry
-      theme-sh
       #
       lnav
       devbox
