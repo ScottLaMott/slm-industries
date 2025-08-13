@@ -95,6 +95,7 @@
     toilet
     tree
     tshark
+    wireshark
     wget
     usbutils
     #--- vwx
