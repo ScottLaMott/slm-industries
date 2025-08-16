@@ -49,7 +49,7 @@
       ./tmux.nix
       ./vim.nix
       ./xdg.nix
-      # ./xsession.nix
+      ./xsession.nix
       ./yazi.nix
       ./zsh.nix
     ];
