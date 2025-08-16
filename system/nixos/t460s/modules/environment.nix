@@ -59,6 +59,7 @@
     # lxd-lts
     #--- mno
     man-db
+    manix
     mutt
     nix-tree
     nmap
