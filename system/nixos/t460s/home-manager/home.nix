@@ -14,6 +14,7 @@
       nix-tree
       picom
       powerline-fonts
+      rofi
       theme-sh
       # tmuxp
       yazi
