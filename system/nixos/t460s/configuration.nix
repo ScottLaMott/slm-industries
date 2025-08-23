@@ -8,13 +8,13 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./cachix.nix
-    ./modules/environment.nix
+    # ./cachix.nix
+    # ./modules/environment.nix
     ./modules/fonts.nix
     ./modules/networking.nix
     ./modules/tlp.nix
-    <home-manager/nixos>
-    ./home-manager/home.nix
+    # <home-manager/nixos>
+    # ./home-manager/home.nix
   ];
 
   #--- bootloader
@@ -26,7 +26,7 @@
 
   system = {
     stateVersion = "23.05";
-    copySystemConfiguration = true;
+    # copySystemConfiguration = true;
   };
 
   #--- nix package manager options
@@ -48,9 +48,9 @@
 
   #--- virtualisation
   #- incus, lxd nachfolger
-  virtualisation.incus.enable = true;
+  # virtualisation.incus.enable = true;
   #- virtmanager
-  virtualisation.libvirtd.enable = false;
+  # virtualisation.libvirtd.enable = false;
   #--- test ---# virtualisation.virtualbox.host.enable = true;
 
   hardware.graphics.enable = true;
