@@ -8,8 +8,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    # ./cachix.nix
-    # ./modules/environment.nix
+    ./cachix.nix
+    ./modules/environment.nix
     ./modules/fonts.nix
     ./modules/networking.nix
     ./modules/tlp.nix
