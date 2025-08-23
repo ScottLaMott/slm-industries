@@ -13,8 +13,6 @@
     ./modules/fonts.nix
     ./modules/networking.nix
     ./modules/tlp.nix
-    # <home-manager/nixos>
-    # ./home-manager/home.nix
   ];
 
   #--- bootloader
@@ -48,9 +46,9 @@
 
   #--- virtualisation
   #- incus, lxd nachfolger
-  # virtualisation.incus.enable = true;
+  virtualisation.incus.enable = true;
   #- virtmanager
-  # virtualisation.libvirtd.enable = false;
+  virtualisation.libvirtd.enable = false;
   #--- test ---# virtualisation.virtualbox.host.enable = true;
 
   hardware.graphics.enable = true;
@@ -124,8 +122,8 @@
 
   #--- shell environment
   # programs.vim.defaultEditor = true;
-  programs.zsh.enable = true;
-  programs.zsh.enableGlobalCompInit = false;
+  # programs.zsh.enable = true;
+  # programs.zsh.enableGlobalCompInit = false;
   programs.ssh.forwardX11 = true;
 
   programs.wireshark.enable = true;

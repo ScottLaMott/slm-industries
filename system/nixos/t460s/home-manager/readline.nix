@@ -16,7 +16,6 @@
       #-- extraConfig declared in readline.nix
       #--
       
-      $include /etc/input.rc
       set editing-mode vi
 
       "\C-p":history-search-backward
