@@ -1,8 +1,8 @@
   #--- user home-manager configuration
 
 { config, lib, pkgs, modulesPath, ... }: {
-  home-manager.users.slm = {pkgs, ...}: {
-    programs.zsh.enable = true;
+    # programs.zsh.enable = true;
+    home.username = "slm";
     home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
@@ -32,6 +32,7 @@
       playerctl
       soco-cli
       spotify-player
+      starship
       strawberry
       #
       lnav
@@ -39,21 +40,20 @@
     ];
 
     imports = [
-      ./alacritty.nix
-      ./cava.nix
-      ./git.nix
-      ./fzf.nix
-      ./rofi.nix
-      ./picom.nix
-      ./readline.nix
-      ./starship.nix
-      ./tmux.nix
-      ./vim.nix
-      ./xdg.nix
-      ./xsession.nix
-      ./yazi.nix
-      ./zsh.nix
+      ./home-manager/alacritty.nix
+      ./home-manager/cava.nix
+      ./home-manager/git.nix
+      ./home-manager/fzf.nix
+      ./home-manager/rofi.nix
+      ./home-manager/picom.nix
+      ./home-manager/readline.nix
+      ./home-manager/starship.nix
+      ./home-manager/tmux.nix
+      ./home-manager/vim.nix
+      ./home-manager/xdg.nix
+      ./home-manager/xsession.nix
+      ./home-manager/yazi.nix
+      ./home-manager/zsh.nix
     ];
-  }; #--- user home-manager configuration end
 
 }
