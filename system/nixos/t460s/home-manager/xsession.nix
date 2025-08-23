@@ -1,6 +1,6 @@
 #----------------------------------------------------------
 #---
-#--- git configuration / home-manager
+#--- xsession configuration / home-manager
 #---
 
 { config, lib, pkgs, modulesPath, ... }: {

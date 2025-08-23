@@ -10,8 +10,8 @@
     package = pkgs.rofi;
     terminal="alacritty";
    
-    # theme="sidebar";
-    theme="fancy2";
+    theme="sidebar";
+    # theme="fancy2";
     # theme="arthur";
     # theme="Indego";
     # theme="Paper";
