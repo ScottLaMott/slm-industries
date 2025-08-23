@@ -1,6 +1,6 @@
 #----------------------------------------------------------
 #---
-#--- starship configuration / home-manager
+#--- yazi configuration / home-manager
 #---
 
 { config, lib, pkgs, modulesPath, ... }: {
