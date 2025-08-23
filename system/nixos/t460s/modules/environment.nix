@@ -9,19 +9,19 @@
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
-    abcde
+    # abcde
     acpi
     alacritty
     ansible
     bat
     bc
-    bitwarden-cli
-    brave
+    # bitwarden-cli
+    # brave
     brightnessctl
     btop
     bucklespring
     curl
-    cachix
+    # cachix
     #--- def
     devbox
     dmenu
@@ -33,7 +33,7 @@
     file
     fzf
     #--- ghi
-    gcc
+    # gcc
     gitAndTools.gitFull
     glxinfo
     gnome-keyring
@@ -65,15 +65,15 @@
     nmap
     neofetch
     # neovim
-    nodejs
+    # nodejs
     openssh
     #--- pqr
     pciutils
-    pulseaudioFull
-    pulsemixer
+    # pulseaudioFull
+    # pulsemixer
     pure-prompt
-    python3Full
-    qemu
+    # python3Full
+    # qemu
     ranger
     ripgrep
     rlwrap
@@ -84,8 +84,8 @@
     sshpass
     stylua
     sxiv
-    tcl
-    tclreadline
+    # tcl
+    # tclreadline
     tcpdump
     termshark
     tig
@@ -96,20 +96,20 @@
     toilet
     tree
     tshark
-    wireshark
+    # wireshark
     wget
     usbutils
     #--- vwx
-    virt-manager
-    virt-top
-    virt-viewer
-    wavemon
-    wget
-    xclip
-    xorg.xhost
-    xorg.xeyes
+    # virt-manager
+    # virt-top
+    # virt-viewer
+    # wavemon
+    # wget
+    # xclip
+    # xorg.xhost
+    # xorg.xeyes
     #--- yz
-    zathura
+    # zathura
 
     #--- test
     zip
