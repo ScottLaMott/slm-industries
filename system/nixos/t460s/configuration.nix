@@ -121,9 +121,6 @@
   services.gnome.gnome-keyring.enable = true;
 
   #--- shell environment
-  # programs.vim.defaultEditor = true;
-  # programs.zsh.enable = true;
-  # programs.zsh.enableGlobalCompInit = false;
   programs.ssh.forwardX11 = true;
 
   programs.wireshark.enable = true;
