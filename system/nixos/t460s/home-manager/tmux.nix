@@ -19,8 +19,8 @@
     mouse         = true;
 
     plugins = with pkgs; [
-      tmuxPlugins.gruvbox
-      # tmuxPlugins.nord
+      # tmuxPlugins.gruvbox
+      tmuxPlugins.nord
       tmuxPlugins.tmux-fzf
       # pkgs.tmuxPlugins.resurrect
       {
