@@ -53,6 +53,7 @@
       ./home-manager/xdg.nix
       ./home-manager/xsession.nix
       ./home-manager/yazi.nix
+      ./home-manager/zoxide.nix
       ./home-manager/zsh.nix
     ];
 

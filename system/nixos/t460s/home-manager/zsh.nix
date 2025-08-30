@@ -22,7 +22,7 @@
       plugins = [
         { name = "hlissner/zsh-autopair"; tags = [ "defer:2" ]; }
         { name = "endaaman/lxd-completion-zsh"; } # ???
-        { name = "agkozak/zsh-z"; }
+        # { name = "agkozak/zsh-z"; }
       ];
     };
 
@@ -60,6 +60,8 @@
       bindkey -M menuselect 'l' vi-forward-char
       bindkey -M menuselect 'j' vi-down-line-or-history
       bindkey -v '^?' backward-delete-char
+
+      # eval "$(zoxide init zsh)"
 
       # wallpaper mit feh
 
