@@ -9,14 +9,25 @@
 }: {
   programs.readline = {
     enable = true;
+    includeSystemConfig = true;
     extraConfig = ''
 
-      #----------------------------------------------------------
-      # extraConfig declared in readline.nix
-      #
-
+      #-----------------
+      #-- extraConfig declared in readline.nix
+      #--
+      
       set editing-mode vi
-    '';
 
+      "\C-p":history-search-backward
+      "\C-n":history-search-forward
+
+      set colored-stats On
+      set completion-ignore-case On
+      set completion-prefix-display-length 3
+      set mark-symlinked-directories On
+      set show-all-if-ambiguous On
+      set show-all-if-unmodified On
+      set visible-stats On
+    '';
   };
 }
