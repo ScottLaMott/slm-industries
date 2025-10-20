@@ -109,6 +109,7 @@
       zathura
 
       #--- test
+      prismlauncher
       zip
       unzip
       # picom-jonaburg
