@@ -15,7 +15,7 @@
     ansible
     bat
     bc
-    bitwarden-cli
+    # bitwarden-cli
     brave
     brightnessctl
     btop
@@ -51,6 +51,7 @@
     libguestfs
     libsecret 
     libsixel
+    libvirt
     lsd
     lua
     lua52Packages.luarocks-nix
@@ -59,12 +60,13 @@
     # lxd-lts
     #--- mno
     man-db
+    manix
     mutt
     nix-tree
     nmap
     neofetch
     # neovim
-    nodejs
+    # nodejs
     openssh
     #--- pqr
     pciutils
@@ -75,6 +77,7 @@
     qemu
     ranger
     ripgrep
+    rlwrap
     #--- stu
     screen
     silver-searcher
@@ -82,6 +85,8 @@
     sshpass
     stylua
     sxiv
+    tcl
+    tclreadline
     tcpdump
     termshark
     tig
@@ -92,17 +97,18 @@
     toilet
     tree
     tshark
+    wireshark
     wget
     usbutils
     #--- vwx
     virt-manager
     virt-top
     virt-viewer
-    wavemon
+    # wavemon
     wget
-    xclip
-    xorg.xhost
-    xorg.xeyes
+    # xclip
+    # xorg.xhost
+    # xorg.xeyes
     #--- yz
     zathura
 

@@ -7,7 +7,6 @@
 let mapleader=" "
 
 "--- general
-map <leader>q  :quit<cr>
 map <leader>s  :Startify<cr>
 map <leader>lr :!./%<cr>
 " map <leader>sr :source $HOME/.config/vim/<cr>
@@ -21,7 +20,10 @@ map <C-p>      :bprevious<CR>
 
 "--- windows
 map <leader>o  :only<cr>
-map <leader>c  :close<cr>
+map <leader>w  :write<cr>
+map <leader>q  :quit<cr>
+map <leader>s  :e #<cr>
+map <leader>so :source<cr>
 
 "--- help
 map <F2>        <C-T>
@@ -69,10 +71,4 @@ map <leader>ll :Limelight!!<cr>
 "--- terminal
 " für :terminal-mode, exit terminal-mode
 tnoremap <Esc><Esc> <C-\><C-n>
-
-"--- mix
-"map <leader>j :wincmd j<cr>
-"map <leader>k :wincmd k<cr>
-"map <leader>h :wincmd h<cr>
-"map <leader>l :wincmd l<cr>
 

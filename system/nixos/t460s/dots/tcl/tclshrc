@@ -1,0 +1,7 @@
+package require tclreadline
+
+proc ::tclreadline::prompt1 {} {
+    return "[lindex [split [info hostname] "."] 0] [lindex [split [pwd] "/"] end] % "
+}
+
+::tclreadline::Loop

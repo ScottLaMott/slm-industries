@@ -1,12 +1,13 @@
 #----------------------------------------------------------
 #---
-#--- yazi configuration / home-manager
+#--- zoxide configuration / home-manager
 #---
 
 { config, lib, pkgs, modulesPath, ... }: {
 
-  programs.yazi = {
+  programs.zoxide = {
     enable = true;
+    enableZshIntegration = true;
   };
 
 }

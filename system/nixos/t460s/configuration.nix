@@ -13,8 +13,6 @@
     ./modules/fonts.nix
     ./modules/networking.nix
     ./modules/tlp.nix
-    <home-manager/nixos>
-    ./home-manager/home.nix
   ];
 
   #--- bootloader
@@ -26,11 +24,12 @@
 
   system = {
     stateVersion = "23.05";
-    copySystemConfiguration = true;
+    # copySystemConfiguration = true;
   };
 
   #--- nix package manager options
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  # nix.settings.sandbox =false;
   nix.extraOptions = "download-buffer-size = 100000000";
 
   #--- nfs mount
@@ -122,10 +121,9 @@
   services.gnome.gnome-keyring.enable = true;
 
   #--- shell environment
-  # programs.vim.defaultEditor = true;
-  programs.zsh.enable = true;
-  programs.zsh.enableGlobalCompInit = false;
   programs.ssh.forwardX11 = true;
+
+  programs.wireshark.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
@@ -137,7 +135,8 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
 
