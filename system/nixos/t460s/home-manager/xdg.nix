@@ -8,6 +8,10 @@
   xdg = {
     enable = true;
 
+    # configHome = "/home/slm/.config";
+    # configHome = lib.concatStrings [ home.homeDirectory "/.config" ]; #FIXME
+    configHome = lib.concatStrings [ "/home/slm" "/.config" ];
+
     configFile."awesome" = {
       enable = true;
       source = ../dots/awesome/rc.lua;
@@ -39,7 +43,7 @@
     };
 
     configFile."yazi" = {
-      enable   = true;
+      enable   = false;
       source   = ../dots/yazi/yazi.toml;
       target   = "yazi/yazi.toml";
     };
