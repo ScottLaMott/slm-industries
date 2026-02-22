@@ -2,18 +2,25 @@
   description = "t460s-next-generation";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/master";
+      # url = "github:nix-community/home-manager/release-25.11";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:ScottLaMott/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {
+  # outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.t460s-ng = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -31,6 +38,9 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
         }
+        # slm ???
+        # nvf.nixosModules.default
+        nvf.nixosModules.nvf
       ];
     };
   };
