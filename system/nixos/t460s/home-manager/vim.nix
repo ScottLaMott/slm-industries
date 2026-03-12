@@ -16,7 +16,7 @@
 
       # -- the best of the rest
       fzf-vim
-      goyo
+      goyo-vim
       markdown-preview-nvim
       limelight-vim
       vim-commentary
