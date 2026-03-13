@@ -34,8 +34,9 @@
     fzf
     #--- ghi
     gcc
-    gitAndTools.gitFull
-    glxinfo
+    gimp
+    gitFull
+    mesa-demos
     gnome-keyring
     gnumake
     htop
@@ -49,6 +50,7 @@
     lazygit
     lf
     libguestfs
+    libreoffice
     libsecret 
     libsixel
     libvirt
@@ -61,7 +63,7 @@
     #--- mno
     man-db
     manix
-    mutt
+    nix-inspect
     nix-tree
     nmap
     neofetch
@@ -73,7 +75,7 @@
     pulseaudioFull
     pulsemixer
     pure-prompt
-    python3Full
+    python3
     qemu
     ranger
     ripgrep
@@ -113,10 +115,18 @@
     zathura
 
     #--- test
+    lunar-client
     zip
     unzip
     # picom-jonaburg
     # spotify
+    nautilus
+    # gns3
+    # gns3-server
+    # gns3-gui
+    # ubridge
+    # vpcs
+    # dynamips
   ];
 
 }
