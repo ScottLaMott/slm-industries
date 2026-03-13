@@ -15,13 +15,13 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    dotDir = ".config/zsh"; # FIXME
+    dotDir = "${config.xdg.configHome}/zsh";
 
     zplug = {
       enable = true;
       plugins = [
         { name = "hlissner/zsh-autopair"; tags = [ "defer:2" ]; }
-        { name = "endaaman/lxd-completion-zsh"; } # ???
+        # { name = "endaaman/lxd-completion-zsh"; } # ???
         # { name = "agkozak/zsh-z"; }
       ];
     };
@@ -130,6 +130,9 @@
 
       #--- music
       pm    = "pulsemixer";
+
+      #--- prismlauncher, neuste version, selbst gebaut
+      prismlauncher  = "/home/slm/ws/projects/prismlauncher/result/bin/prismlauncher";
 
       #--- eyecandy hi hi
       nf    = "clear; neofetch";
