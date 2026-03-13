@@ -8,14 +8,20 @@
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    userName = "Scott LaMott";
-    userEmail = "slm@slm-industries";
-    extraConfig = {
+    # userName = "Scott LaMott";
+    # userEmail = "slm@slm-industries";
+    # extraConfig = {
+    #   core = { editor = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim"; };
+    #   credential.helper = "libsecret";
+    # };
+    settings = {
+      user.name = "Scott LaMott";
+      user.email = "slm@slm-industries";
       core = { editor = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim"; };
       credential.helper = "libsecret";
-    };
-    aliases = {
-      s = "status";
+      aliases = {
+       s = "status";
+     };
     };
   };
 
