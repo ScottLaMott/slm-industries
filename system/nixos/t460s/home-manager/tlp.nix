@@ -6,7 +6,7 @@
 { ... }: {
 
   services.tlp = {
-    enable=true;
+    enable=false;
 
     settings = {    # https://linrunner.de/tlp/introduction.html
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
