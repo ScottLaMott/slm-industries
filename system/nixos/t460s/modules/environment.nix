@@ -67,7 +67,7 @@
     nix-inspect
     nix-tree
     nmap
-    neofetch
+    fastfetch
     # neovim
     # nodejs
     openssh
