@@ -111,7 +111,6 @@
     wget
     # xclip
     # xorg.xhost
-    x11_ssh_askpass
     # xorg.xeyes
     #--- yz
     zathura
