@@ -337,7 +337,9 @@ globalkeys = gears.table.join(
 
     -- Rofi
     awful.key({ modkey, }, "r", function () awful.util.spawn("rofi -show drun")   end, {description = "rofi -show drun",   group = "launcher"}),
-    awful.key({ modkey, }, "w", function () awful.util.spawn("rofi -show window") end, {description = "rofi -show window", group = "launcher"})
+    awful.key({ modkey, }, "w", function () awful.util.spawn("rofi -show window") end, {description = "rofi -show window", group = "launcher"}),
+    
+    awful.key({ modkey, }, "b", function () awful.util.spawn("flameshot gui") end, {description = "flameshot gu", group = "launcher"})
 )
 
 clientkeys = gears.table.join(

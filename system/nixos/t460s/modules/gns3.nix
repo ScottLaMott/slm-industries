@@ -3,11 +3,16 @@
 #--- gns3 configuration
 #---
 
-{ ... }: {
+{ pkgs, ... }: {
 
-  services.gns3 = {
-    enable=true;
-  };
+  environment.systemPackages = with pkgs; [
+    gns3-server
+    gns3-gui
+    ubridge
+    vpcs
+  ];
+
+  services.gns3-server = { enable=false; };
 
 }
 

@@ -3,10 +3,12 @@
 { config, lib, pkgs, modulesPath, ... }: {
     # programs.zsh.enable = true;
     home.username = "slm";
+    home.homeDirectory = "/home/slm";
     home.stateVersion = "23.11";
     home.packages = with pkgs; [
       atop
       figlet
+      flameshot
       glow
       gdu
       hwinfo
@@ -17,7 +19,7 @@
       rofi
       theme-sh
       # tmuxp
-      yazi
+      # yazi
 
       # fun, teilweise in devbox fun-box
       # cmatrix
@@ -34,9 +36,19 @@
       spotify-player
       starship
       strawberry
+
+      # minecraft
+      cubiomes-viewer
+      prismlauncher
       #
       lnav
       devbox
+      # gns3
+      gns3-server
+      gns3-gui
+      ubridge
+      vpcs
+      dynamips
     ];
 
     imports = [
@@ -45,6 +57,7 @@
       ./home-manager/git.nix
       ./home-manager/fzf.nix
       ./home-manager/rofi.nix
+      ./home-manager/neomutt.nix
       ./home-manager/picom.nix
       ./home-manager/readline.nix
       ./home-manager/starship.nix

@@ -10,7 +10,7 @@
 
     # configHome = "/home/slm/.config";
     # configHome = lib.concatStrings [ home.homeDirectory "/.config" ]; #FIXME
-    configHome = lib.concatStrings [ "/home/slm" "/.config" ];
+    # configHome = lib.concatStrings [ "/home/slm" "/.config" ];
 
     configFile."awesome" = {
       enable = true;
