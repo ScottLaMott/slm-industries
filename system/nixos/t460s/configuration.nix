@@ -13,6 +13,7 @@
     ./modules/fonts.nix
     ./modules/networking.nix
     ./modules/tlp.nix
+    ./modules/gns3.nix
   ];
 
   #--- bootloader
@@ -29,6 +30,8 @@
 
   #--- nix package manager options
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  # nix.settings.trusted_users = 
+  nix.settings.trusted-users = [ "root" "slm" ];
   # nix.settings.sandbox =false;
   nix.extraOptions = "download-buffer-size = 100000000";
 
@@ -105,16 +108,16 @@
     displayManager.lightdm.enable = true; #--- enable login manager
   };
 
-  services.spotifyd = {
-    enable = false;
-    settings =
-      {
-        global = {
-          username = "Alex";
-          password = "foo";
-        };
-      };
-  };
+  # services.spotifyd = {
+  #   enable = false;
+  #   settings =
+  #     {
+  #       global = {
+  #         username = "Alex";
+  #         password = "foo";
+  #       };
+  #     };
+  # };
 
   # für git-push, git anmeldung
   security.pam.services.gdm.enableGnomeKeyring = true;
@@ -122,22 +125,49 @@
 
   #--- shell environment
   programs.ssh.forwardX11 = true;
+  programs.ssh.enableAskPassword = true;
 
   programs.wireshark.enable = true;
+  programs.nvf.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+  
+  # programs.nvf.enableManpages = true; 
 
   #--- user accounts
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm" ];
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
 
+  nixpkgs.config.allowUnfree = true;
+
+  services.minecraft-server.enable = true;
+  services.minecraft-server.eula = true;
+  services.minecraft-server.declarative = true;
+  services.minecraft-server.serverProperties = { 
+    allow-cheats = true; 
+    server-port = 25565;
+  };
+
+  xdg.mime.defaultApplications = {
+  "inode/directory" = "pcmanfm.desktop";
+};
+
+  # config.gns3-server = { };
+
+  # services.gns3-server = { 
+    # enable = true;
+    # settings = {
+      # host = "0.0.0.0"; 
+    #   port = 3080; 
+    # };
+  # };
 }

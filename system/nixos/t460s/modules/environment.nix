@@ -25,6 +25,7 @@
     #--- def
     devbox
     dmenu
+    drawing
     duf
     ethtool
     eza
@@ -110,6 +111,7 @@
     wget
     # xclip
     # xorg.xhost
+    x11_ssh_askpass
     # xorg.xeyes
     #--- yz
     zathura
@@ -121,6 +123,7 @@
     # picom-jonaburg
     # spotify
     nautilus
+    pcmanfm
     # gns3
     # gns3-server
     # gns3-gui
