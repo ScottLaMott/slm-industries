@@ -5,6 +5,12 @@
 - mit Home-Manager, als Module
 - kein Flake
 
+## Commands
+```
+# sudo nixos-rebuild switch             # switch to new configuration
+# sudo nixos-rebuild test               # test new configuration
+```
+
 ## WebLinks ##
 
 ## Todo's ##
