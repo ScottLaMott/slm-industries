@@ -16,7 +16,7 @@
       ansible
       bat
       bc
-      bitwarden
+      bitwarden-desktop
       bitwarden-cli
       bucklespring
       brave
@@ -30,14 +30,15 @@
       duf
       ethtool
       eza
+      fastfetch
       feh
       fd
       file
       fzf
       #--- ghi
       gcc
-      gitAndTools.gitFull
-      glxinfo
+      git
+      mesa-demos
       gnome-keyring
       gnumake
       htop
@@ -64,7 +65,6 @@
       mutt
       nix-tree
       nmap
-      neofetch
       # neovim
       nodejs
       openssh
@@ -73,7 +73,6 @@
       pulseaudioFull
       pulsemixer
       pure-prompt
-      python3Full
       qemu
       ranger
       ripgrep
@@ -103,8 +102,8 @@
       wavemon
       wget
       xclip
-      xorg.xhost
-      xorg.xeyes
+      xhost
+      xeyes
       #--- yz
       zathura
 

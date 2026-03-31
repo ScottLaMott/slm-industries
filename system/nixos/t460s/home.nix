@@ -28,7 +28,7 @@
 
       # music
       beets
-      cava
+      # cava
       mixxx
       picard
       playerctl

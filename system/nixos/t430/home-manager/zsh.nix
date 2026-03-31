@@ -12,10 +12,10 @@
   programs.zsh = {
     enable = true;
     defaultKeymap = "viins";
+    dotDir = "${config.xdg.configHome}/zsh";
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    dotDir = ".config/zsh"; # FIXME
 
     zplug = {
       enable = true;
@@ -81,7 +81,7 @@
       rm    = "rm -i";
 
       #--- edit
-      nvim  = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim";
+      nvim  = "/home/slm/ws/projects/neovim/slm-nvf/result/bin/nvim";
       v     = "vim";
       vs    = "vim -S .session.vim";
       ns    = "nvim -S .session.vim";

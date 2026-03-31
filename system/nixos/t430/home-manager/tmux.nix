@@ -29,7 +29,7 @@
           set -g @resurrect-dir '~/.tmux/resurrect'
           set -g @resurrect-strategy-vim 'session'
           set -g @resurrect-strategy-nvim 'session'
-          set -g @resurrect-processes 'journalctl watch btop man ssh vim nvim cava spotify_player'
+          set -g @resurrect-processes 'journalctl watch man ssh vim nvim'
         '';
       }
       {
