@@ -88,6 +88,7 @@
     xkb.options = "caps:escape"; #--- map caps to escape
     windowManager.awesome.enable = true; #--- enable window manager
     displayManager.lightdm.enable = true; #--- enable login manager
+    # desktopManager = {cinnamon.enable = true;};
   };
 
   services.spotifyd = {
@@ -112,7 +113,7 @@
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" ];
+    extraGroups = ["networkmanager" "wheel" "lxd" "jackaudio" "libvirtd" "incus-admin" "minecraft" ];
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };

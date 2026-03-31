@@ -6,7 +6,7 @@
 { config, lib, pkgs, modulesPath, ... }: {
 
   programs.yazi = {
-    enable = true;
+    enable = false;
   };
 
 }

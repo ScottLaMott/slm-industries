@@ -1,5 +1,10 @@
 # NixOS T430 Konfiguration #
 
+## NIXOS-Version
+- NixOS 26.05 / Yarara / unstable
+- mit Home-Manager, als Module
+- kein Flake
+
 ## WebLinks ##
 
 ## Todo's ##

@@ -12,19 +12,17 @@
       hwinfo
       nitch
       nix-tree
-      picom
       playerctl
       # powerline-fonts
       # tmuxp
-      yazi
+      # yazi
       # music
-      beets
-      cava
-      mixxx
-      picard
-      soco-cli
-      spotify-player
-      strawberry
+      # beets
+      # mixxx
+      # picard
+      # soco-cli
+      # spotify-player
+      # strawberry
       #
       lnav
       devbox
