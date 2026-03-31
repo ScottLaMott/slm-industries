@@ -18,7 +18,6 @@ hier bitte weiterführene
 ## DONES
 ## LINKS
 
-
 - [Nixos-And-Flakes](https://nixos-and-flakes.thiscute.world/introduction)
 - [nixpkgs - build status](https://hydra.nixos.org/job/nixpkgs/trunk/unstable#tabs-constituents)
 - [Rebuild NixOS Offline - build](https://discourse.nixos.org/t/rebuild-nixos-offline/3679)
