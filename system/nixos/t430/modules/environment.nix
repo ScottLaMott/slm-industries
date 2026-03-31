@@ -27,6 +27,7 @@
       #--- def
       devbox
       dmenu
+      drawing
       duf
       ethtool
       eza
@@ -64,6 +65,7 @@
       man-db
       mutt
       nix-tree
+      nix-inspect
       nmap
       # neovim
       nodejs
