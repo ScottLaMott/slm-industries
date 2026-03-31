@@ -12,7 +12,9 @@
     settings = {
       user.name = "Scott LaMott";
       user.email = "slm@slm-industries";
-      core = { editor = "/home/slm/ws/projects/neovim/slm-nvf/result/bin/nvim"; };
+      core = { 
+        editor = "/home/slm/ws/projects/neovim/slm-nvf/result/bin/nvim"; 
+      };
       credential.helper = "libsecret";
       aliases = {
        s = "status";
