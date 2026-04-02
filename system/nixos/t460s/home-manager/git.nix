@@ -8,6 +8,7 @@
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
+    signing.format = null;
     settings = {
       user.name = "Scott LaMott";
       user.email = "slm@slm-industries";
