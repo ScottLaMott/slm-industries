@@ -1,0 +1,103 @@
+flake.nix
+
+{
+  description = "t460s-next-generation";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      # url = "github:nix-community/home-manager/release-25.11";
+      # The `follows` keyword in inputs is used for inheritance.
+      # Here, `inputs.nixpkgs` of home-manager is kept consistent with
+      # the `inputs.nixpkgs` of the current flake,
+      # to avoid problems caused by different versions of nixpkgs.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:ScottLaMott/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {
+  # outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    # Please replace my-nixos with your hostname
+    nixosConfigurations.t460s-ng = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # Import the previous configuration.nix we used,
+        # so the old configuration file still takes effect
+        ./configuration.nix
+        # make home-manager as a module of nixos
+        # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.slm = import ./home.nix;
+
+          # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+        }
+        # slm ???
+        # nvf.nixosModules.default
+        nvf.nixosModules.nvf
+      ];
+    };
+  };
+
+}
+
+tree .
+
+.
+├── cachix
+│   └── nix-community.nix
+├── cachix.nix
+├── claude-input-nixos-configuration.txt
+├── configuration.nix
+├── dots
+│   ├── awesome
+│   │   └── rc.lua
+│   ├── tcl
+│   │   └── tclshrc
+│   ├── vim
+│   │   ├── maps.vim
+│   │   └── settings.vim
+│   ├── yazi
+│   │   └── yazi.toml
+│   └── zsh
+│       ├── slm-colored-man-pages
+│       └── slm-zshrc
+├── flake.lock
+├── flake.nix
+├── hardware-configuration.nix
+├── home-manager
+│   ├── alacritty.nix
+│   ├── cava.nix
+│   ├── fzf.nix
+│   ├── git.nix
+│   ├── neomutt.nix
+│   ├── picom.nix
+│   ├── readline.nix
+│   ├── rofi.nix
+│   ├── starship.nix
+│   ├── tlp.nix
+│   ├── tmux.nix
+│   ├── vim.nix
+│   ├── xdg.nix
+│   ├── xsession.nix
+│   ├── yazi.nix
+│   ├── zoxide.nix
+│   └── zsh.nix
+├── home.nix
+├── modules
+│   ├── environment.nix
+│   ├── fonts.nix
+│   ├── gns3.nix
+│   ├── networking.nix
+│   └── tlp.nix
+└── readme.slm.md
+
+10 directories, 38 files

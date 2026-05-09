@@ -1,0 +1,44 @@
+{
+  description = "t460s-next-generation";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    snowfall-lib = {
+      url = "github:snowfallorg/lib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nvf = {
+      url = "github:ScottLaMott/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = inputs:
+    inputs.snowfall-lib.mkFlake {
+      inherit inputs;
+      src = ./.;
+
+      snowfall = {
+        namespace = "slm";   # frei wählbar, z.B. dein Username
+      };
+
+      channels-config = {
+        allowUnfree = true;  # falls du das brauchst
+      };
+
+      homes.modules = with inputs; [
+        home-manager.nixosModules.home-manager
+      ];
+
+      systems.modules.nixos = with inputs; [
+        nvf.nixosModules.nvf
+      ];
+    };
+}
