@@ -1,0 +1,7 @@
+### slm
+#
+[manager]
+ratio           = [1, 3, 4]
+show_hidden     = false
+sort_dir_first  = true
+scrolloff       = 200
