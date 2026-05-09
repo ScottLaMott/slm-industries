@@ -27,6 +27,7 @@
 
   #--- virtualisation
   virtualisation.incus.enable = true;
+  virtualisation.incus.bucketSupport = false;
   networking.nftables.enable = true;
   virtualisation.libvirtd.enable = false;
 
