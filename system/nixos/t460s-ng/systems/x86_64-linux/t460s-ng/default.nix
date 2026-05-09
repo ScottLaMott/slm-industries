@@ -8,7 +8,7 @@
 }: {
   # cachix.nix entweder hier importieren oder nach modules/nixos/ verschieben
   imports = [
-    # ../../.../cachix.nix  # falls du es nicht nach modules/nixos/ verschiebst
+    ./hardware.nix
   ];
 
   #--- bootloader
@@ -27,6 +27,7 @@
 
   #--- virtualisation
   virtualisation.incus.enable = true;
+  networking.nftables.enable = true;
   virtualisation.libvirtd.enable = false;
 
   hardware.graphics.enable = true;

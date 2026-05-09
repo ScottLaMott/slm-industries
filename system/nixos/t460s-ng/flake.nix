@@ -33,12 +33,13 @@
         allowUnfree = true;  # falls du das brauchst
       };
 
-      homes.modules = with inputs; [
-        home-manager.nixosModules.home-manager
-      ];
-
       systems.modules.nixos = with inputs; [
         nvf.nixosModules.nvf
       ];
+      
+      homes.modules = with inputs; [
+        nvf.homeManagerModules.nvf
+      ];
+
     };
 }
