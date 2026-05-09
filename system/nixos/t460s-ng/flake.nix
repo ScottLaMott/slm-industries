@@ -1,5 +1,5 @@
 {
-  description = "t460s-next-generation";
+  description = "t460s - claude optimized";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -10,7 +10,7 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -33,8 +33,8 @@
         allowUnfree = true;  # falls du das brauchst
       };
 
-      systems.modules.nixos = with inputs; [
-        nvf.nixosModules.nvf
+      systems.modules.nixos = [
+        inputs.nvf.nixosModules.nvf
       ];
       
       homes.modules = with inputs; [
