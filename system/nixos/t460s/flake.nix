@@ -22,7 +22,7 @@
   outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {
   # outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.t460s-ng = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.t460s = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         # Import the previous configuration.nix we used,
