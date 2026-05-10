@@ -78,15 +78,29 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
 
-  #--- user accounts
-  users.users.slm = {
-    isNormalUser = true;
-    password = "changeme";
-    description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
-    ignoreShellProgramCheck = true;
-    shell = pkgs.zsh;
+  #claude 
+#--- user accounts
+users.users.slm = {
+  isNormalUser = true;
+  initialPassword = "changeme";  # <-- initialPassword, nicht password
+  description = "Scott LaMott";
+  extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
+  ignoreShellProgramCheck = true;
+  shell = pkgs.zsh;
+};
+
+systemd.services.force-password-change = {
+  description = "Force password change for slm on first login";
+  wantedBy = [ "multi-user.target" ];
+  after = [ "systemd-user-sessions.service" ];
+  serviceConfig = {
+    Type = "oneshot";
+    RemainAfterExit = true;
+    ExecStart = "${pkgs.shadow}/bin/chage -d 0 slm";
+>>>>>>> 5adee1e (claude test user passwd)
   };
+};
+
 
   nixpkgs.config.allowUnfree = true;
 
