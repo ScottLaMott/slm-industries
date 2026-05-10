@@ -3,6 +3,7 @@
 #---
 {
   config,
+  lib,
   pkgs,
   ...
 }: {
@@ -80,6 +81,7 @@
   #--- user accounts
   users.users.slm = {
     isNormalUser = true;
+    password = "changeme";
     description = "Scott LaMott";
     extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
     ignoreShellProgramCheck = true;
@@ -99,4 +101,5 @@
   xdg.mime.defaultApplications = {
     "inode/directory" = "pcmanfm.desktop";
   };
+
 }
