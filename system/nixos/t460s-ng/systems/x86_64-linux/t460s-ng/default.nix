@@ -82,7 +82,7 @@
 #--- user accounts
 users.users.slm = {
   isNormalUser = true;
-  initialPassword = "changeme";  # <-- initialPassword, nicht password
+  password = "changeme";  # <-- initialPassword, nicht password
   description = "Scott LaMott";
   extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
   ignoreShellProgramCheck = true;
@@ -97,10 +97,8 @@ systemd.services.force-password-change = {
     Type = "oneshot";
     RemainAfterExit = true;
     ExecStart = "${pkgs.shadow}/bin/chage -d 0 slm";
->>>>>>> 5adee1e (claude test user passwd)
   };
 };
-
 
   nixpkgs.config.allowUnfree = true;
 
