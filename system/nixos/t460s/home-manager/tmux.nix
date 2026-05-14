@@ -59,6 +59,7 @@
 
       set-option -ag status-right '#{?pane_synchronized, #[bg=yellow]SYNC#[default],}'
 
+      bind-key -n M-u copy-mode
       bind-key -n M-h select-pane -L
       bind-key -n M-j select-pane -D
       bind-key -n M-k select-pane -U
