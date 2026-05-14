@@ -22,8 +22,9 @@
       brave
       brightnessctl
       btop
-      curl
       cachix
+      claude-code
+      curl
       #--- def
       devbox
       dmenu
@@ -86,7 +87,7 @@
       stylua
       sxiv
       tcpdump
-      termshark
+      # termshark  # wireshark-cli hash mismatch in 26.05pre
       tig
       tio
       tmux-xpanes
@@ -94,7 +95,7 @@
       tlp
       toilet
       tree
-      tshark
+      # tshark  # wireshark-cli hash mismatch in 26.05pre
       wget
       usbutils
       #--- vwx
