@@ -1,6 +1,8 @@
   #--- user home-manager configuration
 
 { config, lib, pkgs, modulesPath, ... }: {
+  home-manager.useGlobalPkgs = true;
+
   home-manager.users.slm = {pkgs, ...}: {
     programs.zsh.enable = true;
     home.stateVersion = "24.11";

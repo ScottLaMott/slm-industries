@@ -26,8 +26,11 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  nixpkgs.config.allowUnfree = true;
+
   #--- virtualisation
   virtualisation.incus.enable = true;
+  virtualisation.incus.bucketSupport = false;
 
   #- virtmanager
   virtualisation.libvirtd.enable = true;

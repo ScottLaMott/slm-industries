@@ -10,7 +10,7 @@
     defaultEditor = true;
     plugins = with pkgs.vimPlugins; [
       # -- colorscheme
-      awesome-vim-colorschemes
+      # awesome-vim-colorschemes  # unfree license — breaks build
       vim-airline
       vim-airline-themes
 

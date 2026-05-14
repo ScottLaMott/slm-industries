@@ -9,6 +9,8 @@
 ```
 # sudo nixos-rebuild switch             # switch to new configuration
 # sudo nixos-rebuild test               # test new configuration
+
+# sudo nix-channel --upgrade            # channel updaten
 ```
 
 ## WebLinks ##
