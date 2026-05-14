@@ -51,9 +51,22 @@
 
     extraConfig = ''
       set-option -g status-left-length 20
+      set-option -g status-position top
       set-option -g renumber-windows on
       set-option -g pane-border-lines single
       set-option -g pane-border-indicators arrows
+
+      # --- yellow colorscheme ---
+      set -g status-style                  "bg=colour226,fg=colour232"
+      set -g status-left-style             "bg=colour226,fg=colour232,bold"
+      set -g status-right-style            "bg=colour220,fg=colour232,bold"
+      set -g window-status-style           "bg=colour226,fg=colour238"
+      set -g window-status-current-style   "bg=colour232,fg=colour226,bold"
+      set -g window-status-separator       " "
+      set -g pane-active-border-style      "fg=colour231,bold"
+      set -g pane-border-style             "fg=colour226"
+      set -g message-style                 "bg=colour226,fg=colour232,bold"
+      set -g message-command-style         "bg=colour220,fg=colour232,bold"
 
       bind-key -n M-h select-pane -L
       bind-key -n M-j select-pane -D
