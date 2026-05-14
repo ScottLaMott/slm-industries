@@ -113,6 +113,14 @@
   #--- shell environment
   # programs.ssh.forwardX11 = true;
 
+  security.sudo.extraRules = [{
+    users = [ "slm" ];
+    commands = [{
+      command = "/run/current-system/sw/bin/nixos-rebuild";
+      options = [ "NOPASSWD" ];
+    }];
+  }];
+
   #--- user accounts
   users.users.slm = {
     isNormalUser = true;
