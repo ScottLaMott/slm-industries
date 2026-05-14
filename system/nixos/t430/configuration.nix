@@ -11,6 +11,7 @@
     ./modules/environment.nix
     ./modules/networking.nix
     ./modules/fonts.nix
+    ./modules/tlp.nix
     <home-manager/nixos>
     ./home-manager/home.nix
   ];
