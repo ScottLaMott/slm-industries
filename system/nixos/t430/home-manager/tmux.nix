@@ -68,6 +68,7 @@
       set -g message-style                 "bg=colour226,fg=colour232,bold"
       set -g message-command-style         "bg=colour220,fg=colour232,bold"
 
+      bind-key -n M-u copy-mode
       bind-key -n M-h select-pane -L
       bind-key -n M-j select-pane -D
       bind-key -n M-k select-pane -U
