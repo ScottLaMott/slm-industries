@@ -1,6 +1,6 @@
 #----------------------------------------------------------
 #---
-#--- git configuration / home-manager
+#--- xsession / awesome wm / home-manager
 #---
 
 { config, lib, pkgs, modulesPath, ... }: {
