@@ -103,7 +103,6 @@
       virt-top
       virt-viewer
       wavemon
-      wget
       xclip
       xhost
       xeyes
