@@ -3,7 +3,6 @@
 #--- readline configuration / home-manager
 #---
 
-#{ config, lib, pkgs, modulesPath,
 {
   ...
 }: {
