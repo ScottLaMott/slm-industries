@@ -20,8 +20,10 @@
     brightnessctl
     btop
     bucklespring
-    curl
     cachix
+    claude-code
+    # comma  # replaced by comma-with-db via nix-index-database flake
+    curl
     #--- def
     devbox
     dmenu
@@ -64,6 +66,7 @@
     #--- mno
     man-db
     manix
+    # nix-index  # replaced by nix-index-with-db via nix-index-database flake
     nix-inspect
     nix-tree
     nmap

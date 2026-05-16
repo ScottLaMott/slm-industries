@@ -17,9 +17,13 @@
       url = "github:ScottLaMott/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nvf, nix-index-database, ... }@inputs: {
   # outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.t460s = nixpkgs.lib.nixosSystem {
@@ -41,6 +45,12 @@
         # slm ???
         # nvf.nixosModules.default
         nvf.nixosModules.nvf
+        {
+          environment.systemPackages = [
+            nix-index-database.packages.x86_64-linux.nix-index-with-db
+            nix-index-database.packages.x86_64-linux.comma-with-db
+          ];
+        }
       ];
     };
   };
