@@ -23,3 +23,5 @@
 - [ ] `homes/.default.nix.un~` — Swap-Datei entfernen (`.gitignore` oder löschen)
 
 ## Erledigt
+
+- [x] X11-Forwarding deaktivieren (SSH-Warnung bei git push behoben)
