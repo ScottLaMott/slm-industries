@@ -27,7 +27,7 @@
     };
 
     sessionVariables = {
-      EDITOR = "vim";
+      EDITOR = "nvim";
       LESS = "-j10 -R";
     };
 
@@ -38,7 +38,6 @@
 
       # expand PATH
       PATH=~/.local/bin:$PATH
-      EDITOR=nvim
     '';
 
     initContent = ''
