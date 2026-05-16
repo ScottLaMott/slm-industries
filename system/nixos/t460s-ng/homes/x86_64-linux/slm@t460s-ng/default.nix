@@ -39,5 +39,12 @@
     dynamips
   ];
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks."*" = {
+      extraOptions.ForwardX11 = "no";
+    };
+  };
+
   # imports nicht nötig – Snowfall lädt modules/home/ automatisch
 }
