@@ -67,6 +67,7 @@
       ./home-manager/xsession.nix
       ./home-manager/yazi.nix
       ./home-manager/zoxide.nix
+      ./home-manager/ssh.nix
       ./home-manager/zsh.nix
     ];
 
