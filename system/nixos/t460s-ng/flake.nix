@@ -24,7 +24,7 @@
     # Note: this points to a personal fork — consider switching to
     # github:NotAShelf/nvf for upstream updates
     nvf = {
-      url = "github:ScottLaMott/nvf";
+      url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -51,6 +51,7 @@
       # NixOS modules applied to all systems defined in systems/
       # Adds nvf's NixOS module so you can configure Neovim system-wide
       systems.modules.nixos = [
+        inputs.home-manager.nixosModules.home-manager
         inputs.nvf.nixosModules.nvf
       ];
 

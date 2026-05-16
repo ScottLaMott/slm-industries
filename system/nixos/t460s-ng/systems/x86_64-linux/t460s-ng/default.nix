@@ -10,6 +10,8 @@
   # cachix.nix entweder hier importieren oder nach modules/nixos/ verschieben
   imports = [
     ./hardware.nix
+    # ./nvf.nix
+    ../../../modules/nixos/environment.nix
   ];
 
   #--- bootloader
@@ -31,6 +33,13 @@
   virtualisation.incus.bucketSupport = false;
   networking.nftables.enable = true;
   virtualisation.libvirtd.enable = false;
+
+  virtualisation.vmVariant = {
+    virtualisation.cores = 4;
+    virtualisation.memorySize = 4096; # MB
+    virtualisation.qemu.options = [ "-vga virtio" ];
+    services.spice-vdagentd.enable = true;
+  };
 
   hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;
@@ -74,31 +83,36 @@
   programs.ssh.forwardX11 = true;
   programs.ssh.enableAskPassword = true;
   programs.wireshark.enable = true;
-  programs.nvf.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
 
-  #claude 
-#--- user accounts
-users.users.slm = {
-  isNormalUser = true;
-  password = "changeme";  # <-- initialPassword, nicht password
-  description = "Scott LaMott";
-  extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
-  ignoreShellProgramCheck = true;
-  shell = pkgs.zsh;
-};
-
-systemd.services.force-password-change = {
-  description = "Force password change for slm on first login";
-  wantedBy = [ "multi-user.target" ];
-  after = [ "systemd-user-sessions.service" ];
-  serviceConfig = {
-    Type = "oneshot";
-    RemainAfterExit = true;
-    ExecStart = "${pkgs.shadow}/bin/chage -d 0 slm";
+  programs.nvf = {
+    enable = true;
+    settings = import ./nvf.nix { isMaximal = false; };
   };
-};
+
+  #--- user accounts
+  users.users.slm = {
+    isNormalUser = true;
+    password = "changeme";  # <-- initialPassword, nicht password
+    description = "Scott LaMott";
+    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
+    ignoreShellProgramCheck = true;
+    shell = pkgs.zsh;
+  };
+
+  programs.zsh.enable = true;
+
+  systemd.services.force-password-change = {
+    description = "Force password change for slm on first login";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "systemd-user-sessions.service" ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = "${pkgs.shadow}/bin/chage -d 0 slm";
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
