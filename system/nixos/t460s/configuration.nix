@@ -124,7 +124,7 @@
   services.gnome.gnome-keyring.enable = true;
 
   #--- shell environment
-  programs.ssh.forwardX11 = true;
+  programs.ssh.forwardX11 = false;
   programs.ssh.enableAskPassword = true;
 
   programs.wireshark.enable = true;
