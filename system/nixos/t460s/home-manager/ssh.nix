@@ -1,8 +1,8 @@
 { ... }: {
   programs.ssh = {
     enable = true;
-    matchBlocks."github.com" = {
-      forwardX11 = false;
+    matchBlocks."*" = {
+      extraOptions.ForwardX11 = "no";
     };
   };
 }
