@@ -13,7 +13,7 @@
 
 ### Tmux
 
-- [ ] `tmux.nix` — weather-Plugin: leerer `extraConfig`-Block mit FIXME-Kommentar bereinigen
+- [x] `tmux.nix` — weather-Plugin: leerer `extraConfig`-Block mit FIXME-Kommentar bereinigen
 - [ ] `tmux.nix` — continuum: auskommentiertes `status-right` mit FIXME-Kommentar klären
 
 ### Nix / Flake
