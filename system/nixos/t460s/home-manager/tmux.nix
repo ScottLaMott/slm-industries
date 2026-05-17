@@ -45,6 +45,7 @@
 
     extraConfig = ''
       set-option -g status-left-length 20
+      set-option -g status-justify absolute-centre
       set-option -g status-position top
       set-option -g renumber-windows on
       set-option -g pane-border-lines heavy
