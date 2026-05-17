@@ -51,6 +51,7 @@
       set-option -g pane-border-lines heavy
       set-option -g pane-border-indicators colour
 
+      set-option -g window-status-separator ' '
       set-option -ag status-right '#{?pane_synchronized, #[bg=yellow]SYNC#[default],}'
 
       bind-key -n M-y copy-mode

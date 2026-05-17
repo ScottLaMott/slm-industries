@@ -9,6 +9,7 @@
     enable = true;
     #--- settings
     settings = {
+      font.normal.family = "FiraCode Nerd Font";
       font.size = 9;
       # font.x = 0;
       # font.y = 2;
