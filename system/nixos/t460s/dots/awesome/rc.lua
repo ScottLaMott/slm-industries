@@ -53,8 +53,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.useless_gap = 4
 
---- FIXME beautiful.wallpaper.maximized("~/ws/slm-industries/system/wallpaper/wall.png", s)
---- beautiful.wallpaper.maximized("~/ws/slm-industries/system/wallpaper/wall.png", s, true)
+beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/wallpaper.jpg"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -168,12 +167,12 @@ local function set_wallpaper(s)
     end
 end
 
--- -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
--- screen.connect_signal("property::geometry", set_wallpaper)
+-- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
+screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
-    -- set_wallpaper(s)
+    set_wallpaper(s)
 
     -- Each screen has its own tag table.
     awful.tag({ "one", "two", "three", "four", "five" }, s, awful.layout.layouts[1])
