@@ -10,5 +10,9 @@
     matchBlocks."*" = {
       extraOptions.ForwardX11 = "no";
     };
+    matchBlocks."github.com" = {
+      hostname = "ssh.github.com";
+      port = 443;
+    };
   };
 }
