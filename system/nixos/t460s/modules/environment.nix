@@ -22,7 +22,7 @@
     bucklespring
     cachix
     claude-code
-    # comma  # replaced by comma-with-db via nix-index-database flake
+    # comma  # via nix-index-database.nixosModules.nix-index-with-db
     curl
     #--- def
     devbox
@@ -66,7 +66,7 @@
     #--- mno
     man-db
     manix
-    # nix-index  # replaced by nix-index-with-db via nix-index-database flake
+    # nix-index  # via nix-index-database.nixosModules.nix-index-with-db
     nix-inspect
     nix-tree
     nmap

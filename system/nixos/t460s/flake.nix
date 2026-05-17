@@ -45,12 +45,7 @@
         # slm ???
         # nvf.nixosModules.default
         nvf.nixosModules.nvf
-        {
-          environment.systemPackages = [
-            nix-index-database.packages.x86_64-linux.nix-index-with-db
-            nix-index-database.packages.x86_64-linux.comma-with-db
-          ];
-        }
+        nix-index-database.nixosModules.nix-index-with-db
       ];
     };
   };
