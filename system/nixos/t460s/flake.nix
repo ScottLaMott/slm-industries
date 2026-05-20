@@ -45,7 +45,8 @@
         # slm ???
         # nvf.nixosModules.default
         nvf.nixosModules.nvf
-        nix-index-database.nixosModules.nix-index-with-db
+        nix-index-database.nixosModules.default
+        # nix-index-database.nixosModules.nix-index-with-db
       ];
     };
   };
