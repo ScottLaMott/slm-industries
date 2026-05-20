@@ -22,7 +22,7 @@
     bucklespring
     cachix
     claude-code
-    # comma  # via nix-index-database.nixosModules.nix-index-with-db
+    comma  # via nix-index-database.nixosModules.nix-index-with-db
     curl
     #--- def
     devbox
