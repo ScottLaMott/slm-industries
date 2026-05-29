@@ -49,6 +49,11 @@
       [ -f  $XDG_CONFIG_HOME/zsh/slm-zshrc ]                && source $XDG_CONFIG_HOME/zsh/slm-zshrc
       [ -f  $XDG_CONFIG_HOME/zsh/slm-colored-man-pages ]    && source $XDG_CONFIG_HOME/zsh/slm-colored-man-pages
 
+      #--- edit command line in $EDITOR (v in normal mode)
+      autoload -Uz edit-command-line
+      zle -N edit-command-line
+      bindkey -M vicmd 'v' edit-command-line
+
       #--- completion
       zmodload zsh/complist
       #
