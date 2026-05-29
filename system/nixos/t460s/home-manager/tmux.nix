@@ -44,7 +44,7 @@
     ];
 
     extraConfig = ''
-      set-option -g status-left "#S | "
+      set-option -g status-left "| #S | "
       set-option -g status-left-length 20
       set-option -g status-justify absolute-centre
       set-option -g status-position top
@@ -55,7 +55,7 @@
       set-option -g window-status-separator ' | '
       set-option -g window-status-format ' #I #W '
       set-option -g window-status-current-format ' #I #W#{?window_zoomed_flag, *Z,} '
-      set-option -g status-right "#h | %Y-%m-%d | %H:%M"
+      set-option -g status-right "| #h | %Y-%m-%d | %H:%M |"
       set-option -ag status-right '#{?pane_synchronized, #[bg=yellow]SYNC#[default],}'
 
       bind-key -n M-y copy-mode
