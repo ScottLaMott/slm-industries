@@ -152,10 +152,90 @@
   services.minecraft-server.enable = true;
   services.minecraft-server.eula = true;
   services.minecraft-server.declarative = true;
-  services.minecraft-server.serverProperties = { 
-    allow-cheats = true; 
+  services.minecraft-server.serverProperties = {
+    allow-cheats = true;
     server-port = 25565;
   };
+
+  # Second vanilla server instance on port 25566
+  systemd.sockets.minecraft-server2 = {
+    bindsTo = [ "minecraft-server2.service" ];
+    socketConfig = {
+      ListenFIFO = "/run/minecraft-server2.stdin";
+      SocketMode = "0660";
+      SocketUser = "minecraft";
+      SocketGroup = "minecraft";
+      RemoveOnStop = true;
+      FlushPending = true;
+    };
+  };
+
+  systemd.services.minecraft-server2 =
+    let
+      dataDir = "/var/lib/minecraft2";
+      jvmOpts = "-Xmx4096M -Xms2048M";
+      serverPropertiesFile = pkgs.writeText "server2.properties" ''
+        # server.properties managed by NixOS configuration
+        server-port=25566
+        allow-cheats=true
+      '';
+      eulaFile = builtins.toFile "eula2.txt" ''
+        # eula.txt managed by NixOS Configuration
+        eula=true
+      '';
+      stopScript = pkgs.writeShellScript "minecraft-server2-stop" ''
+        echo stop > /run/minecraft-server2.stdin
+        while kill -0 "$1" 2> /dev/null; do
+          sleep 1s
+        done
+      '';
+    in
+    {
+      description = "Minecraft Server 2 Service";
+      wantedBy = [ "multi-user.target" ];
+      requires = [ "minecraft-server2.socket" ];
+      after = [ "network.target" "minecraft-server2.socket" ];
+
+      serviceConfig = {
+        ExecStart = "${pkgs.minecraft-server}/bin/minecraft-server ${jvmOpts}";
+        ExecStop = "${stopScript} $MAINPID";
+        Restart = "always";
+        User = "minecraft";
+        WorkingDirectory = dataDir;
+        StateDirectory = "minecraft2";
+
+        StandardInput = "socket";
+        StandardOutput = "journal";
+        StandardError = "journal";
+
+        CapabilityBoundingSet = [ "" ];
+        DeviceAllow = [ "" ];
+        LockPersonality = true;
+        PrivateDevices = true;
+        PrivateTmp = true;
+        PrivateUsers = true;
+        ProtectClock = true;
+        ProtectControlGroups = true;
+        ProtectHome = true;
+        ProtectHostname = true;
+        ProtectKernelLogs = true;
+        ProtectKernelModules = true;
+        ProtectKernelTunables = true;
+        ProtectProc = "invisible";
+        RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
+        RestrictNamespaces = true;
+        RestrictRealtime = true;
+        RestrictSUIDSGID = true;
+        SystemCallArchitectures = "native";
+        UMask = "0077";
+      };
+
+      preStart = ''
+        ln -sf ${eulaFile} eula.txt
+        cp --remove-destination ${serverPropertiesFile} server.properties
+        chmod +w server.properties
+      '';
+    };
 
   xdg.mime.defaultApplications = {
   "inode/directory" = "pcmanfm.desktop";
