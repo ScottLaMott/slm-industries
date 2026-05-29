@@ -54,6 +54,13 @@
       zle -N edit-command-line
       bindkey -M vicmd 'v' edit-command-line
 
+      # Jump to begin of line / insert mode command line history
+      zle-history-line-set () {
+        zle vi-beginning-of-line;
+        zle vi-cmd-mode;
+      }
+      zle -N zle-history-line-set
+
       #--- completion
       zmodload zsh/complist
       #

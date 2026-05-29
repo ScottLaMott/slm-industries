@@ -19,11 +19,11 @@
 
 #--- slm 
 # Jump to begin of line / insert mode command line history
-zle-history-line-set () {
-    zle vi-beginning-of-line;
-    zle vi-cmd-mode;
-}
-zle -N zle-history-line-set
+# zle-history-line-set () {
+#     zle vi-beginning-of-line;
+#     zle vi-cmd-mode;
+# }
+# zle -N zle-history-line-set
 
 #--- yazi wrapper, exit yazi in current direcotry
 # function yy () {
