@@ -127,6 +127,7 @@
       hg    = "history | grep ";
 
       #--- tmux
+      tls   = "tmux list-sessions";
       ta    = "tmux attach";
       tl    = "tmux switch-client -l";
 

@@ -16,6 +16,8 @@ hier bitte weiterführene
 - repository auf github verschieben
 
 ## DONES
+- tmux statusbar verbessert
+
 ## LINKS
 
 - [Nixos-And-Flakes](https://nixos-and-flakes.thiscute.world/introduction)
