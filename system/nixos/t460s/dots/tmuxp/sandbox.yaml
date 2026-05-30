@@ -1,0 +1,7 @@
+session_name: sandbox
+start_directory: ~/ws/sandbox
+
+windows:
+  - window_name: zsh
+    panes:
+      - shell_command: ""

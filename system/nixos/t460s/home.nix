@@ -51,6 +51,11 @@
       dynamips
     ];
 
+    home.file = {
+      ".config/tmuxp/nixos-t460s.yaml".source = ./dots/tmuxp/nixos-t460s.yaml;
+      ".config/tmuxp/sandbox.yaml".source     = ./dots/tmuxp/sandbox.yaml;
+    };
+
     imports = [
       ./home-manager/alacritty.nix
       ./home-manager/cava.nix
