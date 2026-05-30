@@ -8,7 +8,7 @@
 - [x] `zsh.nix` — EDITOR-Konflikt beheben: `sessionVariables.EDITOR = "vim"` UND `envExtra: EDITOR=nvim` gesetzt (doppelt, widersprüchlich)
 - [ ] `zsh.nix` — hardcodierte nvim-Pfade entfernen: `nvim`- und `prismlauncher`-Aliases zeigen auf `/home/slm/ws/projects/...` statt auf Nix-verwaltete Pfade
 - [ ] `git.nix` — `core.editor` hardcodiert auf `/home/slm/ws/projects/neovim/nvf/result/bin/nvim`, sollte Nix-Paket referenzieren
-- [ ] `home-manager/tlp.nix` — Datei existiert, wird aber in `home.nix` nicht importiert (toter Code, entfernen oder einbinden)
+- [x] `home-manager/tlp.nix` — Datei existiert, wird aber in `home.nix` nicht importiert (toter Code, entfernen oder einbinden)
 - [ ] `zsh.nix` — libvirt-Aliases (`virsh`, `virt-viewer`, `virt-manager`) obwohl `virtualisation.libvirtd.enable = false`
 
 ### Tmux
