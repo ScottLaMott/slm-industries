@@ -18,7 +18,7 @@
       powerline-fonts
       rofi
       theme-sh
-      # tmuxp
+
       # yazi
 
       # fun, teilweise in devbox fun-box
