@@ -1,0 +1,15 @@
+session_name: enterprise
+start_directory: ~/slm-industries
+
+windows:
+  - window_name: edit
+    panes:
+      - shell_command: nvim .
+
+  - window_name: claude
+    panes:
+      - shell_command: claude -c
+
+  - window_name: zsh
+    panes:
+      - shell_command: ""

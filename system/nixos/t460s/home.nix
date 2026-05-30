@@ -54,6 +54,7 @@
     home.file = {
       ".config/tmuxp/nixos-t460s.yaml".source = ./dots/tmuxp/nixos-t460s.yaml;
       ".config/tmuxp/sandbox.yaml".source     = ./dots/tmuxp/sandbox.yaml;
+      ".config/tmuxp/enterprise.yaml".source  = ./dots/tmuxp/enterprise.yaml;
     };
 
     imports = [
