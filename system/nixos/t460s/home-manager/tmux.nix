@@ -9,18 +9,18 @@
     enable        = true;
     tmuxp.enable  = true;
     baseIndex     = 1;
-    escapeTime    = 1;
+    escapeTime    = 1;          # low value avoids ESC delay in vim/nvim
     keyMode       = "vi";
-    prefix        = "M-a";
+    prefix        = "M-a";      # Alt+a — avoids conflict with readline (Ctrl+a)
     # shortcut      = "a";
     newSession    = true;
     historyLimit  = 100000;
-    terminal      = "screen-256color";
+    terminal      = "screen-256color";  # tmux-256color missing on many remote hosts
     mouse         = true;
 
     plugins = with pkgs; [
-      tmuxPlugins.gruvbox
-      # tmuxPlugins.nord
+      # tmuxPlugins.gruvbox
+      tmuxPlugins.nord
       tmuxPlugins.tmux-fzf
       # pkgs.tmuxPlugins.resurrect
       {
@@ -52,6 +52,7 @@
       set-option -g pane-border-lines heavy
       set-option -g pane-border-indicators colour
 
+      # overrides theme defaults: active window gets highlighted bg, inactive gets fg-only
       set-option -g window-status-style 'bg=colour237,fg=colour214'
       set-option -g window-status-current-style 'bg=colour214,fg=colour237'
       set-option -g window-status-separator ' | '
@@ -72,7 +73,7 @@
       bind-key -n M-b switch-client -l
       bind-key -n M-p switch-client -p
       bind-key -n M-n switch-client -n
-      bind-key -n M-d set-window-option synchronize-pane
+      bind-key -n M-d set-window-option synchronize-pane  # -n: no prefix; toggles simultaneous input to all panes
 
       TMUX_FZF_LAUNCH_KEY="C-f"                # tmux-fzf plugin c-a c-f
     '';
