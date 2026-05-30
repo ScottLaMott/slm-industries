@@ -7,12 +7,14 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."*" = {
-      extraOptions.ForwardX11 = "no";
-    };
-    matchBlocks."github.com" = {
-      hostname = "ssh.github.com";
-      port = 443;
+    settings = {
+      "*" = {
+        ForwardX11 = "no";
+      };
+      "github.com" = {
+        HostName = "ssh.github.com";
+        Port = 443;
+      };
     };
   };
 }
