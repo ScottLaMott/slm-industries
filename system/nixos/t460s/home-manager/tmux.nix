@@ -53,8 +53,8 @@
       set-option -g pane-border-indicators colour
 
       # overrides theme defaults: active window gets highlighted bg, inactive gets fg-only
-      set-option -g window-status-style 'bg=colour237,fg=colour214'
-      set-option -g window-status-current-style 'bg=colour214,fg=colour237'
+      set-option -g window-status-style 'bg=black,fg=white'
+      set-option -g window-status-current-style 'bg=#5e81ac,fg=white'
       set-option -g window-status-separator ' | '
       set-option -g window-status-format ' #I #W '
       set-option -g window-status-current-format ' #I #W#{?window_zoomed_flag, *Z,} '
