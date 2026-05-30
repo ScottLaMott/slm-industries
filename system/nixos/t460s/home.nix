@@ -14,9 +14,7 @@
       hwinfo
       nitch
       nix-tree
-      picom
       powerline-fonts
-      rofi
       theme-sh
 
       # yazi
@@ -34,7 +32,6 @@
       playerctl
       soco-cli
       spotify-player
-      starship
       strawberry
 
       # minecraft
