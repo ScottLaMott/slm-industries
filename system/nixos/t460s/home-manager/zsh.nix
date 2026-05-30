@@ -131,11 +131,6 @@
       ta    = "tmux attach";
       tl    = "tmux switch-client -l";
 
-      #--- libvirt
-      virsh        = "virsh --connect=qemu:///system";
-      virt-viewer  = "virt-viewer --connect=qemu:///system --attach";
-      virt-manager = "virt-manager --connect=qemu:///system";
-
       #--- nix
       nie   = "nix-instantiate --eval";
       db    = "devbox";
