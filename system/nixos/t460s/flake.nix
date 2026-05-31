@@ -2,9 +2,9 @@
   description = "t460s-next-generation";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/d233902339c02a9c334e7e593de68855ad26c4cb"; # last working commit before awesome build break
+    nixpkgs.url = "github:NixOS/nixpkgs/d233902339c02a9c334e7e593de68855ad26c4cb"; # last working commit before awesome build break
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       # url = "github:nix-community/home-manager/master";
       # url = "github:nix-community/home-manager/release-26.05";
@@ -43,19 +43,6 @@
           home-manager.users.slm = import ./home.nix;
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-        }
-        # workaround: awesome 4.3 generate-examples fails with lgi/cairo on nixos-unstable
-        {
-          nixpkgs.overlays = [
-            (final: prev: {
-              awesome = prev.awesome.overrideAttrs (old: {
-                cmakeFlags = (old.cmakeFlags or []) ++ [ "-DGENERATE_DOC=OFF" ];
-                preConfigure = (old.preConfigure or "") + ''
-                  sed -i '/add_dependencies.*check-examples/d' CMakeLists.txt
-                '';
-              });
-            })
-          ];
         }
         # slm ???
         # nvf.nixosModules.default
