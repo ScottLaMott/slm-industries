@@ -23,7 +23,7 @@
 
 ### Dotfiles
 
-- [ ] `dots/awesome/rc.lua` — Konfiguration prüfen und ggf. anpassen
+- [x] `dots/awesome/rc.lua` — Konfiguration prüfen und ggf. anpassen
 
 ## Erledigt
 
