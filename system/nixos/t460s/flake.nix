@@ -44,6 +44,16 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
         }
+        # workaround: awesome 4.3 generate-examples fails with lgi/cairo on nixos-unstable
+        {
+          nixpkgs.overlays = [
+            (final: prev: {
+              awesome = prev.awesome.overrideAttrs (old: {
+                cmakeFlags = (old.cmakeFlags or []) ++ [ "-DGENERATE_DOC=OFF" ];
+              });
+            })
+          ];
+        }
         # slm ???
         # nvf.nixosModules.default
         nvf.nixosModules.nvf
