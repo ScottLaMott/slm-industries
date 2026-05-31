@@ -18,7 +18,7 @@
 
 ### Nix / Flake
 
-- [ ] `flake.lock` — regelmäßig aktualisieren (`nix flake update`)
+- [x] `flake.lock` — regelmäßig aktualisieren (`nix flake update`)
 - [ ] Flake-Struktur auf Snowfall Lib migrieren (Angleichung an t460s-ng, langfristig)
 
 ### Dotfiles
