@@ -35,7 +35,6 @@
       {
         plugin = tmuxPlugins.continuum;
         extraConfig = ''
-          # set -g status-right 'Continuum status: #{continuum_status}' ### FIXME:
           set -g @continuum-restore 'on'
           set -g @continuum-boot 'on'
           set -g @resurrect-capture-pane-contents 'on'
