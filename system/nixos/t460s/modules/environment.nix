@@ -53,8 +53,7 @@
     lazygit
     lf
     libguestfs
-    libreoffice
-    libsecret 
+    libsecret
     libsixel
     libvirt
     lsd
