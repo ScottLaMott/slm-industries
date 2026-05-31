@@ -2,8 +2,8 @@
   description = "t460s-next-generation";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/d233902339c02a9c334e7e593de68855ad26c4cb"; # last working commit before awesome build break
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    # nixpkgs.url = "github:NixOS/nixpkgs/d233902339c02a9c334e7e593de68855ad26c4cb"; # last working commit before awesome build break
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     home-manager = {
       # url = "github:nix-community/home-manager/master";
       url = "github:nix-community/home-manager/release-26.05";
