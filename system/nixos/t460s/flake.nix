@@ -50,9 +50,8 @@
             (final: prev: {
               awesome = prev.awesome.overrideAttrs (old: {
                 cmakeFlags = (old.cmakeFlags or []) ++ [ "-DGENERATE_DOC=OFF" ];
-                postPatch = (old.postPatch or "") + ''
-                  substituteInPlace CMakeLists.txt \
-                    --replace "add_dependencies(check check-examples)" ""
+                preConfigure = (old.preConfigure or "") + ''
+                  sed -i '/add_dependencies.*check-examples/d' CMakeLists.txt
                 '';
               });
             })
