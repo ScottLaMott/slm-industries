@@ -6,8 +6,8 @@
 
 - [x] `configuration.nix:127` — `programs.ssh.forwardX11 = true` entfernen oder auf `false` setzen (setzt ForwardX11 yes in `/etc/ssh/ssh_config`, Warnung beim git push)
 - [x] `zsh.nix` — EDITOR-Konflikt beheben: `sessionVariables.EDITOR = "vim"` UND `envExtra: EDITOR=nvim` gesetzt (doppelt, widersprüchlich)
-- [ ] `zsh.nix` — hardcodierte nvim-Pfade entfernen: `nvim`- und `prismlauncher`-Aliases zeigen auf `/home/slm/ws/projects/...` statt auf Nix-verwaltete Pfade
-- [ ] `git.nix` — `core.editor` hardcodiert auf `/home/slm/ws/projects/neovim/nvf/result/bin/nvim`, sollte Nix-Paket referenzieren
+- [x] `zsh.nix` — hardcodierte nvim-Pfade: Absicht, zeigen auf lokale Builds in `~/ws/projects/neovim/` (nvf + vanilla)
+- [x] `git.nix` — `core.editor` hardcodiert: Absicht, lokaler nvf-Build in `~/ws/projects/neovim/nvf/result/bin/nvim`
 - [x] `home-manager/tlp.nix` — Datei existiert, wird aber in `home.nix` nicht importiert (toter Code, entfernen oder einbinden)
 - [x] `zsh.nix` — libvirt-Aliases (`virsh`, `virt-viewer`, `virt-manager`) obwohl `virtualisation.libvirtd.enable = false`
 
