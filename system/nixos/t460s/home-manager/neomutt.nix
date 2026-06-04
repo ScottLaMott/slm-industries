@@ -17,10 +17,10 @@
       # set smtp_url = "smtp://ctimmer.os@smtp.gmail.com:587/"
       # set spoolfile = "imaps://ctimmer.os@gmail.com@imap.domain.com/"
 
-      set imap_user = ctimmer.os@imap.gmail.com
-      set imap_pass = REDACTED
+      set imap_user = ctimmer.os@gmail.com
+      set imap_pass = `pass email/gmail`
       set spoolfile = +INBOX
-      mailboxes = +INBOX
+      mailboxes +INBOX
     '';
   };
 
