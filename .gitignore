@@ -2,8 +2,10 @@
 .session.vim
 Session.vim
 result
+result-*
 
 # directories
+.direnv
 tmp
 wallpaper-not-checked
 dockyard/pictures/slm-pixs
