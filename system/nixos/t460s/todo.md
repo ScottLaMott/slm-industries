@@ -21,6 +21,15 @@
 - [x] `flake.lock` — regelmäßig aktualisieren (`nix flake update`)
 - [ ] Flake-Struktur auf Snowfall Lib migrieren (Angleichung an t460s-ng, langfristig)
 
+### E-Mail / neomutt
+
+- [ ] **neomutt: pass-Setup abschließen** — nach `nixos-rebuild switch`:
+  1. `gpg --gen-key`
+  2. `pass init <gpg-email>`
+  3. `pass insert email/gmail` (neues Gmail-Passwort eintragen)
+  4. neomutt testen
+- [ ] **Gmail-Passwort ändern** — altes Passwort war im öffentlichen GitHub-Repo (`myaccount.google.com → Sicherheit → Passwort`)
+
 ### Dotfiles
 
 - [x] `dots/awesome/rc.lua` — Konfiguration prüfen und ggf. anpassen
