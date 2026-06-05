@@ -65,7 +65,9 @@ find ~/ws -name "result*" -type l -delete
 sudo nix-collect-garbage -d
 ```
 
-Ergebnis: 95 GB → 74 GB, **21 GB freigegeben**.
+Ergebnis: 95 GB → 25 GB (laut gdu), **70 GB freigegeben**.
+`nix-store --optimise` anschließend ausgeführt (war bereits teilweise optimiert, 10.3 GiB Hardlinks).
+Systemgenerationen nach GC: 2 (99 + 100).
 
 ## Tipp: result-Symlinks
 
