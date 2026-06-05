@@ -21,6 +21,10 @@
 - [x] `flake.lock` — regelmäßig aktualisieren (`nix flake update`)
 - [ ] Flake-Struktur auf Snowfall Lib migrieren (Angleichung an t460s-ng, langfristig)
 
+### Claude CLI
+
+- [ ] `sudo` in Claude CLI funktioniert nicht (kein Terminal für Passwort-Eingabe) — `SUDO_ASKPASS` oder passwordless sudo für bestimmte Befehle konfigurieren
+
 ### E-Mail / neomutt
 
 - [ ] **neomutt: pass-Setup abschließen** — nach `nixos-rebuild switch`:
