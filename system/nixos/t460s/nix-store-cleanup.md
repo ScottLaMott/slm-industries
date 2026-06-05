@@ -55,6 +55,18 @@ du -sh /nix/store/* | sort -rh | head -20
 du -sh /nix/store
 ```
 
+## Bereinigung 2026-06-05
+
+Store war auf 95 GB angewachsen (146 GB Partition). Ursache: 17 `result`-Symlinks
+in `~/ws/` hielten alte Build-Outputs als GC Roots fest.
+
+```sh
+find ~/ws -name "result*" -type l -delete
+sudo nix-collect-garbage -d
+```
+
+Ergebnis: 95 GB → 74 GB, **21 GB freigegeben**.
+
 ## Tipp: result-Symlinks
 
 `result`-Symlinks von alten `nix build`-Läufen sind die häufigste versteckte GC Root.
