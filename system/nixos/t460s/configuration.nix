@@ -172,6 +172,21 @@
 
   systemd.services.minecraft-server2 =
     let
+      minecraftServer2 = pkgs.minecraft-server.overrideAttrs (_: {
+        version = "26.1.2";
+        src = pkgs.fetchurl {
+          url = "https://piston-data.mojang.com/v1/objects/97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51/server.jar";
+          sha256 = "0hnbxnghbbki3vlgwkrxnr06nj92ig6qzbqpzml4gxi8hg1yfiyd";
+        };
+        installPhase = ''
+          runHook preInstall
+          install -Dm644 $src $out/lib/minecraft/server.jar
+          makeWrapper ${pkgs.lib.getExe pkgs.jdk25} $out/bin/minecraft-server \
+            --append-flags "-jar $out/lib/minecraft/server.jar nogui" \
+            --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [ pkgs.udev ]}
+          runHook postInstall
+        '';
+      });
       dataDir = "/var/lib/minecraft2";
       jvmOpts = "-Xmx4096M -Xms2048M";
       serverPropertiesFile = pkgs.writeText "server2.properties" ''
@@ -197,7 +212,7 @@
       after = [ "network.target" "minecraft-server2.socket" ];
 
       serviceConfig = {
-        ExecStart = "${pkgs.minecraft-server}/bin/minecraft-server ${jvmOpts}";
+        ExecStart = "${minecraftServer2}/bin/minecraft-server ${jvmOpts}";
         ExecStop = "${stopScript} $MAINPID";
         Restart = "always";
         User = "minecraft";
