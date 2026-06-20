@@ -76,6 +76,10 @@
 
       # wallpaper mit feh
 
+      # manix shortcuts (Query muss vor --source stehen)
+      mnix()   { manix "$@" --source nixos_options,hm_options; }
+      mnixos() { manix "$@" --source nixos_options; }
+
       # nix-index command-not-found handler für zsh
       command_not_found_handler() {
         local cmd=$1
