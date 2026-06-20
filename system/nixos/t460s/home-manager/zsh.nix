@@ -76,6 +76,19 @@
 
       # wallpaper mit feh
 
+      # nix-index command-not-found handler für zsh
+      command_not_found_handler() {
+        local cmd=$1
+        local attrs
+        attrs=$(${pkgs.nix-index}/bin/nix-locate --minimal --no-group --type x --type s --whole-name --at-root "/bin/$cmd" 2>/dev/null)
+        if [ -z "$attrs" ]; then
+          echo "zsh: command not found: $cmd" >&2
+        else
+          echo "nix shell nixpkgs#$(echo "$attrs" | head -1 | sed 's/\..*//')" >&2
+        fi
+        return 127
+      }
+
       #----------------------------------------------------------
       #zprof
     '';
