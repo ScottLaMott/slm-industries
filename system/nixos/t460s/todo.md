@@ -23,7 +23,7 @@
 
 ### Claude CLI
 
-- [ ] `sudo` in Claude CLI funktioniert nicht (kein Terminal für Passwort-Eingabe) — `SUDO_ASKPASS` oder passwordless sudo für bestimmte Befehle konfigurieren
+- [x] `sudo` in Claude CLI funktioniert nicht (kein Terminal für Passwort-Eingabe) — `timestamp_type=global, timestamp_timeout=60` in sudoers, einmalig `sudo -v` im Terminal
 
 ### Nix
 
