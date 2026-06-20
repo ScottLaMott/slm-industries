@@ -132,6 +132,8 @@
 
   programs.command-not-found.enable = false;
 
+  security.sudo.extraConfig = "Defaults timestamp_timeout=60, timestamp_type=global";
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     # Add any missing dynamic libraries for unpackaged programs

@@ -25,6 +25,10 @@
 
 - [ ] `sudo` in Claude CLI funktioniert nicht (kein Terminal für Passwort-Eingabe) — `SUDO_ASKPASS` oder passwordless sudo für bestimmte Befehle konfigurieren
 
+### Nix
+
+- [ ] manix optimieren — schnellere NixOS-Optionssuche konfigurieren
+
 ### E-Mail / neomutt
 
 - [ ] **neomutt: pass-Setup abschließen** — nach `nixos-rebuild switch`:
