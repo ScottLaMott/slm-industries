@@ -2,9 +2,13 @@
 #---
 #--- alacritty configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.alacritty = {
     enable = true;
     #--- settings

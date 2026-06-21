@@ -30,8 +30,8 @@
 
   #--- nix package manager options
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # nix.settings.trusted_users = 
-  nix.settings.trusted-users = [ "root" "slm" ];
+  # nix.settings.trusted_users =
+  nix.settings.trusted-users = ["root" "slm"];
   # nix.settings.sandbox =false;
   nix.extraOptions = "download-buffer-size = 100000000";
 
@@ -139,14 +139,14 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
-  
-  # programs.nvf.enableManpages = true; 
+
+  # programs.nvf.enableManpages = true;
 
   #--- user accounts
   users.users.slm = {
     isNormalUser = true;
     description = "Scott LaMott";
-    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm" ];
+    extraGroups = ["networkmanager" "wheel" "wireshark" "lxd" "jackaudio" "libvirt" "incus-admin" "minecraft" "kvm"];
     ignoreShellProgramCheck = true;
     shell = pkgs.zsh;
   };
@@ -163,7 +163,7 @@
 
   # Second vanilla server instance on port 25566
   systemd.sockets.minecraft-server2 = {
-    bindsTo = [ "minecraft-server2.service" ];
+    bindsTo = ["minecraft-server2.service"];
     socketConfig = {
       ListenFIFO = "/run/minecraft-server2.stdin";
       SocketMode = "0660";
@@ -174,99 +174,97 @@
     };
   };
 
-  systemd.services.minecraft-server2 =
-    let
-      minecraftServer2 = pkgs.minecraft-server.overrideAttrs (_: {
-        version = "26.1.2";
-        src = pkgs.fetchurl {
-          url = "https://piston-data.mojang.com/v1/objects/97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51/server.jar";
-          sha256 = "0hnbxnghbbki3vlgwkrxnr06nj92ig6qzbqpzml4gxi8hg1yfiyd";
-        };
-        installPhase = ''
-          runHook preInstall
-          install -Dm644 $src $out/lib/minecraft/server.jar
-          makeWrapper ${pkgs.lib.getExe pkgs.jdk25} $out/bin/minecraft-server \
-            --append-flags "-jar $out/lib/minecraft/server.jar nogui" \
-            --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [ pkgs.udev ]}
-          runHook postInstall
-        '';
-      });
-      dataDir = "/var/lib/minecraft2";
-      jvmOpts = "-Xmx4096M -Xms2048M";
-      serverPropertiesFile = pkgs.writeText "server2.properties" ''
-        # server.properties managed by NixOS configuration
-        server-port=25566
-        allow-cheats=true
-      '';
-      eulaFile = builtins.toFile "eula2.txt" ''
-        # eula.txt managed by NixOS Configuration
-        eula=true
-      '';
-      stopScript = pkgs.writeShellScript "minecraft-server2-stop" ''
-        echo stop > /run/minecraft-server2.stdin
-        while kill -0 "$1" 2> /dev/null; do
-          sleep 1s
-        done
-      '';
-    in
-    {
-      description = "Minecraft Server 2 Service";
-      wantedBy = [ "multi-user.target" ];
-      requires = [ "minecraft-server2.socket" ];
-      after = [ "network.target" "minecraft-server2.socket" ];
-
-      serviceConfig = {
-        ExecStart = "${minecraftServer2}/bin/minecraft-server ${jvmOpts}";
-        ExecStop = "${stopScript} $MAINPID";
-        Restart = "always";
-        User = "minecraft";
-        WorkingDirectory = dataDir;
-        StateDirectory = "minecraft2";
-
-        StandardInput = "socket";
-        StandardOutput = "journal";
-        StandardError = "journal";
-
-        CapabilityBoundingSet = [ "" ];
-        DeviceAllow = [ "" ];
-        LockPersonality = true;
-        PrivateDevices = true;
-        PrivateTmp = true;
-        PrivateUsers = true;
-        ProtectClock = true;
-        ProtectControlGroups = true;
-        ProtectHome = true;
-        ProtectHostname = true;
-        ProtectKernelLogs = true;
-        ProtectKernelModules = true;
-        ProtectKernelTunables = true;
-        ProtectProc = "invisible";
-        RestrictAddressFamilies = [ "AF_INET" "AF_INET6" ];
-        RestrictNamespaces = true;
-        RestrictRealtime = true;
-        RestrictSUIDSGID = true;
-        SystemCallArchitectures = "native";
-        UMask = "0077";
+  systemd.services.minecraft-server2 = let
+    minecraftServer2 = pkgs.minecraft-server.overrideAttrs (_: {
+      version = "26.1.2";
+      src = pkgs.fetchurl {
+        url = "https://piston-data.mojang.com/v1/objects/97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51/server.jar";
+        sha256 = "0hnbxnghbbki3vlgwkrxnr06nj92ig6qzbqpzml4gxi8hg1yfiyd";
       };
-
-      preStart = ''
-        ln -sf ${eulaFile} eula.txt
-        cp --remove-destination ${serverPropertiesFile} server.properties
-        chmod +w server.properties
+      installPhase = ''
+        runHook preInstall
+        install -Dm644 $src $out/lib/minecraft/server.jar
+        makeWrapper ${pkgs.lib.getExe pkgs.jdk25} $out/bin/minecraft-server \
+          --append-flags "-jar $out/lib/minecraft/server.jar nogui" \
+          --prefix LD_LIBRARY_PATH : ${pkgs.lib.makeLibraryPath [pkgs.udev]}
+        runHook postInstall
       '';
+    });
+    dataDir = "/var/lib/minecraft2";
+    jvmOpts = "-Xmx4096M -Xms2048M";
+    serverPropertiesFile = pkgs.writeText "server2.properties" ''
+      # server.properties managed by NixOS configuration
+      server-port=25566
+      allow-cheats=true
+    '';
+    eulaFile = builtins.toFile "eula2.txt" ''
+      # eula.txt managed by NixOS Configuration
+      eula=true
+    '';
+    stopScript = pkgs.writeShellScript "minecraft-server2-stop" ''
+      echo stop > /run/minecraft-server2.stdin
+      while kill -0 "$1" 2> /dev/null; do
+        sleep 1s
+      done
+    '';
+  in {
+    description = "Minecraft Server 2 Service";
+    wantedBy = ["multi-user.target"];
+    requires = ["minecraft-server2.socket"];
+    after = ["network.target" "minecraft-server2.socket"];
+
+    serviceConfig = {
+      ExecStart = "${minecraftServer2}/bin/minecraft-server ${jvmOpts}";
+      ExecStop = "${stopScript} $MAINPID";
+      Restart = "always";
+      User = "minecraft";
+      WorkingDirectory = dataDir;
+      StateDirectory = "minecraft2";
+
+      StandardInput = "socket";
+      StandardOutput = "journal";
+      StandardError = "journal";
+
+      CapabilityBoundingSet = [""];
+      DeviceAllow = [""];
+      LockPersonality = true;
+      PrivateDevices = true;
+      PrivateTmp = true;
+      PrivateUsers = true;
+      ProtectClock = true;
+      ProtectControlGroups = true;
+      ProtectHome = true;
+      ProtectHostname = true;
+      ProtectKernelLogs = true;
+      ProtectKernelModules = true;
+      ProtectKernelTunables = true;
+      ProtectProc = "invisible";
+      RestrictAddressFamilies = ["AF_INET" "AF_INET6"];
+      RestrictNamespaces = true;
+      RestrictRealtime = true;
+      RestrictSUIDSGID = true;
+      SystemCallArchitectures = "native";
+      UMask = "0077";
     };
 
+    preStart = ''
+      ln -sf ${eulaFile} eula.txt
+      cp --remove-destination ${serverPropertiesFile} server.properties
+      chmod +w server.properties
+    '';
+  };
+
   xdg.mime.defaultApplications = {
-  "inode/directory" = "pcmanfm.desktop";
-};
+    "inode/directory" = "pcmanfm.desktop";
+  };
 
   # config.gns3-server = { };
 
-  # services.gns3-server = { 
-    # enable = true;
-    # settings = {
-      # host = "0.0.0.0"; 
-    #   port = 3080; 
-    # };
+  # services.gns3-server = {
+  # enable = true;
+  # settings = {
+  # host = "0.0.0.0";
+  #   port = 3080;
+  # };
   # };
 }

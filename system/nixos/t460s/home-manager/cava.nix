@@ -2,28 +2,27 @@
 #---
 #--- cava configuration / home-manager
 #---
-
-{ config, 
-  lib, 
-  pkgs, 
-  modulesPath, 
-  ... 
-  }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.cava = {
     enable = true;
     settings = {
-      # output.orientation = "top"; geht nur in speziellem output mode 
+      # output.orientation = "top"; geht nur in speziellem output mode
       output.waveform = 0;
       color = {
         # background = "'#000000'";
         # background = "'#FFFFFF'";    # white
-        background = "'#33FF33'";    # green
-        
+        background = "'#33FF33'"; # green
+
         # foreground = "'#000000'";    # black
         # foreground = "'#FFFFFF'";
         # foreground = "'#00b359'";
-        foreground = "'#FFFF00'";    # yello
+        foreground = "'#FFFF00'"; # yello
       };
     };
   };

@@ -2,9 +2,13 @@
 #---
 #--- git configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -12,12 +16,11 @@
     settings = {
       user.name = "Scott LaMott";
       user.email = "slm@slm-industries";
-      core = { editor = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim"; };
+      core = {editor = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim";};
       credential.helper = "libsecret";
       aliases = {
-       s = "status";
-     };
+        s = "status";
+      };
     };
   };
-
 }

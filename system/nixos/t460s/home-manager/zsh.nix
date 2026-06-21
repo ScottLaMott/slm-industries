@@ -20,7 +20,10 @@
     zplug = {
       enable = true;
       plugins = [
-        { name = "hlissner/zsh-autopair"; tags = [ "defer:2" ]; }
+        {
+          name = "hlissner/zsh-autopair";
+          tags = ["defer:2"];
+        }
         # { name = "endaaman/lxd-completion-zsh"; } # ???
         # { name = "agkozak/zsh-z"; }
       ];
@@ -104,66 +107,66 @@
     };
 
     shellAliases = {
-      ".."  = "cd ..";
-      c     = "clear";
-      cp    = "cp -i";
-      mv    = "mv -i";
-      rm    = "rm -i";
+      ".." = "cd ..";
+      c = "clear";
+      cp = "cp -i";
+      mv = "mv -i";
+      rm = "rm -i";
 
       #--- edit
-      nvim  = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim";
-      v     = "vim";
-      vs    = "vim -S .session.vim";
-      ns    = "nvim -S .session.vim";
-      n     = "nvim";
+      nvim = "/home/slm/ws/projects/neovim/nvf/result/bin/nvim";
+      v = "vim";
+      vs = "vim -S .session.vim";
+      ns = "nvim -S .session.vim";
+      n = "nvim";
 
       #--- network
-      pgo   = "ping -c1 -W5 www.google.com";
-      p     = "ping -c 3 -w5";
-      ncs   = "nmcli connection show";
-      nds   = "nmcli device show";
+      pgo = "ping -c1 -W5 www.google.com";
+      p = "ping -c 3 -w5";
+      ncs = "nmcli connection show";
+      nds = "nmcli device show";
 
       #--- git
-      gs    = "git status";
-      grs   = "git remote show origin";
+      gs = "git status";
+      grs = "git remote show origin";
 
       #--- ls / df
-      ls    = "exa";
-      la    = "ls -la";
-      ll    = "ls -l";
-      lR    = "ls -lR";
-      dfe   = "df -t ext4"; # fs-type ext4
+      ls = "exa";
+      la = "ls -la";
+      ll = "ls -l";
+      lR = "ls -lR";
+      dfe = "df -t ext4"; # fs-type ext4
 
       #--- incus
-      ils   = "incus ls -cns4S -fcompact";
-      ilsr  = "incus ls -cns4S -fcompact status=running";
-      ilss  = "incus ls -cns4S -fcompact status=stopped";
-      ie    = "incus exec";
+      ils = "incus ls -cns4S -fcompact";
+      ilsr = "incus ls -cns4S -fcompact status=running";
+      ilss = "incus ls -cns4S -fcompact status=stopped";
+      ie = "incus exec";
 
       #--- history
-      hg    = "history | grep ";
+      hg = "history | grep ";
 
       #--- tmux
-      tls   = "tmux list-sessions";
-      ta    = "tmux attach";
-      tl    = "tmux switch-client -l";
+      tls = "tmux list-sessions";
+      ta = "tmux attach";
+      tl = "tmux switch-client -l";
 
       #--- nix
-      nie   = "nix-instantiate --eval";
-      db    = "devbox";
+      nie = "nix-instantiate --eval";
+      db = "devbox";
 
       #--- music
-      pm    = "pulsemixer";
+      pm = "pulsemixer";
 
       #--- prismlauncher, neuste version, selbst gebaut
-      prismlauncher  = "/home/slm/ws/projects/prismlauncher/result/bin/prismlauncher";
+      prismlauncher = "/home/slm/ws/projects/prismlauncher/result/bin/prismlauncher";
 
       #--- eyecandy hi hi
-      nf    = "clear; neofetch";
-      cni   = "clear; neofetch; inxi --full";
-      cm    = "cmatrix -u9 -s";
-      cmr   = "cmatrix -u9 -s -r";
-      cct   = "theme.sh -i2";
+      nf = "clear; neofetch";
+      cni = "clear; neofetch; inxi --full";
+      cm = "cmatrix -u9 -s";
+      cmr = "cmatrix -u9 -s -r";
+      cct = "theme.sh -i2";
     };
   };
 }

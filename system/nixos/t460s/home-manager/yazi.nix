@@ -2,11 +2,14 @@
 #---
 #--- yazi configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.yazi = {
     enable = false;
   };
-
 }

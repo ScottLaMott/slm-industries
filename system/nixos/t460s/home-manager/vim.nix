@@ -2,9 +2,13 @@
 #---
 #--- vim configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.vim = {
     enable = true;
     defaultEditor = true;
@@ -32,13 +36,13 @@
     #--- settings
     settings = {
       number = true;
-      relativenumber  = false;
+      relativenumber = false;
       expandtab = true;
       shiftwidth = 2;
       tabstop = 2;
       undofile = true;
     };
-    extraConfig  = ''
+    extraConfig = ''
       """""""""""""""""""""""""""""""""""""""""""""""""""""
       " declared by vim.nix / slm
       "
@@ -50,6 +54,6 @@
       endif
       "
       """""""""""""""""""""""""""""""""""""""""""""""""""""
-   '';
+    '';
   };
 }

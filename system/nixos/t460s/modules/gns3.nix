@@ -2,9 +2,7 @@
 #---
 #--- gns3 configuration
 #---
-
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     gns3-server
     gns3-gui
@@ -12,7 +10,5 @@
     vpcs
   ];
 
-  services.gns3-server = { enable=false; };
-
+  services.gns3-server = {enable = false;};
 }
-

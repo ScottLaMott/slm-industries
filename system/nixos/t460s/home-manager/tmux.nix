@@ -2,21 +2,25 @@
 #---
 #--- tmux configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.tmux = {
-    enable        = true;
-    tmuxp.enable  = true;
-    baseIndex     = 1;
-    escapeTime    = 1;          # low value avoids ESC delay in vim/nvim
-    keyMode       = "vi";
-    prefix        = "M-a";      # Alt+a — avoids conflict with readline (Ctrl+a)
+    enable = true;
+    tmuxp.enable = true;
+    baseIndex = 1;
+    escapeTime = 1; # low value avoids ESC delay in vim/nvim
+    keyMode = "vi";
+    prefix = "M-a"; # Alt+a — avoids conflict with readline (Ctrl+a)
     # shortcut      = "a";
-    newSession    = true;
-    historyLimit  = 100000;
-    terminal      = "screen-256color";  # tmux-256color missing on many remote hosts
-    mouse         = true;
+    newSession = true;
+    historyLimit = 100000;
+    terminal = "screen-256color"; # tmux-256color missing on many remote hosts
+    mouse = true;
 
     plugins = with pkgs; [
       tmuxPlugins.gruvbox
@@ -77,5 +81,4 @@
       TMUX_FZF_LAUNCH_KEY="C-f"                # tmux-fzf plugin c-a c-f
     '';
   };
-
 }

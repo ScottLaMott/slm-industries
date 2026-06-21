@@ -1,11 +1,15 @@
 #--- environment configuration / NixOS
-{ config, lib, pkgs, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   #--- completion for system packages
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
 
   #--- add zsh to /etc/shells
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
 
   #--- list installed packages system profile. To search, run: $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -22,7 +26,7 @@
     bucklespring
     cachix
     claude-code
-    comma  # via nix-index-database.nixosModules.nix-index-with-db
+    comma # via nix-index-database.nixosModules.nix-index-with-db
     curl
     #--- def
     devbox
@@ -39,6 +43,7 @@
     gcc
     gimp
     gitFull
+    github-cli
     mesa-demos
     gnome-keyring
     gnumake
@@ -132,5 +137,4 @@
     # vpcs
     # dynamips
   ];
-
 }

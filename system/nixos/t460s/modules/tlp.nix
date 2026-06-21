@@ -2,13 +2,12 @@
 #---
 #--- tlp configuration
 #---
-
-{ ... }: {
-
+{...}: {
   services.tlp = {
-    enable=true;
+    enable = true;
 
-    settings = {    # https://linrunner.de/tlp/introduction.html
+    settings = {
+      # https://linrunner.de/tlp/introduction.html
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
       CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
@@ -25,6 +24,4 @@
       STOP_CHARGE_THRESH_BAT1 = 95; # 80 and above it stops charging
     };
   };
-
 }
-

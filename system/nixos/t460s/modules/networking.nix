@@ -2,15 +2,16 @@
 #---
 #--- networking configuration
 #---
-
-{ config, pkgs, ... }: {
-
+{
+  config,
+  pkgs,
+  ...
+}: {
   networking = {
-   
     networkmanager.enable = true;
     hostName = "t460s";
     nftables.enable = true;
-    
+
     firewall.interfaces.incusbr0.allowedTCPPorts = [
       53
       67
@@ -19,7 +20,7 @@
       53
       67
     ];
-   
+
     extraHosts = ''
       # enterprise-container
     '';

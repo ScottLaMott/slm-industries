@@ -2,9 +2,13 @@
 #---
 #--- fzf configuration / home-manager
 #---
-
-{ config, lib, pkgs, modulesPath, ... }: {
-
+{
+  config,
+  lib,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -20,8 +24,7 @@
       "--prompt='fzf-> '"
       "--scroll-off=5"
       "--preview=bat"
-      ];
+    ];
     changeDirWidgetCommand = "fd --type d --hidden";
   };
-
 }

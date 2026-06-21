@@ -2,11 +2,8 @@
 #---
 #--- readline configuration / home-manager
 #---
-
 #{ config, lib, pkgs, modulesPath,
-{
-  ...
-}: {
+{...}: {
   programs.readline = {
     enable = true;
     includeSystemConfig = true;
@@ -15,7 +12,7 @@
       #-----------------
       #-- extraConfig declared in readline.nix
       #--
-      
+
       set editing-mode vi
 
       "\C-p":history-search-backward
