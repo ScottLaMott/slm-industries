@@ -76,7 +76,7 @@
     nmap
     fastfetch
     # neovim
-    # nodejs
+    nodejs
     openssh
     #--- pqr
     pciutils
