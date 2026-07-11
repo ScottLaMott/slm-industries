@@ -64,9 +64,15 @@ mount "$(part 2)" /mnt
 mkdir -p /mnt/boot
 mount "$(part 1)" /mnt/boot
 
+# Konfiguration auf den Stick kopieren
+echo "==> Kopiere Konfiguration nach /mnt/etc/nixos ..."
+mkdir -p /mnt/etc/nixos
+cp -r "${SCRIPT_DIR}/." /mnt/etc/nixos/
+
 # Installieren
 echo "==> Installiere usb-${BUNDLE} ..."
-nixos-install --flake "${SCRIPT_DIR}#usb-${BUNDLE}" --root /mnt
+nixos-install --flake "/mnt/etc/nixos#usb-${BUNDLE}" --root /mnt
 
 echo ""
-echo "Fertig! USB-Stick kann entfernt werden."
+echo "Fertig! Auf dem Stick: sudo nixos-rebuild switch --flake /etc/nixos#usb-${BUNDLE}"
+echo "USB-Stick kann entfernt werden."

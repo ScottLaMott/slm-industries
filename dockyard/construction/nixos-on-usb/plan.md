@@ -33,7 +33,7 @@ Neue Bundles können jederzeit als `.nix`-Datei unter `bundles/` hinzugefügt we
 
 ## Phase 1 — Projektstruktur [x]
 
-- [x] flake.nix anlegen (nixosConfigurations + packages/diskImages via nixos-generators)
+- [x] flake.nix anlegen (nixosConfigurations, diskImage-Output kommt in Phase 4b)
 - [x] modules/base.nix anlegen (gemeinsame Basis)
 - [x] modules/hardware.nix anlegen (Bootloader, Dateisysteme by-label)
 - [x] bundles/minecraft-server.nix anlegen
@@ -41,38 +41,39 @@ Neue Bundles können jederzeit als `.nix`-Datei unter `bundles/` hinzugefügt we
 - [x] bundles/nixos-gui.nix anlegen
 - [x] install.sh anlegen
 
-## Phase 2 — Basis-Konfiguration [ ]
+## Phase 2 — Basis-Konfiguration [x]
 
 `modules/base.nix`:
-- [ ] Locale: de, Europe/Berlin, en_US.UTF-8
-- [ ] Benutzer: slm mit sudo
-- [ ] SSH aktivieren
-- [ ] Basispakete: tmux, vim, git, nmap, zsh
-- [ ] Flakes aktivieren
+- [x] Locale: de, Europe/Berlin, en_US.UTF-8
+- [x] Konsolentastatur: de (console.keyMap)
+- [x] Benutzer: slm mit sudo (passwordless)
+- [x] SSH aktivieren
+- [x] Basispakete: tmux, vim, git, nmap, wget, curl, zsh
+- [x] Flakes aktivieren
 
-## Phase 3 — Bundles implementieren [ ]
+## Phase 3 — Bundles implementieren [x]
 
-- [ ] minecraft-server.nix: Minecraft-Server-Dienst + Port 25565
-- [ ] nixos-demo.nix: drei Bereiche:
-  - NixOS-Showcase: neofetch, nix repl, CLI-Tools
-  - Präsentation: MOTD, cowsay/figlet-Begrüßung beim Login
-  - Netzwerk-Demo: nmap, curl, tcpdump, iperf3
-- [ ] nixos-gui.nix: AwesomeWM + LightDM (wie auf den ThinkPads)
+- [x] minecraft-server.nix: Minecraft-Server-Dienst + Port 25565 (openFirewall)
+- [x] nixos-demo.nix: drei Bereiche:
+  - NixOS-Showcase: neofetch, nix-tree
+  - Präsentation: MOTD, figlet/lolcat-Begrüßung beim Login
+  - Netzwerk-Demo: nmap, curl, tcpdump, iperf3, traceroute, whois
+- [x] nixos-gui.nix: AwesomeWM + LightDM, deutsches Keyboard
 
-## Phase 4 — USB-Partitionierung & Install-Script [ ]
+## Phase 4 — USB-Partitionierung & Install-Script [x]
 
 USB-Stick Layout:
 ```
-Part 1: EFI   (512MB, FAT32)
-Part 2: Root  (Rest,  ext4)
+Part 1: EFI   (512MB, FAT32, Label: USB_EFI)
+Part 2: Root  (Rest,  ext4,  Label: USB_ROOT)
 ```
 
 install.sh:
-- [ ] Bundle-Auswahl (interaktives Menü)
-- [ ] USB partitionieren (sgdisk/parted)
-- [ ] formatieren (mkfs.fat, mkfs.ext4)
-- [ ] mounten nach /mnt
-- [ ] nixos-install --flake .#<bundle> aufrufen
+- [x] Bundle-Auswahl (interaktives Menü)
+- [x] USB partitionieren (sgdisk)
+- [x] formatieren (mkfs.fat, mkfs.ext4)
+- [x] mounten nach /mnt
+- [x] nixos-install --flake .#<bundle> aufrufen
 
 Bootloader: systemd-boot (`canTouchEfiVariables = false` — wichtig für USB).
 
@@ -92,6 +93,7 @@ resize2fs /dev/sdXp2       # Root-Partition auf volle Stick-Größe ausdehnen
 
 ## Phase 5 — Test [ ]
 
-- [ ] Basis-Bundle in VM testen (QEMU)
+- [x] Basis-Bundle in VM testen (QEMU) — Tastatur, Login, zsh ok
+- [ ] Demo-Bundle in VM testen
 - [ ] GUI-Bundle in VM testen
 - [ ] Auf echtem USB-Stick installieren und booten

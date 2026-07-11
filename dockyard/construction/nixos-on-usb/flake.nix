@@ -12,7 +12,7 @@
     mkUsb = modules:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [./modules/base.nix ./modules/hardware.nix] ++ modules;
+modules = [./modules/base.nix ./modules/hardware.nix] ++ modules;
       };
   in {
     nixosConfigurations = {
