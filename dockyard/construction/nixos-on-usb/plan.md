@@ -9,13 +9,14 @@ Beim Installieren wird ein Bundle gewählt das auf den Stick installiert wird.
 ```
 nixos-on-usb/
 ├── plan.md                  # dieser Plan
-├── flake.nix                # Flake mit allen nixosConfigurations
+├── flake.nix                # Flake mit nixosConfigurations + packages (diskImages)
 ├── install.sh               # Script: USB partitionieren + Bundle wählen + nixos-install
 ├── modules/
-│   └── base.nix             # gemeinsame Basis (slm, SSH, zsh, locale, ...)
+│   ├── base.nix             # gemeinsame Basis (slm, SSH, zsh, locale, ...)
+│   └── hardware.nix         # Bootloader, Dateisysteme (by-label)
 └── bundles/
     ├── minecraft-server.nix # Minecraft-Server Bundle
-    ├── nixos-demo.nix       # minimales Demo/Showcase-System
+    ├── nixos-demo.nix       # Demo/Showcase-System
     └── nixos-gui.nix        # NixOS mit Desktop (AwesomeWM)
 ```
 
@@ -25,20 +26,20 @@ nixos-on-usb/
 |-------------------|-------------------------------------|
 | `usb-base`        | Basis: slm, SSH, zsh, tmux, vim, git |
 | `usb-minecraft`   | + Minecraft-Server                  |
-| `usb-nixos-demo`  | + Demo-System (minimal, showcase)   |
+| `usb-nixos-demo`  | + Demo-System (NixOS-Showcase, Präsentation, Netzwerk) |
 | `usb-gui`         | + AwesomeWM Desktop                 |
 
 Neue Bundles können jederzeit als `.nix`-Datei unter `bundles/` hinzugefügt werden.
 
-## Phase 1 — Projektstruktur [ ]
+## Phase 1 — Projektstruktur [x]
 
-- [ ] flake.nix anlegen (mit allen nixosConfigurations)
-- [ ] modules/base.nix anlegen (gemeinsame Basis)
-- [ ] bundles/minecraft-server.nix anlegen
-- [ ] bundles/nixos-demo.nix anlegen
-- [ ] bundles/nixos-gui.nix anlegen
-- [ ] hardware.nix anlegen (Bootloader, Dateisysteme)
-- [ ] install.sh anlegen
+- [x] flake.nix anlegen (nixosConfigurations + packages/diskImages via nixos-generators)
+- [x] modules/base.nix anlegen (gemeinsame Basis)
+- [x] modules/hardware.nix anlegen (Bootloader, Dateisysteme by-label)
+- [x] bundles/minecraft-server.nix anlegen
+- [x] bundles/nixos-demo.nix anlegen
+- [x] bundles/nixos-gui.nix anlegen
+- [x] install.sh anlegen
 
 ## Phase 2 — Basis-Konfiguration [ ]
 
@@ -51,8 +52,11 @@ Neue Bundles können jederzeit als `.nix`-Datei unter `bundles/` hinzugefügt we
 
 ## Phase 3 — Bundles implementieren [ ]
 
-- [ ] minecraft-server.nix: Minecraft-Server-Dienst
-- [ ] nixos-demo.nix: minimale Showcasekonfiguration
+- [ ] minecraft-server.nix: Minecraft-Server-Dienst + Port 25565
+- [ ] nixos-demo.nix: drei Bereiche:
+  - NixOS-Showcase: neofetch, nix repl, CLI-Tools
+  - Präsentation: MOTD, cowsay/figlet-Begrüßung beim Login
+  - Netzwerk-Demo: nmap, curl, tcpdump, iperf3
 - [ ] nixos-gui.nix: AwesomeWM + LightDM (wie auf den ThinkPads)
 
 ## Phase 4 — USB-Partitionierung & Install-Script [ ]
@@ -70,7 +74,21 @@ install.sh:
 - [ ] mounten nach /mnt
 - [ ] nixos-install --flake .#<bundle> aufrufen
 
-Bootloader: GRUB (UEFI + BIOS Legacy) — läuft auf möglichst vielen Maschinen.
+Bootloader: systemd-boot (`canTouchEfiVariables = false` — wichtig für USB).
+
+## Phase 4b — diskImage Output [ ]
+
+Alternativ zu nixos-install: fertiges Image bauen und per dd flashen.
+Kein extra Flake-Input nötig — nutzt `image.repart` (nixpkgs-intern, systemd-repart).
+
+```bash
+nix build .#usb-minecraft-image
+dd if=result/image.raw of=/dev/sdX bs=4M status=progress
+resize2fs /dev/sdXp2       # Root-Partition auf volle Stick-Größe ausdehnen
+```
+
+- [ ] modules/image.nix anlegen (image.repart Partitionslayout: ESP + Root)
+- [ ] packages.x86_64-linux.usb-*-image für jedes Bundle exponieren
 
 ## Phase 5 — Test [ ]
 
