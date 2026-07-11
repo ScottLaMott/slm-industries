@@ -1,0 +1,15 @@
+session_name: nixos-on-usb
+start_directory: ~/slm-industries/dockyard/construction/nixos-on-usb
+
+windows:
+  - window_name: edit
+    panes:
+      - shell_command: nvim .
+
+  - window_name: claude
+    panes:
+      - shell_command: claude -c
+
+  - window_name: test
+    panes:
+      - shell_command: nitch
