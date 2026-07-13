@@ -1,9 +1,20 @@
 {
   pkgs,
   lib,
+  configPath,
   ...
 }: {
-  console.keyMap = "de";
+  virtualisation.vmVariant = {
+    virtualisation.sharedDirectories.nixos-config = {
+      source = configPath;
+      target = "/etc/nixos";
+    };
+  };
+  console = {
+    keyMap = "de";
+    font = "spleen-8x16";
+    packages = [pkgs.spleen];
+  };
 
   time.timeZone = "Europe/Berlin";
 
