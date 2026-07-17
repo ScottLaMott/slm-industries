@@ -38,11 +38,12 @@
 
   environment.systemPackages = with pkgs; [
     tmux
-    vim
+    neovim
     git
     nmap
     wget
     curl
+    cmatrix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

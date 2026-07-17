@@ -94,6 +94,6 @@ resize2fs /dev/sdXp2       # Root-Partition auf volle Stick-Größe ausdehnen
 ## Phase 5 — Test [ ]
 
 - [x] Basis-Bundle in VM testen (QEMU) — Tastatur, Login, zsh ok
-- [ ] Demo-Bundle in VM testen
+- [x] Demo-Bundle in VM testen — MOTD, figlet-Begrüßung ok
 - [ ] GUI-Bundle in VM testen
 - [ ] Auf echtem USB-Stick installieren und booten
