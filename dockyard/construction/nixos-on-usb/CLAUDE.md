@@ -45,18 +45,19 @@ Sonst startet die VM mit dem alten System (QEMU cached das Image).
 
 ## Konfiguration im laufenden VM ändern
 
-Das Projektverzeichnis ist im VM unter `/etc/nixos` gemountet (9p virtio shared directory).
-Änderungen in `/etc/nixos` im VM wirken sich direkt auf den Host aus — es ist dasselbe Verzeichnis.
+Das Projektverzeichnis ist im VM unter `/etc/nixos` gemountet (9p virtio, **read-only aus VM-Sicht**).
+Dateien können nur auf dem **Host** editiert werden.
 
 ```bash
-# Im VM: Konfiguration editieren
-vim /etc/nixos/modules/base.nix
+# 1. Auf dem Host editieren (normaler Editor)
 
-# Im VM: System neu bauen und aktivieren
+# 2. Im VM: Cache leeren damit Änderungen sichtbar werden
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# 3. Im VM: System neu bauen und aktivieren
 sudo nixos-rebuild switch --flake /etc/nixos#usb-base
 ```
 
-Alternativ auf dem Host editieren, dann im VM `nixos-rebuild switch` ausführen.
 Kernel- und Bootloader-Änderungen erfordern einen VM-Neustart.
 
 ## Auf echten USB-Stick installieren
