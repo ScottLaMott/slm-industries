@@ -5,6 +5,7 @@
   ...
 }: {
   virtualisation.vmVariant = {
+    virtualisation.memorySize = 4096;
     virtualisation.sharedDirectories.nixos-config = {
       source = configPath;
       target = "/etc/nixos";

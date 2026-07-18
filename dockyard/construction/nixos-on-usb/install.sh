@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-BUNDLES=(base minecraft nixos-demo gui)
+BUNDLES=(base minecraft nixos-demo gui papermc)
 
 die() { echo "Fehler: $*" >&2; exit 1; }
 
