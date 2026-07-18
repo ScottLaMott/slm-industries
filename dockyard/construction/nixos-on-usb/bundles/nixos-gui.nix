@@ -10,9 +10,13 @@
     windowManager.awesome.enable = true;
   };
 
+  networking.networkmanager.enable = true;
+  users.users.slm.extraGroups = ["networkmanager"];
+
   environment.systemPackages = with pkgs; [
     alacritty
     firefox
     feh
+    networkmanagerapplet
   ];
 }
