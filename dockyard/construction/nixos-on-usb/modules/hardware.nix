@@ -9,6 +9,8 @@
     "uas"
   ];
 
+  hardware.enableRedistributableFirmware = true;
+
   boot.loader.systemd-boot.enable = true;
   # Nicht die EFI-Variablen des Host-Systems überschreiben
   boot.loader.efi.canTouchEfiVariables = false;
