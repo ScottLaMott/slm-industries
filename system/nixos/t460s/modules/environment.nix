@@ -44,6 +44,7 @@
     gimp
     gitFull
     github-cli
+    gptfdisk
     mesa-demos
     gnome-keyring
     gnumake
