@@ -12,7 +12,7 @@ die() { echo "Fehler: $*" >&2; exit 1; }
 # Ziel-Gerät wählen
 echo ""
 echo "Verfügbare Block-Geräte:"
-lsblk -o NAME,SIZE,TYPE,MODEL | grep -E "^NAME|disk"
+lsblk -o NAME,SIZE,TYPE,MODEL
 echo ""
 read -rp "Ziel-Gerät (z.B. /dev/sdb): " DEVICE
 [[ -b "$DEVICE" ]] || die "Gerät $DEVICE nicht gefunden"
@@ -62,6 +62,7 @@ mkfs.ext4 -L  USB_ROOT    "$(part 2)"
 
 # Cleanup bei Fehler
 cleanup() {
+  echo "Fehler aufgetreten — mounte aus ..." >&2
   umount /mnt/boot 2>/dev/null || true
   umount /mnt 2>/dev/null || true
 }
@@ -81,7 +82,7 @@ rsync -a --exclude='*.qcow2' --exclude='result' --exclude='result-*' \
 
 # Installieren
 echo "==> Installiere usb-${BUNDLE} ..."
-nixos-install --flake "/mnt/etc/nixos#usb-${BUNDLE}" --root /mnt
+nixos-install --flake "/mnt/etc/nixos#usb-${BUNDLE}" --root /mnt --no-channel-copy
 
 echo ""
 echo "Fertig! Auf dem Stick: sudo nixos-rebuild switch --flake /etc/nixos#usb-${BUNDLE}"
