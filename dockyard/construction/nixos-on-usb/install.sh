@@ -52,8 +52,7 @@ echo "==> Partitioniere $DEVICE ..."
 sgdisk --zap-all "$DEVICE"
 sgdisk -n 1:0:+512M -t 1:ef00 -c 1:"USB_EFI"  "$DEVICE"
 sgdisk -n 2:0:0     -t 2:8300 -c 2:"USB_ROOT" "$DEVICE"
-partprobe "$DEVICE"
-sleep 1
+udevadm settle
 
 # Formatieren
 echo "==> Formatiere Partitionen ..."
