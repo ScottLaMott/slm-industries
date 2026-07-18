@@ -25,23 +25,25 @@ modules/
   base.nix              # Gemeinsame Basis (User, SSH, Font, ...)
   hardware.nix          # Bootloader, Kernel-Module, Dateisysteme, Firmware
 bundles/
-  minecraft-server.nix  # Vanilla Minecraft Server
-  papermc-server.nix    # PaperMC Server
-  nixos-demo.nix        # Demo-System mit MOTD und Netzwerk-Tools
-  nixos-gui.nix         # AwesomeWM Desktop + NetworkManager
+  minecraft-server.nix   # Vanilla Minecraft Server
+  papermc-server.nix     # PaperMC Server
+  nixos-demo.nix         # Demo-System mit MOTD und Netzwerk-Tools
+  nixos-gui.nix          # AwesomeWM Desktop + NetworkManager
+  gui-prismlauncher.nix  # GUI + PrismLauncher (importiert nixos-gui.nix)
 ```
 
 ---
 
 ## Bundles
 
-| Name              | Flake-Ziel       | Inhalt                                        |
-|-------------------|------------------|-----------------------------------------------|
-| `base`            | `usb-base`       | slm, SSH, zsh, tmux, neovim, git, cmatrix     |
-| `minecraft`       | `usb-minecraft`  | + Vanilla Minecraft Server (Port 25565)       |
-| `papermc`         | `usb-papermc`    | + PaperMC Server (Port 25565)                 |
-| `nixos-demo`      | `usb-nixos-demo` | + fastfetch, nix-tree, Netzwerk-Tools, MOTD   |
-| `gui`             | `usb-gui`        | + AwesomeWM, LightDM, Firefox, NetworkManager |
+| Name              | Flake-Ziel            | Inhalt                                              |
+|-------------------|-----------------------|-----------------------------------------------------|
+| `base`            | `usb-base`            | slm, SSH, zsh, tmux, neovim, git, cmatrix           |
+| `minecraft`       | `usb-minecraft`       | + Vanilla Minecraft Server (Port 25565)             |
+| `papermc`         | `usb-papermc`         | + PaperMC Server (Port 25565)                       |
+| `nixos-demo`      | `usb-nixos-demo`      | + fastfetch, nix-tree, Netzwerk-Tools, MOTD         |
+| `gui`             | `usb-gui`             | + AwesomeWM, LightDM, Firefox, NetworkManager       |
+| `prismlauncher`   | `usb-prismlauncher`   | + GUI (wie oben) + PrismLauncher (Minecraft-Client) |
 
 ---
 
