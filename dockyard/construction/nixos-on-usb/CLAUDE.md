@@ -5,25 +5,29 @@ Persistentes NixOS auf USB-Stick mit wählbaren Bundles. Kein Live-ISO — echte
 ## Projektstruktur
 
 ```
-flake.nix          # nixosConfigurations (usb-base, usb-minecraft, usb-nixos-demo, usb-gui)
+flake.nix          # nixosConfigurations (usb-base, usb-minecraft, usb-nixos-demo, usb-gui, usb-papermc, usb-prismlauncher)
 install.sh         # Interaktives Install-Script für echten USB-Stick
 modules/
   base.nix         # Gemeinsame Basis: locale, user slm, SSH, zsh, font, VM-Einstellungen
-  hardware.nix     # systemd-boot, USB-Kernelmodule, Dateisysteme by-label
+  hardware.nix     # systemd-boot, USB-Kernelmodule, Dateisysteme by-label, WiFi-Firmware
 bundles/
   minecraft-server.nix
+  papermc-server.nix
   nixos-demo.nix
   nixos-gui.nix
+  gui-prismlauncher.nix
 ```
 
 ## Bundles
 
-| Name             | Inhalt                                              |
-|------------------|-----------------------------------------------------|
-| `usb-base`       | Basis: slm, SSH, zsh, tmux, vim, git               |
-| `usb-minecraft`  | + Minecraft-Server (Port 25565)                     |
-| `usb-nixos-demo` | + fastfetch, nix-tree, Netzwerk-Tools, MOTD, figlet |
-| `usb-gui`        | + AwesomeWM + LightDM + alacritty + firefox         |
+| Name                  | Inhalt                                                      |
+|-----------------------|-------------------------------------------------------------|
+| `usb-base`            | Basis: slm, SSH, zsh, tmux, neovim, git                    |
+| `usb-minecraft`       | + Minecraft-Server (Port 25565)                             |
+| `usb-papermc`         | + PaperMC Server (Port 25565)                               |
+| `usb-nixos-demo`      | + fastfetch, nix-tree, Netzwerk-Tools, MOTD, figlet         |
+| `usb-gui`             | + AwesomeWM + LightDM + alacritty + firefox + NetworkManager|
+| `usb-prismlauncher`   | + GUI (wie oben) + PrismLauncher (Minecraft-Client)         |
 
 ## VM-Test (QEMU)
 
