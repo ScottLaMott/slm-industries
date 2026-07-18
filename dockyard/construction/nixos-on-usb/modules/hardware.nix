@@ -9,6 +9,7 @@
     "uas"
   ];
 
+  # für wifi firmware
   hardware.enableRedistributableFirmware = true;
 
   boot.loader.systemd-boot.enable = true;

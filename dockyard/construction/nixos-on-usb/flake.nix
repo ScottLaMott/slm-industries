@@ -22,6 +22,7 @@
       usb-nixos-demo = mkUsb [./bundles/nixos-demo.nix];
       usb-gui = mkUsb [./bundles/nixos-gui.nix];
       usb-papermc = mkUsb [./bundles/papermc-server.nix];
+      usb-prismlauncher = mkUsb [./bundles/gui-prismlauncher.nix];
     };
 
     # Phase 4b: diskImage-Outputs werden hier ergänzt

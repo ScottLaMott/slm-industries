@@ -26,10 +26,10 @@
     ┌─────────────────────────────────────────┐
     │           NixOS Demo System             │
     ├─────────────────────────────────────────┤
-    │  fastfetch          Systeminfo           │
+    │  fastfetch         Systeminfo           │
     │  nix repl          Nix REPL             │
     │  nix-tree          Nix Store Explorer   │
-    │  nmap / tcpdump    Netzwerk-Tools        │
+    │  nmap / tcpdump    Netzwerk-Tools       │
     └─────────────────────────────────────────┘
 
   '';
