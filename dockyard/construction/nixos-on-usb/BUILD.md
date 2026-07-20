@@ -42,8 +42,8 @@ bundles/
 | `minecraft`       | `usb-minecraft`       | + Vanilla Minecraft Server (Port 25565)             |
 | `papermc`         | `usb-papermc`         | + PaperMC Server (Port 25565)                       |
 | `nixos-demo`      | `usb-nixos-demo`      | + fastfetch, nix-tree, Netzwerk-Tools, MOTD         |
-| `gui`             | `usb-gui`             | + AwesomeWM, LightDM, Firefox, NetworkManager       |
-| `prismlauncher`   | `usb-prismlauncher`   | + GUI (wie oben) + PrismLauncher (Minecraft-Client) |
+| `gui`             | `usb-gui`             | + AwesomeWM, LightDM, Firefox, NetworkManager, Bluetooth |
+| `prismlauncher`   | `usb-prismlauncher`   | + GUI + PrismLauncher + PaperMC (lokal), Autologin als `mc` |
 
 ---
 
@@ -177,3 +177,5 @@ Die Konfiguration liegt unter `/etc/nixos` auf dem Stick selbst.
 | nixpkgs | `nixos-26.05` |
 | VM-Memory | 4 GB (für Minecraft/PaperMC empfohlen) |
 | User | `slm`, Passwort `nixos`, passwordless sudo |
+| prismlauncher-User | `mc`, kein Passwort, Autologin, PrismLauncher startet automatisch |
+| Bluetooth | alle GUI-Bundles: blueman, powerOnBoot — pairen mit `bluetoothctl` |

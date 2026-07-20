@@ -26,8 +26,8 @@ bundles/
 | `usb-minecraft`       | + Minecraft-Server (Port 25565)                             |
 | `usb-papermc`         | + PaperMC Server (Port 25565)                               |
 | `usb-nixos-demo`      | + fastfetch, nix-tree, Netzwerk-Tools, MOTD, figlet         |
-| `usb-gui`             | + AwesomeWM + LightDM + alacritty + firefox + NetworkManager|
-| `usb-prismlauncher`   | + GUI (wie oben) + PrismLauncher (Minecraft-Client)         |
+| `usb-gui`             | + AwesomeWM + LightDM + alacritty + firefox + NetworkManager + Bluetooth |
+| `usb-prismlauncher`   | + GUI + PrismLauncher + PaperMC (lokal), Autologin als `mc`             |
 
 ## VM-Test (QEMU)
 
@@ -96,3 +96,5 @@ sudo nixos-rebuild switch --flake /etc/nixos#usb-<bundle>
 - **Unfree Pakete:** pro Bundle mit `nixpkgs.config.allowUnfreePredicate` erlauben (siehe minecraft-server.nix)
 - **Konsolen-Font:** spleen-8x16 — gut lesbar im 1024x768 VM-Fenster
 - **nixpkgs:** `nixos-26.05`
+- **Bluetooth:** alle GUI-Bundles — blueman, powerOnBoot; pairen mit `bluetoothctl`
+- **prismlauncher:** User `mc` (Autologin), PrismLauncher Autostart via `.xprofile`, Offline-Account voreingerichtet, PaperMC auf localhost:25565
