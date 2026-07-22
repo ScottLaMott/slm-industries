@@ -1,11 +1,18 @@
 {
   description = "NixOS on USB — persistentes NixOS mit wählbaren Bundles";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 
   outputs = {
     self,
     nixpkgs,
+    home-manager,
   }: let
     system = "x86_64-linux";
 
@@ -13,7 +20,12 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {configPath = toString ./.;};
-        modules = [./modules/base.nix ./modules/hardware.nix] ++ modules;
+        modules = [
+          ./modules/base.nix
+          ./modules/hardware.nix
+          ./modules/home-slm.nix
+          home-manager.nixosModules.home-manager
+        ] ++ modules;
       };
   in {
     nixosConfigurations = {
