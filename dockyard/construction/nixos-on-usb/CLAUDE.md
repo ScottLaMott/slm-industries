@@ -10,6 +10,7 @@ install.sh         # Interaktives Install-Script für echten USB-Stick
 modules/
   base.nix         # Gemeinsame Basis: locale, user slm, SSH, zsh, font, VM-Einstellungen
   hardware.nix     # systemd-boot, USB-Kernelmodule, Dateisysteme by-label, WiFi-Firmware
+  home-slm.nix     # Home-Manager für slm: zsh, tmux, git, alacritty, rofi, picom, awesome
 bundles/
   minecraft-server.nix
   papermc-server.nix
@@ -98,3 +99,5 @@ sudo nixos-rebuild switch --flake /etc/nixos#usb-<bundle>
 - **nixpkgs:** `nixos-26.05`
 - **Bluetooth:** alle GUI-Bundles — blueman, powerOnBoot; pairen mit `bluetoothctl`
 - **prismlauncher:** User `mc` (Autologin), PrismLauncher Autostart via `.xprofile`, Offline-Account voreingerichtet, PaperMC auf localhost:25565
+- **home-manager (slm):** Module direkt aus `system/nixos/t460s/home-manager/` referenziert — zsh, tmux, git, alacritty, rofi, picom, awesome rc.lua, fzf, starship, zoxide, readline
+- **VM-Hinweis:** picom läuft mit xrender-Backend (kein GPU in QEMU); alacritty opacity=1.0 — auf echter Hardware funktionieren GLX und Transparenz

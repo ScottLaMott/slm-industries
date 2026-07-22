@@ -24,6 +24,7 @@ install.sh              # Interaktives Install-Script
 modules/
   base.nix              # Gemeinsame Basis (User, SSH, Font, ...)
   hardware.nix          # Bootloader, Kernel-Module, Dateisysteme, Firmware
+  home-slm.nix          # Home-Manager für slm (alle Bundles): zsh, tmux, git, alacritty, rofi, picom, awesome
 bundles/
   minecraft-server.nix   # Vanilla Minecraft Server
   papermc-server.nix     # PaperMC Server
@@ -179,3 +180,5 @@ Die Konfiguration liegt unter `/etc/nixos` auf dem Stick selbst.
 | User | `slm`, Passwort `nixos`, passwordless sudo |
 | prismlauncher-User | `mc`, kein Passwort, Autologin, PrismLauncher startet automatisch |
 | Bluetooth | alle GUI-Bundles: blueman, powerOnBoot — pairen mit `bluetoothctl` |
+| home-manager (slm) | zsh vi-mode, tmux gruvbox, git, alacritty, rofi, picom, awesome rc.lua aus t460s |
+| VM-Hinweis | picom xrender-Backend, alacritty opacity=1.0 — auf echter Hardware GLX + Transparenz |
